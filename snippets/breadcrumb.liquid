@@ -1,0 +1,79 @@
+{% unless template == 'index' %}
+<nav class="breadcrumb" aria-label="breadcrumbs">
+<div class="container">	
+ 
+  {% if template contains 'product' %}
+  {% if collection %}
+  <a href="/" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
+  <span aria-hidden="true" class="breadcrumb__sep">&#47;</span>
+  {% if collection.handle %}
+  {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
+  {{ collection.title | link_to: url }}
+  {% endif %}
+    {% else %}
+   <a href="/" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
+  {% endif %}
+
+  <span aria-hidden="true" class="breadcrumb__sep">&#47;</span>
+  <span>{{ product.title }}</span>
+
+
+  {% elsif template contains 'collection' and collection.handle %}
+  {% unless template == 'list-collections' %}
+ 
+  <a href="/" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
+
+  <span aria-hidden="true" class="breadcrumb__sep">&#47;</span>
+  {% if current_tags %}
+  {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
+  {{ collection.title | link_to: url }}
+  <span aria-hidden="true" class="breadcrumb__sep">&#47;</span>
+  <span>{{ current_tags | join: " + " }}</span>
+  {% else %}
+  <span>{{ collection.title }}</span>
+
+  {% endif %}
+  {% endunless %}
+  {% elsif template == 'blog' %}
+
+  <a href="/" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
+
+  <span aria-hidden="true" class="breadcrumb__sep">&#47;</span>
+  {% if current_tags %}
+  {{ blog.title | link_to: blog.url }}
+  <span aria-hidden="true" class="breadcrumb__sep">&#47;</span>
+  <span>{{ current_tags | join: " + " }}</span>
+  {% else %}
+
+  <span>{{ blog.title }}</span>
+
+  {% endif %}
+
+  {% elsif template == 'article' %}
+
+  <a href="/" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
+
+  <span aria-hidden="true" class="breadcrumb__sep">&#47;</span>
+  {{ blog.title | link_to: blog.url }}
+  <span aria-hidden="true" class="breadcrumb__sep">&#47;</span>
+  <span>{{ article.title }}</span>
+
+  {% elsif template contains 'page' %}
+  
+  <a href="/" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
+
+  <span aria-hidden="true" class="breadcrumb__sep">&#47;</span>
+  <span>{{ page.title }}</span>
+
+  {% else %}
+ 
+  <a href="/" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
+
+  <span aria-hidden="true" class="breadcrumb__sep">&#47;</span>
+  <span>{{ page_title }}</span>
+
+  {% endif %}
+  </div>
+</nav>
+ <div class="dt-sc-hr-invisible-large"></div>
+{% endunless %}

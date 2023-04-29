@@ -1,0 +1,211 @@
+<div data-section-id="{{ section.id }}"  data-section-type="home-product-grid-type-5" class="home-product-grid-type-5">
+ <div class="container">
+  {%- assign collection = collections[section.settings.collection] -%}
+  {%- assign limit = section.settings.grid | times: section.settings.rows -%}  
+  {%- assign tp = section.settings.total_products  -%}
+  
+  <div class="full_width_tab load-wrapper">       
+    {% if section.settings.title != blank or section.settings.small_title  %}
+    <div class="section-header section-header--small">
+      <div class="border-title wow flash animated">
+        {% endif %}            
+        {% if section.settings.title != blank %}
+        <h2 class="section-header__title" style="color:{{section.settings.title_clr }};">    
+          {{ section.settings.title }}
+        </h2>
+        {% endif %}  
+        {% if section.settings.small_title != blank %}<div class="short-desc"> <p style="color:{{section.settings.small_title_clr }};">{{ section.settings.small_title }}</p></div>{% endif %}  
+        {% if section.settings.title != blank or section.settings.small_title  %}
+      </div>
+    </div>    
+    {% endif %}      
+    
+    {% if section.settings.alignment == 'right' or  section.settings.alignment == 'left' %} 
+    {%- assign grid_mid_width = 'wide--one-half post-large--one-half large--one-half medium--one-half small-grid__item' -%}
+    {% else %}
+    {%- assign grid_mid_width = ' ' -%}
+    {% endif%}     
+
+    <div class="grid-uniform">
+      {% if section.settings.alignment == 'left' %}
+      {% if section.settings.show_image  %}
+      <div class="grid__item wide--one-half post-large--one-half large--one-half medium--one-half small-grid__item  left">      
+        <div class="type4__singele_items">
+          <a href="{{ section.settings.link }}">
+            {% if section.settings.image != blank %}
+            <img src="{{ section.settings.image  | img_url:'master'}}"  alt="{{ section.settings.title }}"/>    
+            {% else %}
+             <img src="//via.placeholder.com/340x550">
+            {% endif%}      
+            
+          {% if section.settings.title_banner != blank %}  <h2 style="color:{{ section.settings.title_banner_clr }}">{{ section.settings.title_banner }}</h2>{% endif%}   
+          </a>
+          
+          
+        </div>
+      </div>
+      {% endif %}
+      {% endif %}
+      <div class="grid__item   {% if section.settings.show_image %} {{grid_mid_width }} {% endif %}">              
+       {% if section.settings.subtitle != blank %}
+          <div class="subheading appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ section.settings.subtitle }}</div>
+        {% endif %}
+        {% if section.settings.titletext != blank %}
+          <div class="h1 appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ section.settings.title | escape }}</div>
+        {% endif %}
+        {% if section.settings.text != blank %}
+          <div class="rte appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ section.settings.text }}</div>
+        {% endif %}
+        {% if section.settings.button_label != blank %}
+          <div class="appear-delay{% cycle '','-1','-2','-3','-4' %}">
+            <a href="{{ section.settings.button_link }}" class="btn{% if section.settings.button_style == 'secondary' %} btn--tertiary{% endif %}">
+              {{ section.settings.button_label }}
+            </a>
+          </div>
+        {% endif %}     
+      </div>
+      {% if section.settings.alignment == 'right' %}
+      {% if section.settings.show_image %}
+      <div class="grid__item wide--four-tenths post-large--four-tenths large--four-tenths medium--grid__item small-grid__item right">      
+        <div class="type4__singele_items">
+          <a href="{{ section.settings.link }}">
+            {% if section.settings.image != blank %}
+            <img src="{{ section.settings.image  | img_url:'master'}}"  alt="{{ section.settings.title }}"/>    
+            {% else %}
+            <img src="//via.placeholder.com/340x550">
+            {% endif%} 
+                      {% if section.settings.title_banner != blank %}  <h2 style="color:{{ section.settings.title_banner_clr }}">{{ section.settings.title_banner }}</h2>{% endif%}   
+
+          </a>
+        </div>
+      </div>
+      {% endif %}
+      {% endif %}
+    </div>
+  </div>
+  </div>
+</div>  
+
+<div class="dt-sc-hr-invisible-large"></div> 
+
+{% schema %}
+{
+"name": "Product and advertisement",
+"class": "index-section",
+"settings": [  
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default": "New arrivals"
+},	
+{
+"type": "color",
+"id": "title_clr",
+"label": "Heading Color",
+"default": "#000"
+},	
+{
+"type": "text",
+"id": "small_title",
+"label": "Small Heading"      
+},	
+{
+"type": "color",
+"id": "small_title_clr",
+"label": "Small Heading Color",
+"default": "#000"      
+},	
+{
+"type": "checkbox",
+"id": "show_image",
+"label": "Show Image",
+"default": true
+},
+{
+"type": "image_picker",
+"id": "image",
+"label": "Image",
+"info": "Size: 474x759"
+},	
+
+{
+"type": "text",
+"id": "title_banner",
+"label": "Title",
+"default":"Summer Sale 50% off"
+},
+{
+"type": "color",
+"id": "title_banner_clr",
+"label": "Title Color",
+"default":"#fff"
+},
+{
+"type": "url",
+"id": "link",
+"label": "Link Url"	  
+},
+{
+"type": "select",
+"id": "alignment",
+"label": "Alignment",
+"default": "left",
+"options": [
+{
+"value": "left",
+"label": "Left"
+},
+{
+"value": "right",
+"label": "Right"
+},
+{
+"value": "none",
+"label": "None"
+} 
+
+]
+},
+ {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subheading"
+      },
+      {
+        "type": "text",
+        "id": "titletext",
+        "label": "Heading",
+        "default": "Image with text"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text",
+        "default": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      }
+
+
+],
+"presets": [
+{
+"name": "Text and image",
+"category": "Collection"
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+

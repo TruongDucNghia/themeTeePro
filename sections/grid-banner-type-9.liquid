@@ -1,0 +1,236 @@
+<div data-section-id="{{ section.id }}" data-section-type="grid-banner-type-9" class="grid-banner-type-9">  
+  <div class="grid-uniform">        
+    {% if section.blocks.size > 0 %}      
+    {% for block in section.blocks %}    
+    {% case section.blocks.size %}
+    {% when 1 %}
+    {%- assign block_width = 'one-whole text-center' -%}
+    {% when 2 %}
+    {%- assign block_width = 'wide--one-half post-large--one-half large--one-half medium--grid__item small-grid__item' -%}
+    {% when 3 %}
+    {%- assign block_width = 'wide--one-third post-large--one-third large--one-whole medium--grid__item small-grid__item' -%}
+    {% when 4 %}
+    {%- assign block_width = 'wide--one-half post-large--one-half large--one-half medium--grid__item small-grid__item' -%}
+    {% endcase %}    
+    <div class="grid__item {{ block_width }} section-wrapper section-wrapper-{{ block.id }} " style="background: {{ block.settings.section_bg }};"> 
+      <div class="section-inner ">        
+        {% if block.settings.alignment == "left" %}  
+        <div class="grid__item wide--one-half post-large--one-half large--one-half medium--one-half small-grid__item">
+
+          {% if block.settings.link != blank %}<a href="{{ block.settings.link }}" class="collection-img img-hover-effect" >{% endif %}
+          {% if block.settings.image != blank %}
+          <img src="{{ block.settings.image | img_url: '1920X' }}" alt="{{ block.settings.title }}"/>
+          {% else %}
+          <img src="//via.placeholder.com/768x768">
+          {% endif%} 
+          {% if block.settings.link != blank %}</a>{% endif %}
+        </div>
+        {% endif%} 
+
+        <div class="grid__item wide--one-half post-large--one-half large--one-half medium--one-half small-grid__item">
+          <div class="collection-info"> 
+
+            {% if block.settings.title != blank %}                        
+            <h2 style="color:{{block.settings.title_color }}">
+              
+              
+              
+              
+              {% if block.settings.link != blank %}
+                
+              
+              
+              <a href="{{ block.settings.link }}" style="color:{{block.settings.title_color }}">
+                {% endif %}  
+                {{ block.settings.title }}
+                {% if block.settings.link != blank %}</a> {% endif %}     
+            </h2>        
+            {% endif %}   
+             {% if block.settings.title_1 != blank %} 
+              <h5 style="color:{{block.settings.title_1_color}}"> {{ block.settings.title_1 }}</h5>
+               {% endif %}
+              
+            {% if block.settings.link != blank %}<a href="{{ block.settings.link }}" class="btn">{{ block.settings.button }}</a>{% endif%}
+
+          </div>
+        </div>
+
+        {% if block.settings.alignment == "right" %}  
+        <div class="grid__item wide--one-half post-large--one-half large--one-half medium--one-half small-grid__item {{ block.settings.alignment }}">
+
+          {% if block.settings.link != blank %}<a href="{{ block.settings.link }}" class="collection-img img-hover-effect" >{% endif %}
+
+          {% if block.settings.image != blank %}
+          <img src="{{ block.settings.image | img_url: '1920X' }}" alt="{{ block.settings.title }}" />
+          {% else %}
+          <img src="//via.placeholder.com/768x768">
+          {% endif%} 
+
+          {% if block.settings.link != blank %}</a>{% endif %}
+
+        </div>
+        {% endif%}   
+
+      </div>
+    </div>         
+    {% endfor %}
+    {% endif %}    
+
+  </div> 
+
+  <div class="dt-sc-hr-invisible-large"></div>
+
+</div>
+
+
+{% for block in section.blocks %}    
+<style type="text/css">
+  .grid-banner-type-9 .section-wrapper-{{ block.id }}:hover h2 a {color:{{block.settings.title_hover_color}}!important;}
+  .grid-banner-type-9 .section-wrapper-{{ block.id }}:hover  { background:{{ block.settings.section_hover_bg }} !important;}  
+  .grid-banner-type-9 .section-wrapper-{{ block.id }} .btn { color: {{ block.settings.button_color }};}
+  .grid-banner-type-9 .section-wrapper-{{ block.id }} .btn:hover { color: {{ block.settings.button_hover_text }};}
+  .grid-banner-type-9 .section-wrapper-{{ block.id }} .btn:hover {background: {{ block.settings.button_hover_bg }}; }
+  .grid-banner-type-9 .section-wrapper-{{ block.id }} .btn { background: {{ block.settings.button_bg_color }}; }
+  .grid-banner-type-9 .section-wrapper-{{ block.id }}:hover .img-hover-effect:before { background:{{ block.settings.overlay_bgcolor_2 | color_modify: 'alpha', 0.2 }};z-index:1; }
+</style>
+{% endfor %}
+
+{% schema %}
+{
+"name": "Grid Banner Type 9",
+"class": "index-section",
+"max_blocks":4,
+"settings": [],
+"blocks": [
+{
+"type": "Image",
+"name": "Images",
+"settings": [ 
+{
+  "type": "color",
+  "id": "overlay_bgcolor_2",
+  "label": "Overlay Bg",
+  "default": "#fff"
+  },
+
+{
+"type": "image_picker",
+"id": "image",
+"label": "Image",
+"info": "Size: 570x450"
+},
+{
+"type": "select",
+"id": "alignment",
+"label": "Image alignment",
+"default": "left",
+"options": [
+{
+"value": "left",
+"label": "Left"
+},
+{
+"value": "right",
+"label": "Right"
+}        
+]
+},
+
+{
+"type": "color",
+"id": "section_bg",
+"label": "Block background",
+"default":"#e8e8e8"	
+}, 	
+{
+"type": "color",
+"id": "section_hover_bg",
+"label": "Block hover background",
+"default":"#f5f5f5"	
+}, 	
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default": "Title"	
+},
+{
+"type": "color",
+"id": "title_color",
+"label": "Heading color",
+"default":"#000"	
+}, 
+{
+"type": "color",
+"id": "title_hover_color",
+"label": "Title Hover color",
+"default":"#000"	
+}, 
+{
+"type": "text",
+"id": "title_1",
+"label": "Sub Heading",
+"default": "Title"	
+},
+{
+"type": "color",
+"id": "title_1_color",
+"label": "Sub Heading color",
+"default":"#000"	
+}, 	
+{
+"type": "text",
+"id": "button",
+"label": "Button Text",
+"default": "View Details"	
+},    
+{
+"type": "color",
+"id": "button_bg_color",
+"label": "Background",
+"default":"#000"	
+},
+{
+"type": "color",
+"id": "button_hover_bg",
+"label": "Hover Background",
+"default":"#fff"	
+},
+{
+"type": "color",
+"id": "button_color",
+"label": "Text Color",
+"default":"#fff"	
+},
+{
+"type": "color",
+"id": "button_hover_text",
+"label": "Hover Text Color",
+"default":"#000"	
+},
+{
+"type": "text",
+"id": "link",
+"label": "Link"          
+}      
+
+]
+}
+],
+"presets": [
+{
+"name": "Grid Banner Type 9",
+"category": "Image",
+"blocks": [
+{
+"type": "Image"
+},
+{
+"type": "Image"
+}        
+]
+}
+]
+}
+{% endschema %}
+

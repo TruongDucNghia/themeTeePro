@@ -1,0 +1,230 @@
+<div data-section-id="{{ section.id }}"  data-section-type="home-product-grid-type-5" class="home-product-grid-type-6">
+ <div class="container">
+  {%- assign collection = collections[section.settings.collection] -%}
+  {%- assign limit = section.settings.grid | times: section.settings.rows -%}  
+  {%- assign tp = section.settings.total_products  -%}
+  
+  <div class="full_width_tab load-wrapper">       
+     
+     
+    {% if section.settings.alignment == 'right' or  section.settings.alignment == 'left' %} 
+    {%- assign grid_mid_width = 'wide--one-half post-large--one-half large--one-half medium--one-half small-grid__item' -%}
+    {% else %}
+    {%- assign grid_mid_width = ' ' -%}
+    {% endif%}     
+
+    <div class="grid-uniform">
+      {% if section.settings.alignment == 'left' %}
+       <div class="grid__item wide--one-half post-large--one-half large--one-half medium--one-half small-grid__item left">      
+       
+        <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    
+        
+         <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                  
+                      
+                           <div class="swiper-slide">
+            {% if block.settings.image != blank %}
+                <img  src="{{ block.settings.image | img_url:'master' }}"  alt="">
+            {% else %}
+                {{ 'collection-2' |placeholder_svg_tag }}
+            {% endif %}
+        </div>
+                          
+
+                  
+                {% endfor %}
+         
+  </div>
+           <div class="swiper-pagination"></div>
+</div>
+  
+        
+        
+      </div>
+      
+      
+      {% endif %}
+      <div class="grid__item   {{grid_mid_width }} wrapper_content">              
+       {% if section.settings.subtitle != blank %}
+          <div class="subheading appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ section.settings.subtitle }}</div>
+        {% endif %}
+        {% if section.settings.titletext != blank %}
+          <div class="h2 appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ section.settings.title | escape }}</div>
+        {% endif %}
+
+        {% if section.settings.text != blank %}
+          <div class="rte appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ section.settings.text }}</div>
+        {% endif %}
+                {% if section.settings.small_title != blank %}
+        </div>
+      {% endif %}  
+
+        {% if section.settings.button_label != blank %}
+          <div class="appear-delay{% cycle '','-1','-2','-3','-4' %}">
+            <a href="{{ section.settings.button_link }}" class="btn{% if section.settings.button_style == 'secondary' %} btn--tertiary{% endif %}">
+              {{ section.settings.button_label }}
+            </a>
+          </div>
+        {% endif %}     
+      </div>
+      {% if section.settings.alignment == 'right' %}
+   
+      <div class="grid__item wide--one-half post-large--one-half large--one-half medium--one-half small-grid__item right">      
+       
+        <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    
+      
+                   <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                  
+                      
+                           <div class="swiper-slide">
+            {% if block.settings.image != blank %}
+                <img  src="{{ block.settings.image | img_url:'master' }}"  alt="">
+            {% else %}
+                {{ 'collection-2' |placeholder_svg_tag }}
+            {% endif %}
+        </div>
+                          
+
+                  
+                {% endfor %}
+         
+  </div>
+</div>
+            <div class="swiper-pagination"></div>
+  
+</div>
+  
+        
+        
+      </div>
+  
+      {% endif %}
+    </div>
+  </div>
+  </div>
+</div>  
+
+<div class="dt-sc-hr-invisible-large"></div> 
+<script>
+  $(document).ready(function () {
+  var mySwiper = new Swiper('.swiper-container', {
+  
+    speed: 1000,
+  
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: false,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 250,
+        depth: 250,
+        modifier: 1,
+        slideShadows: false,
+    },
+ pagination: {
+   clickable: true,
+        el: '.swiper-pagination',
+      }
+ 
+  
+})
+  });
+</script>
+{% schema %}
+{
+"name": "Product and advertisement",
+"class": "index-section",
+"settings": [  
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default": "New arrivals"
+},	
+
+{
+"type": "select",
+"id": "alignment",
+"label": "Alignment",
+"default": "left",
+"options": [
+{
+"value": "left",
+"label": "Left"
+},
+{
+"value": "right",
+"label": "Right"
+},
+{
+"value": "none",
+"label": "None"
+} 
+
+]
+},
+ {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subheading"
+      },
+      {
+        "type": "text",
+        "id": "titletext",
+        "label": "Heading",
+        "default": "Image with text"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text",
+        "default": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button label"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      }
+
+
+],
+
+"blocks":[
+{
+"name":"Banner item",
+"type":"banner-item-2",
+"settings":[
+{
+"type":"image_picker",
+"id":"image",
+"label":"Image"
+}
+
+]
+}
+],
+
+"presets": [
+{
+"name": "Welcome Tpro",
+"category": "Welcome Tpro"
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+

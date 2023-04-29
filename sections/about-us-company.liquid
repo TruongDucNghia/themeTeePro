@@ -1,0 +1,266 @@
+
+{% if section.settings.play_icon != blank %}
+{% assign button = section.settings.play_icon | img_url: "master" %}
+{% else %}
+{% assign button = 'm3-icon-play.png' | asset_url %}
+{% endif %}
+<div data-section-id="{{ section.id }}" class="about-us-company">
+ 	<div class="container">
+	  {% if section.settings.title != blank or section.settings.small_title  %}
+      <div class="section-header section-header--small border-title wow fadeInDown animated animated {{ section.settings.title_position }} " >
+       
+          {% endif %}  
+        {% if section.settings.title != blank %}
+          <h2 class="service-title" style="color:{{ section.settings.title_clr }};">    
+            {{ section.settings.title }}
+          </h2>
+          {% endif %}  
+{% if section.settings.description != blank %} <p style="color:{{ section.settings.desc_color }}">{{ section.settings.description }}</p>{% endif %}  
+          
+          {% if section.settings.small_title != blank %}
+          <div class="short-desc"><p style="color:{{ section.settings.text_clr }};">{{ section.settings.small_title }}</p></div>{% endif %}  
+          {% if section.settings.title != blank or section.settings.small_title  %}
+
+      
+      </div>
+
+      {% endif %} 
+</div>
+        <div class="grid__item banner-video-section  wide--one-half post-large--one-half  small-grid__item  {% if section.settings.enable_parallax == true %}parallax-box{% endif %} {{section.settings.banner_preset}}">
+          	<div class="incify-video-popup">
+  
+      {% if section.settings.video_source == 'vimeo' %}
+      <a href="https://player.vimeo.com/video/{{section.settings.video_id}}?autoplay=1" ><span class="icons-play-button"></span></a>
+      {% else %}
+      <a href="//www.youtube.com/embed/{{section.settings.video_id}}?version=3"  ><span class="icons-play-button"></span></a>
+      {% endif %}
+  </div>
+        </div>
+        
+        
+         <div class="grid__item wide--one-half post-large--one-half  small-grid__item tshirt-passion ">
+    	{% if section.settings.title_passion != blank  %}
+      <div class="section-header section-header--small" >
+       
+          {% endif %}  
+        {% if section.settings.title_passion != blank %}
+          <h2 class="section-header__heading" style="color:{{ section.settings.title_passion_clr }};">    
+            {{ section.settings.title_passion }}
+          </h2>
+          {% endif %}  
+		{% if section.settings.description_passion != blank %} <p style="color:{{ section.settings.desc_passion_color }}">{{ section.settings.description_passion }}</p>{% endif %}  
+          
+       
+          {% if section.settings.title_passion != blank  %}
+
+      
+      </div>
+
+      {% endif %} 
+             <div class="img-full  ceo-image ">
+                {% if  section.settings.image_ceo != blank %}
+                <img src="{{  section.settings.image_ceo | img_url: "183X" }}" />
+                {% else %}
+                <img src="//via.placeholder.com/100x100">
+                {% endif %} 
+               <div class="ceo-signature">
+			<p>
+              {% if  section.settings.ceo_signature != blank %}
+                <img src="{{  section.settings.ceo_signature | img_url: "183X"  }}" />
+                {% else %}
+                <img src="//via.placeholder.com/100x100">
+                {% endif %} 
+           </p>
+		<p>{{  section.settings.ceo_text }}</p>
+
+		</div>
+              </div>
+           
+        </div>
+        
+        
+    
+</div>
+  <div class="dt-sc-hr-invisible-large"></div>
+<style>
+  .banner-video-section {
+   {% if section.settings.bg_img != blank %} background-image:url({{ section.settings.bg_img | img_url: '1920X'  }});{% endif %}
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    padding-top: 250px;
+    padding-bottom: 250px;
+  }
+  @media (max-width:768px){
+       .banner-video-section {
+    	padding: 80px 0;
+         margin-bottom:30px;
+       }
+  }
+  .banner-video-section:hover {
+	opacity: 0.85
+}
+  .incify-video-popup {
+    text-align:center; 
+        position: relative;
+  }
+  .incify-video-popup .icons-play-button {
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+      background-color: rgb(104,127,240);
+}
+  .incify-video-popup .icons-play-button:before {
+      position: absolute;
+    font-size: 60px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: #fff;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+  
+  }
+    
+</style>
+{% schema %}
+{
+"name": "Video Banner",
+"settings": [
+    {
+    "type": "header",
+    "content": "Video Banner Settings"
+    },
+   {
+"type": "image_picker",
+"id": "bg_img",
+"label": "Bg",
+"info": "Size: 1920x1217"
+
+},
+    {
+     "type": "checkbox",
+     "id": "enable_parallax",
+     "default": true,
+     "label": "Enable Parallax Background"
+    },
+    {
+    "type": "select",
+    "id": "video_source",
+    "label": "Video Source",
+    "options": [
+    {
+    "value": "youtube",
+    "label": "Youtube"
+    },
+    {
+    "value": "vimeo",
+    "label": "Vimeo"
+    }
+    ],
+    "default": "youtube"
+    },
+    {
+      "type": "text",
+      "id": "video_id",
+      "label": "Video",
+      "placeholder": "Vimeo or Youtube video ID"
+    },
+   
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default": "About Us Company"
+},
+{
+"type":"select",
+"id":"title_position",
+"label":"Heading position",
+"default":"text-center",
+"options":[
+{"value":"text-left","label":"Text Left"},
+{"value":"text-right","label":"Text Right"},
+{"value":"text-center","label":"Text Center"}
+]
+},
+{
+"type": "color",
+"id": "title_clr",
+"label": "Title Color",
+"default":"#333"
+},
+{
+"type": "textarea",
+"id": "description",
+"label": "Small Heading",
+"default": "We’re about more than shirts. We’re about you and everything you love. We believe that<br>custom t-shirts do more than just make you look good."
+},
+{
+"type": "color",
+"id": "desc_color",
+"label": "Description color",
+"default": "#000"
+}, 
+
+{
+"type": "text",
+"id": "title_passion",
+"label": "Heading",
+"default": "TeePro Passion for Printing"
+},	
+{
+"type": "color",
+"id": "title_passion_clr",
+"label": "Title Color",
+"default":"#333333"
+},
+{
+"type": "textarea",
+"id": "description_passion",
+"label": "Description  passion"
+},
+{
+"type": "color",
+"id": "desc_passion_color",
+"label": "Description color",
+"default": "#696969"
+},
+ {
+    "type": "image_picker",
+    "id": "image_ceo",
+    "label": "CEO image"
+    },
+{
+    "type": "image_picker",
+    "id": "ceo_signature",
+    "label": "Ceo Signature"
+},
+ {
+    "type": "textarea",
+    "id": "ceo_text",
+    "label": "Ceo Text",
+	"default": "<strong>CEO</strong> – HENRRY INN"
+    }
+    
+	],
+	"presets": [{
+      "name": "Video Banner",
+      "category": "Banner"
+  	}]
+}
+{% endschema %}

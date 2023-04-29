@@ -1,0 +1,38 @@
+{
+  "shopify": {
+    "checkout": {
+      "contact": {
+        "shipping_address_title": "undefined"
+      },
+      "thank_you": {
+        "marker": {
+          "shipping": "undefined"
+        },
+        "shipping_address_title": "undefined"
+      },
+      "general": {
+        "continue_to_shipping_method": "undefined"
+      },
+      "order_summary": {
+        "free_shipping_discount_label": "undefined",
+        "shipping_label": "undefined"
+      },
+      "shipping": {
+        "title": "undefined",
+        "waiting_on_rate_notice": "undefined",
+        "no_rates_for_cart_or_destination_notice": "undefined",
+        "no_rates_for_country_notice": "undefined",
+        "please_enter_your_shipping_information_notice": "undefined"
+      },
+      "payment": {
+        "same_billing_address_label": "undefined",
+        "different_billing_address_label": "undefined"
+      },
+      "review": {
+        "blocks": {
+          "shipping_address_title": "undefined"
+        }
+      }
+    }
+  }
+}

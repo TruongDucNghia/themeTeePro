@@ -1,0 +1,89 @@
+
+
+<div class="container">
+  <div class="nb-page-title-wrap bg_title_post_category bg_img" style="{% if section.settings.background_color_wrapper != blank %}  background-image:url({{ section.settings.background_color_wrapper | img_url: '1920X'  }}){% endif %}">
+
+    <div class="nb-page-title">
+      <h1 style="font-size: {{section.settings.size}}px"  >{{section.settings.heading }}</h1>
+    </div>
+
+</div>
+  <div class="grid__item shortcodes-section">
+      <h2>{{section.settings.faq_heading }}</h2>
+      <!--dt-sc-toggle-frame-set starts-->
+      <div class="dt-sc-toggle-frame-set">
+        {% for block in section.blocks %}          
+          <h5 class="dt-sc-toggle-accordion  {% if forloop.first == true %}active{% endif %}"><a href="#">{{ block.settings.title }}</a></h5>
+          <div class="dt-sc-toggle-content {% if forloop.last %} last{% endif %}" {% if forloop.first == true %}style="display:block;"{% endif %}>
+            <div class="dt-sc-block">
+              {{ block.settings.description }}
+            </div>
+          </div>        
+        {% endfor %}           
+    </div>     
+      <!--dt-sc-toggle-frame-set ends-->
+  
+</div>
+</div>
+<div class="dt-sc-hr-invisible-medium"></div>
+
+
+
+
+{% schema %}
+{
+	"name": "FAQs",
+	"max_blocks": 50,
+	"settings": [
+{
+"type": "text",
+"id": "heading",
+"label": "Heading",
+"default":"FAQ"
+},
+ {
+              "type": "range",
+              "id": "size",
+              "min": 10,
+              "max": 60,
+              "step": 1,
+              "label": "Font size",
+              "unit": "px",
+              "default": 24
+            },
+{
+"type": "image_picker",
+"id": "background_color_wrapper",
+"label": "Bg Wrapper",
+"info": "Size: 1920x1217"
+},
+
+{
+"type": "text",
+"id": "faq_heading",
+"label": "Find The Answer",
+"default":"You Find The Answer Here!"
+}
+],
+	"blocks" : [
+		{
+			"type": "text",
+			"name": "FAQ",
+			"settings": [
+				{
+					"type": "text",
+					"id": "title",
+					"default": "Question",
+					"label": "Question"
+				},
+				{
+					"type": "textarea",
+					"id": "description",
+					"default": "Answer goes here...",
+					"label": "Text"
+				}
+			]
+		}
+	]	
+}
+{% endschema %}

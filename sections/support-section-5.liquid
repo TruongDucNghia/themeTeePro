@@ -1,0 +1,200 @@
+<div data-section-id="{{ section.id }}"  data-section-type="Our Professional Services" class="support-block-type-6">  
+	<div class="container">
+  <div class="grid-uniform">
+   
+      <div class="support-blk-section support-block-wrapper">
+        
+           {% if section.settings.title != blank %}
+    <div class="border-title wow fadeInDown animated {{ section.settings.title_position }}">
+      {% if section.settings.title != blank %}
+      <h3 class="service-title" style="color:{{ section.settings.title_color }};">    
+        {{ section.settings.title }}
+      </h3>
+      {% endif %} 
+            {% if section.settings.description != blank %} <p style="color:{{ section.settings.desc_color }}" >{{ section.settings.description }}</p>{% endif %}  
+
+    </div>
+    {% endif %}
+        
+        
+        <ul class="support_block" {% if section.settings.background_color != blank %} style=" background-color:{{section.settings.background_color}}{% endif %}"> 
+         
+          {% if section.blocks.size > 0 %}      
+          {% for block in section.blocks %}
+           {%- assign block_width = 'wide--one-third post-large--one-third large--one-half small-grid__item' -%}
+          <li class="grid__item {{ block_width }} wow fadeInUp"  data-wow-delay="{{ settings.time_lazy_load }}ms">
+
+            <div class="support_section own-services" >  
+              <div class="service-wrapper-type" style="{% if section.settings.background_color_block != blank %} background-color:{{section.settings.background_color_block}}{% endif %}">
+
+                {% if block.settings.title != blank  %}  
+                <div class="support_icon " >    
+                <i class="{{ block.settings.class }}" style="color:{{ block.settings.class_color }}"></i>
+                </div>
+                {% endif %}   
+                <div class="support_text"> 
+                  {% if block.settings.title != blank  %}  
+                  <h4 style="color:{{ block.settings.title_color }};">{{ block.settings.title }}</h4>
+                  {% endif %} 
+                  {% if block.settings.desc != blank  %}  
+                  <span style="color:{{ block.settings.desc_color }};">{{ block.settings.desc }}</span>
+                  {% endif %}  
+
+                </div>  
+                 <a href="{{ block.settings.link }}" >{{ block.settings.link_text }}</a>
+              </div>
+
+            </div>    
+          </li>  
+          {% endfor %}
+          {% endif %}
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="dt-sc-hr-invisible-large"></div>
+
+
+</div>
+
+
+
+{% schema %}
+{
+"name": "Support Block",
+"class": "index-section",
+"max_blocks":12,
+"settings": [
+{
+"type": "header",
+"content": "General Color"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default": "New arrivals"
+},	
+{
+"type":"select",
+"id":"title_position",
+"label":"Heading position",
+"default":"text-center",
+"options":[
+{"value":"text-left","label":"Text Left"},
+{"value":"text-right","label":"Text Right"},
+{"value":"text-center","label":"Text Center"}
+]
+},
+{
+"type": "color",
+"id": "title_color",
+"label": "Heading Color",
+"default": "#000"
+},
+{
+"type": "textarea",
+"id": "description",
+"label": "Description"
+},
+{
+"type": "color",
+"id": "desc_color",
+"label": "Description color",
+"default": "#000"
+},
+{
+"type": "color",
+"id": "background_color",
+"label": "Description color"
+},
+{
+"type": "color",
+"id": "background_color_block",
+"label": "Block content color",
+"default":"#fff"
+}
+
+],
+"blocks": [
+{
+"type": "text",
+"name": "Support Block",
+"settings": [ 
+{
+"type":"text",
+"id":"class",
+"label":"Icon"
+},
+{
+"type": "color",
+"id": "class_color",
+"label": "Icon color",
+"default":"#000"
+},
+
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default":"Heading"
+},
+{
+"type": "url",
+"id": "link",
+"label": "Link URL"
+},
+{
+"type": "text",
+"id": "link_text",
+"label": "Link text",
+"default":"Read more"
+},
+{
+"type": "color",
+"id": "title_color",
+"label": "Color",
+"default":"#000"
+},
+{
+"type": "text",
+"id": "desc",
+"label": "Description",
+"default":"Description"
+},
+
+{
+"type": "color",
+"id": "desc_color",
+"label": "Color",
+"default":"#696969"
+}     
+
+]
+}
+],
+"presets": [
+{
+"name": "Our Professional Services",
+"category": "Text",
+"blocks": [
+{
+"type": "text"
+},
+{
+"type": "text"
+},
+{
+"type": "text"
+},
+{
+"type": "text"
+}
+
+
+]
+}
+]
+}
+{% endschema %}

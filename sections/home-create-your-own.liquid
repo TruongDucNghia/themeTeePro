@@ -1,0 +1,309 @@
+<div data-section-id="{{ section.id }}"  data-section-type="create-your-own" class="create-your-own">
+ <div class="container">
+  {%- assign collection = collections[section.settings.collection] -%}
+  {%- assign limit = section.settings.grid | times: section.settings.rows -%}  
+  {%- assign tp = section.settings.total_products  -%}
+  
+  <div class="full_width_tab load-wrapper">       
+  
+    
+    {% if section.settings.alignment == 'right' or  section.settings.alignment == 'left' %} 
+    {%- assign grid_mid_width = 'wide--six-tenths post-large--six-tenths  medium--grid__item small-grid__item' -%}
+    {% else %}
+    {%- assign grid_mid_width = ' ' -%}
+    {% endif%}     
+
+    <div class="grid-uniform">
+      {% if section.settings.alignment == 'left' %}
+      {% if section.settings.show_image  %}
+      <div class="grid__item wide--four-tenths post-large--four-tenths  medium--grid__item small-grid__item left block-left">      
+        <div class="create-your-own_items">
+          <a href="{{ section.settings.link }}">
+            {% if section.settings.image != blank %}
+            <img src="{{ section.settings.image  | img_url:'master'}}"  alt="{{ section.settings.title }}"/>    
+            {% else %}
+             <img src="//via.placeholder.com/340x550">
+            {% endif%}      
+            
+          </a>
+       
+
+          
+        </div>
+      </div>
+      {% endif %}
+      {% endif %}
+        {% if section.settings.alignment == 'right' %}
+      {% if section.settings.show_image %}
+      <div class="grid__item wide--four-tenths post-large--four-tenths  medium--grid__item small-grid__item right block-right">      
+        <div class="create-your-own_items">
+          <a href="{{ section.settings.link }}">
+            {% if section.settings.image != blank %}
+            <img src="{{ section.settings.image  | img_url:'master'}}"  alt="{{ section.settings.title }}"/>    
+            {% else %}
+            <img src="//via.placeholder.com/340x550">
+            {% endif%} 
+
+          </a>
+        </div>
+      </div>
+      {% endif %}
+      {% endif %}
+      <div class="grid__item   {% if section.settings.show_image %} {{grid_mid_width }} {% endif %} create_block ">              
+        <div class="support-blk-section">
+           
+      {% if section.settings.title != blank %}
+    <div class="border-title wow fadeInDown animated {{ section.settings.title_position }}">
+      {% if section.settings.title != blank %}
+      <h3 class="service-title" style="color:{{ section.settings.title_color }};">    
+        {{ section.settings.title }}
+      </h3>
+      {% endif %} 
+            {% if section.settings.description != blank %} <p style="color:{{ section.settings.desc_color }}" >{{ section.settings.description }}</p>{% endif %}  
+
+    </div>
+    {% endif %}
+        <ul class="support_block" >         
+          {% if section.blocks.size > 0 %}      
+          {% for block in section.blocks  %}
+          {% case section.blocks.size %}
+          {% when 1 %}
+          {%- assign block_width = 'one-whole text-center' -%}
+          {% when 2 %}
+          {%- assign block_width = 'wide--one-half post-large--one-half large--one-half medium--one-half small-grid__item' -%}
+          {% when 3 %}
+          {%- assign block_width = 'wide--one-third post-large--one-third large--one-third medium--one-half small-grid__item' -%}
+          {% when 4 %}
+          {%- assign block_width = 'wide--one-half post-large--one-half large--one-half medium--one-half small-grid__item' -%}
+          {% endcase %}
+          <li class="grid__item {{ block_width }} wow fadeInUp"  data-wow-delay="{{ settings.time_lazy_load }}ms">
+
+            <div class="support_section service_support" >  
+              <div class="support-wrapper " >
+                 {% if block.settings.title != blank  %}  
+<!--  {% if block.settings.image != blank %}
+                <img  src="{{ block.settings.image | img_url:'master' }}"  alt="">
+            {% else %}
+                {{ 'collection-2' |placeholder_svg_tag }}
+            {% endif %}      
+                 -->
+                <div class="support_icon" style="background:{{ block.settings.background_class }}">    
+                <i class="{{ block.settings.class }}" style="color:{{ block.settings.class_color }}"></i>
+                </div>
+                <div class="support_text create-text"> 
+                  {% if block.settings.title != blank  %}  
+                  <h5 style="color:{{ block.settings.title_color }};">{{ block.settings.title }}</h5>
+                  {% endif %} 
+                  {% if block.settings.desc != blank  %}  
+                  <p style="color:{{ block.settings.desc_color }};" class="desc">{{ block.settings.desc }}</p>
+                  {% endif %}                       
+  				 {% endif %}  
+                </div>   
+              </div>
+
+            </div>    
+          </li>  
+          {% endfor %}
+          {% endif %}
+        </ul>
+      </div>
+      </div>
+    
+    </div>
+  </div>
+  </div>
+</div>  
+
+<div class="dt-sc-hr-invisible-large"></div> 
+
+{% schema %}
+{
+"name": "Product and advertisement",
+"class": "index-section",
+"settings": [  
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default": "Create your own"
+},
+{
+"type":"select",
+"id":"title_position",
+"label":"Heading position",
+"default":"text-center",
+"options":[
+{"value":"text-left","label":"Text Left"},
+{"value":"text-right","label":"Text Right"},
+{"value":"text-center","label":"Text Center"}
+]
+},
+{
+"type": "color",
+"id": "title_clr",
+"label": "Title Color",
+"default":"#000"
+},
+{
+"type": "text",
+"id": "description",
+"label": "Description",
+"default":"You can create any product with your signature. It will make your beloved people supprising"
+},
+{
+"type": "color",
+"id": "desc_color",
+"label": "Description color",
+"default": "#696969"
+},
+{
+"type": "checkbox",
+"id": "show_image",
+"label": "Show Image",
+"default": true
+},
+{
+"type": "image_picker",
+"id": "image",
+"label": "Image",
+"info": "Size: 474x759"
+},	
+
+{
+"type": "url",
+"id": "link",
+"label": "Link Url"	  
+},
+{
+"type": "select",
+"id": "alignment",
+"label": "Alignment",
+"default": "left",
+"options": [
+{
+"value": "left",
+"label": "Left"
+},
+{
+"value": "right",
+"label": "Right"
+},
+{
+"value": "none",
+"label": "None"
+} 
+
+]
+}
+
+],
+"blocks": [
+{
+"type": "text",
+"name": "Support Block",
+"settings": [ 
+
+
+{
+"type":"image_picker",
+"id":"image",
+"label":"Image"
+},
+{
+"type":"text",
+"id":"class",
+"label":"Icon"
+},
+{
+"type": "color",
+"id": "class_color",
+"label": "Icon color",
+"default":"#000"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Heading"          
+},
+{
+"type": "color",
+"id": "background_class",
+"label": "Icon background color",
+"default":"#f3f3f3"
+},
+
+
+{
+"type": "color",
+"id": "title_color",
+"label": "Color",
+"default":"#696969"
+},
+{
+"type": "text",
+"id": "desc",
+"label": "Description"          
+},
+
+{
+"type": "color",
+"id": "desc_color",
+"label": "Color",
+"default":"#696969"
+},
+{
+"type": "text",
+"id": "link",
+"label": "Link"          
+}      
+]
+}
+],
+"presets": [
+{
+"name": "Create your own",
+"category": "Support",
+"blocks": [
+{
+"type": "text",
+"settings":{
+ "class":"teepro-svg-icon-choose-location",
+"title":"Heading",
+"desc":"Lorem ipsum dolor sit amet consectetur adipiscing elit"
+}
+},
+{
+"type": "text",
+"settings":{
+ "class":"teepro-svg-icon-select-product",
+"title":"Heading",
+"desc":"Lorem ipsum dolor sit amet consectetur adipiscing elit"
+}
+},
+{
+"type": "text",
+"settings":{
+ "class":"teepro-svg-icon-add-design",
+"title":"Heading",
+"desc":"Lorem ipsum dolor sit amet consectetur adipiscing elit"
+}
+},
+{
+"type": "text",
+"settings":{
+ "class":"teepro-svg-icon-checkout",
+"title":"Heading",
+"desc":"Lorem ipsum dolor sit amet consectetur adipiscing elit"
+}
+}
+
+
+]
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+

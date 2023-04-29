@@ -1,0 +1,51 @@
+<div class="container">
+<div class="search-products col-main">
+  {% assign grid_results = false %}
+  {% assign respond_js_secret_key = shop.domain | md5 %}
+  {% unless search.terms == respond_js_secret_key %}
+
+  {% if search.performed %}
+  {% paginate search.results by 12 %}
+  {% if search.results_count == 0 %}
+  <h1 class="text--left h2" style="width:100%;">{{ 'general.search.no_results_html' | t: terms: search.terms }}</h1>
+  {% include 'search-bar' %}
+  {% else %}
+  <h1 class="h2 text--left" style="width:100%;">{{ 'general.search.results_for_html' | t: terms: search.terms }}</h1>
+  {% include 'search-bar' %}
+  {% if grid_results == false %}
+  <div class="products-grid-view">
+    <ul>
+      <div class="grid-uniform">
+        {% for item in search.results %}
+        {% assign product = item %}        
+        {% include 'product-grid-item',  grid_item_width: "wide--one-quarter post-large--one-third large--one-half medium--one-half small-grid__item" %}
+        {% endfor %}
+      </div>
+    </ul>
+  </div>
+  {% else %}
+  <div class="grid-uniform">    
+    {% for item in search.results %}    
+    {% assign product = item %}        
+    {% include 'product-grid-item',  grid_item_width: "wide--one-quarter post-large--one-third large--one-half medium--one-half small-grid__item" %}    
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% endif %}
+  {% if paginate.pages > 1 %}
+  <div class="text-center">
+    {% include 'pagination-default' %}
+  </div>
+  {% endif %}
+  {% endpaginate %}
+  <div class="dt-sc-hr-invisible-large"></div>
+  {% else %}
+  <h1 class="h2 left" style="width:100%;">{{ 'general.search.title' | t }}</h1>
+  {% include 'search-bar' %}
+  {% endif %}
+  {% else %}
+  {% include 'respond' %}
+  {% layout none %}
+  {% endunless %}
+</div>
+</div>

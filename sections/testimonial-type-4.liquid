@@ -1,0 +1,255 @@
+<div data-section-id="{{ section.id }}"  data-section-type="testimonial-type-4" class="testimonial-type-4">
+  <div class="grid-uniform testimonial-block" style="float:left;width:100%;">
+
+    <div class="container">
+
+
+      {% if section.settings.title != blank %}
+    <div class="border-title wow fadeInDown animated {{ section.settings.title_position }}">
+      {% if section.settings.title != blank %}
+      <h3 class="service-title" style="color:{{ section.settings.title_color }};">    
+        {{ section.settings.title }}
+      </h3>
+      {% endif %} 
+            {% if section.settings.description != blank %} <p style="color:{{ section.settings.desc_color }}" >{{ section.settings.description }}</p>{% endif %}  
+
+    </div>
+    {% endif %}
+
+    
+        <div class="testimonial-car-4 owl-carousel owl-theme">
+          {% if section.blocks.size > 0 %}  
+          {% for block in section.blocks %}
+          <div class="wow fadeInUp"> 
+            <div class="testimonial-block">
+  
+              <div class="authorimg">
+                {% if  block.settings.image_1 != blank %}
+                <img src="{{  block.settings.image_1 | img_url: "1920X" }}" alt="{{  block.settings.author_name }}" />
+                {% else %}
+                <img src="//via.placeholder.com/500x500">
+                {% endif %} 
+              </div>
+               
+	{% if block.settings.text_desc != blank %}
+              
+              <div class="vc-content-nameposition">
+                 {% if block.settings.author_name != blank %}
+  <h5 style="color:{{block.settings.author_color }}">{{ block.settings.author_name }}</h5>
+                  {% endif %} 
+                <p class="client-position"><span style="color:{{block.settings.image_1_heading_color }}">{{ block.settings.image_1_heading }}</span></p>
+                <p class="description" style="color:{{block.settings.des_color }}">{{ block.settings.text_desc }}</p>
+              {% endif %} 
+            
+              </div>
+            </div>
+          </div>
+          {% endfor %}         
+          {% endif %}   
+        </div>
+        <div class="testimonial-navigation"></div>
+    
+    </div>    
+  </div>
+  <div class="dt-sc-hr-invisible-large"></div>
+</div>
+
+<style>
+    .testimonial-type-4 .owl-theme .owl-nav {
+	left: 385px;
+	bottom: 45px;
+	top: auto;
+	background-color: transparent;
+	opacity: 1;
+	width: auto;
+	display: flex;
+	align-items: center;
+	position: absolute;
+    background: none;
+	}
+    .testimonial-type-4 .owl-nav [class*=owl-] {
+	background: none;
+	}
+     .testimonial-type-4 .owl-nav  .owl-next {
+		border-left: 2px solid grey;
+		border-radius: 0;
+		padding-left: 15px;
+	}
+  
+  @media (max-width:767px){
+     .testimonial-type-4 .owl-theme .owl-nav {
+       position:unset; 
+     }
+    .testimonial-type-4 .owl-nav {
+		position: unset;
+	}
+	.testimonial-type-4 .authorimg {
+		text-align: center;
+	}
+  }
+  
+</style>
+
+
+
+
+{% schema %}
+{
+"name": "Testimonials 18",
+"settings": [
+{
+"type": "color",
+"id": "background_color",
+"label":"Bckground color",
+"default": "#FFF"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default": "We love my client"
+},	
+{
+"type":"select",
+"id":"title_position",
+"label":"Heading position",
+"default":"text-center",
+"options":[
+{"value":"text-left","label":"Text Left"},
+{"value":"text-right","label":"Text Right"},
+{"value":"text-center","label":"Text Center"}
+]
+},
+{
+"type": "color",
+"id": "title_clr",
+"label": "Title Color",
+"default":"#000"
+},
+{
+"type": "textarea",
+"id": "description",
+"label": "Description",
+"default":"<p>Our valued customers’ feedback is the measure of our success. We’re honored to serve what<br> may be the world’s most discerning clientele.</p>"
+},
+{
+"type": "color",
+"id": "desc_color",
+"label": "Description color",
+"default": "#000"
+}
+],
+"blocks": [
+{
+"type": "Testimonial",
+"name": "Testimonial",
+"settings": [
+
+
+{
+"type": "textarea",
+"id": "text_desc",
+"label": "Description",
+"default":"lorem ipsum dolor sit amet consectetur adipiscing elit"
+},
+{
+"type": "color",
+"id": "des_color",
+"label": "Description Color",
+"default":"#000"
+},
+{
+"type": "image_picker",
+"id": "image_1",
+"label": "Image",
+"info": "Size: 180x180"
+},
+{
+"type": "text",
+"id": "author_name",
+"label": "author name",
+"default":"John Web"
+},
+{
+"type": "text",
+"id": "image_1_heading",
+"label": "Designation",
+"default":"Web Designer"
+},
+{
+"type": "color",
+"id": "image_1_heading_color",
+"label": "Designation",
+"default":"#696969"
+},
+{
+"type": "color",
+"id": "author_color",
+"label": "Author Color",
+"default":"#000"
+}
+]
+}
+],
+
+"presets": [
+{
+"name": "Testimonials type 4",
+"category": "Testimonial",
+"blocks": [
+{
+"type": "Testimonial"
+},
+{
+"type": "Testimonial"
+},
+{
+"type": "Testimonial"
+}
+
+]
+}
+]
+}
+
+{% endschema %}
+
+{% stylesheet %}
+
+
+
+ 
+
+{% endstylesheet %}
+
+
+{% javascript %}
+$(document).ready(function(){
+var testimonialtype18 = $(".testimonial-car-4");
+testimonialtype18.owlCarousel({
+items:1,
+loop:true,      
+dots: false, 
+nav:true,
+//navContainer: ".testimonial-navigation",
+ navText: ['<a class="prev"><i class="zmdi zmdi-long-arrow-left"></i></a>','<a class="next"><i class="zmdi zmdi-long-arrow-right"></i></a>'],
+autoplay: false,
+autoplayTimeout: 3000,
+responsive:{
+0:{
+items: 1
+},
+600:{
+items:1
+},
+700:{
+items:1
+},
+
+1000:{
+items: 1
+}
+}
+});
+});
+{% endjavascript %}

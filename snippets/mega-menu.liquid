@@ -1,0 +1,147 @@
+<div class="site-nav-dropdown">     
+ <div class="container   {{ block_style }}"> 
+      <div class="col-1 parent-mega-menu">        
+        {% for l in linklists[main_linklist].links %}
+        <div class="inner col-xs-12{% if banner_first_style != blank or banner_second_style != blank or banner_third_style or featured_product %} col-sm-4{% else %} col{% endif %}">
+          <!-- Menu level 2 -->
+   
+          <a  href="{{ l.url }}" class="{%if linklists[link.handle] != empty %}menu__moblie {% endif %}">
+            {{ l.title }} 
+            {% if block_style == "style_4" %}
+            {% assign compare = l.title | handleize %}
+            {% for collection in collections %}
+            {% if collection.handle ==  compare %} 
+       		{% if collection.image.src != blank %}
+          	{{ collection.image.src | collection_img_url: 'medium' | img_tag: collection_title }}      		
+            {% endif %}
+          {% endif %}
+            {% endfor %}
+            {% endif %}
+          </a>
+       
+          {% if linklists[l.handle] != empty %}
+          <ul class="dropdown">
+            {% for child_l in linklists[l.handle].links %}
+            <!-- Menu level 3 -->
+            <li>
+              <a href="{{ child_l.url }}">
+                {{ child_l.title }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+        {% endfor %}
+     </div>
+      {% if block_style == "style_1" %}
+      {% if banner_first_style != blank or banner_second_style != blank %}
+      <div class="col-2">
+       
+        {% if banner_first_style != blank %}
+       
+          <a href="{{ link_banner_first_style }}" title="">
+            <img src="{{ banner_first_style | img_url : "2000x" }}" alt="" />
+          </a>
+       
+        {% endif %}
+        {% if banner_second_style != blank %}
+      
+          <a href="{{ link_banner_second_style }}" title="">
+            <img src="{{ banner_second_style | img_url : "2000x" }}" alt="" />
+          </a>
+      
+        {% endif %}
+      </div>
+      {% endif %}
+      {% elsif block_style == "style_2" %}
+      {% if banner_first_style != blank or banner_second_style != blank or banner_third_style != blank %}
+      <div class="col-2">
+        {% if banner_second_style != blank or banner_third_style != blank %}
+        <div class="col-left col-sm-6">
+          <a href="{{ link_banner_second_style }}" title="">
+            <img src="{{ banner_second_style | img_url : "2000x" }}" alt="" />
+          </a>
+          <a href="{{ link_banner_third_style }}" title="">
+            <img src="{{ banner_third_style | img_url : "2000x" }}" alt="" />
+          </a>
+        </div>
+        {% endif %}
+        {% if banner_first_style != blank %}
+        <div class="col-right col-sm-6">
+          <a href="{{ link_banner_first_style }}" title="">
+            <img src="{{ banner_first_style | img_url : "2000x" }}" alt="" />
+          </a>
+        </div>
+        {% endif %}    
+
+      </div>
+      {% endif %}
+      {% elsif block_style == "style_3" %}
+      {% if banner_first_style != blank or banner_second_style != blank  %}      
+      <div class="col-wide">
+         <div class="bottom_left"> 
+           <div class="textwidget custom-html-widget">
+            <strong class="about_title">{{ banner_second_style }}</strong>
+  {{banner_four_style}}
+             
+<a class="about_readmore" href="{{link_banner_third_style  }}">  {{ banner_third_style }}</a>
+          </div>
+           
+           
+           
+           
+        </div>
+            {% if banner_first_style != blank %}
+        <div class="bottom_right">           
+          <a href="{{ link_banner_first_style }}">
+            <img src="{{ banner_first_style | img_url : "2000x" }}"  class="image-map" />
+          </a>
+        </div>
+              {% endif %}
+      
+        </div>
+
+      {% endif %}
+   		{% elsif block_style == "style_6" %}
+       {% if banner_first_style != blank or banner_second_style != blank  %}      
+      <div class="col-wide">
+        {% if banner_first_style != blank %}
+        <div class="bottom_left">          
+          <a href="{{ link_banner_first_style }}">
+            <img src="{{ banner_first_style | img_url : "2000x" }}"  class="image-map" />
+          </a>
+        </div>
+        {% endif %}
+      
+        <div class="bottom_right">          
+          
+            {{banner_four_style}}  
+        </div>
+   </div>
+      {% endif %}
+   
+   
+      {% elsif block_style == "style_5" %}      
+      {% if banner_first_style != blank or banner_second_style != blank  %}      
+      <div class="col-wide">
+        {% if banner_first_style != blank %}
+        <div class="bottom_left">          
+          <a href="{{ link_banner_first_style }}" title="">
+            <img src="{{ banner_first_style | img_url : "2000x" }}" alt="" />
+          </a>
+        </div>
+        {% endif %}
+        {% if banner_first_style != blank %}
+        <div class="bottom_right">          
+          <a href="{{ link_banner_second_style }}" title="">
+            <img src="{{ banner_second_style | img_url : "2000x" }}" alt="" />
+          </a>
+        </div>
+        {% endif %}
+        
+      </div>      
+      {% endif %}
+      {% endif %}
+    </div>
+</div>

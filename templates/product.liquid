@@ -1,0 +1,267 @@
+{% if settings.product_page_sidebar == "left_sidebar" or  settings.product_page_sidebar == "right_sidebar" %}
+{% assign mid_width = "grid__item wide--seven-tenths post-large--seven-tenths large--seven-tenths side_bar" %}
+{% else %}
+{% assign mid_width = "full-width" %}
+{% endif %}
+
+{% if settings.product_page_sidebar == "left_thumb" %}
+{% assign mid_width = "grid__item wide--seven-tenths post-large--seven-tenths large--seven-tenths side_bar  left_thumb" %}
+{% endif %}
+{% if settings.product_page_sidebar == "inside_thumb"  %}
+{% assign mid_width = " grid__item wide--seven-tenths post-large--seven-tenths large--seven-tenths side_bar inside_thumb" %}
+{% endif %}
+{% if settings.product_page_sidebar == "right_layout"  %}
+{% assign mid_width = "grid__item wide--seven-tenths post-large--seven-tenths large--seven-tenths side_bar right_layout" %}
+{% endif %}
+
+
+
+
+
+<div class="container">
+    {% if settings.product_page_sidebar == "left_sidebar" %}
+<div class="grid__item wide--three-tenths   post-large--three-tenths   large--three-tenths ">
+     {% include 'product-sidebar' %}
+</div>
+{% endif %}
+
+
+ {% if settings.product_page_sidebar == "right_sidebar" or  settings.product_page_sidebar == "inside_thumb" %}
+   <div class="grid__item wide--three-tenths   post-large--three-tenths   large--three-tenths  right_sidebar">
+      {% include 'product-sidebar' %}
+</div>
+{% endif %}
+<div class="{{ mid_width }} ">
+
+<div itemscope itemtype="http://schema.org/Product" class="single-product-layout-type-1"> 
+  <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
+  <meta itemprop="image" content="{{ product.featured_image.src | img_url: 'grande' }}">
+  <div class="product-single">
+
+    <div class="grid__item wide--one-half post-large--one-half large--one-half product-img-box">
+       {% if product.images.size == 0 %}
+          <div class="product-photo-container">
+            <img src="{{ '' | product_img_url: 'grande' }}" alt="">
+          </div>
+          {% else %}
+          <div class="product-photo-container">
+            {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
+            <a href="{{ featured_image | img_url: 'master' }}" >
+              <img id="product-featured-image" src="{{ featured_image | img_url: 'grande' }}" alt="{{ featured_image.alt | escape }}" data-zoom-image="{{ featured_image.src | img_url: 'master' }}"/>
+            </a>            
+          </div>
+      
+          {% if product.images.size > 0 %}
+          <div class="more-view-wrapper {% if product.images.size == 1 %} hidden {% endif %}  ">
+            <ul id="ProductThumbs" class="product-photo-thumbs   slider-product">
+              {% for image in product.images %}
+              <li class="grid-item">
+                <a href="javascript:void(0)" data-image="{{ image.src | product_img_url: 'grande' }}" data-zoom-image="{{ image.src | product_img_url: 'grande' }}">
+                  <img  src="{{ image.src | product_img_url: 'medium' }}" alt="{{ image.alt | escape }}">
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+             <div class="single-page-owl-carousel"></div>
+          </div>
+          {% endif %}
+      {%- if product.metafields.product.video -%}
+            <div class="p-video">
+              <a href="{{ product.metafields.product.video }}" class="jas-popup-url" data-effect="mfp-move-from-top"><i class="fa fa-video-camera" aria-hidden="true"></i> {{ 'products.product.video' | t }} </a>     
+            </div>
+            {%- endif -%}
+          {% endif %}
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <script>
+    $(document).ready(function() {
+  // slick carousel
+      {% if settings.product_page_sidebar == "left_thumb" or  settings.product_page_sidebar == "inside_thumb" %}
+      
+  $('.slider-product').slick({
+    dots: false,
+    arrows:true,
+    infinite: false,
+    vertical: true,
+ 
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    verticalSwiping: true,
+  });
+   {% else %}   
+       $('.slider-product').slick({
+    dots: false,
+    arrows:true,
+    vertical: false,
+  
+           infinite: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    verticalSwiping: false,
+  }); 
+      {% endif %}
+});
+      </script>
+      
+    </div>
+
+    <div class="product_single_detail_section grid__item wide--one-half post-large--one-half large--one-half">
+      
+      
+      
+      
+      {%- section 'pr_summary' -%}
+      
+      
+      
+      
+      
+  
+      </div>
+       </div>
+  </div>
+  
+  {% if settings.display_description_type == "accordian"  %}
+  <div class="dt-sc-tabs-container">
+    <ul class="dt-sc-tabs">
+      {% if settings.product_tab1 %}<li><a href="#" id="tab_pr_deskl"> {{ settings.product_tab1_heading }} </a></li>{% endif %} 
+      {% if settings.product_tab2 %}<li><a href="#"> {{ settings.product_tab2_heading }}  </a></li>{% endif %}
+      {% if settings.product_tab3 %}<li><a href="#"> {{ settings.product_tab3_heading }}  </a></li>{% endif %}
+    </ul>
+    {% if settings.product_tab1 %}
+    <div class="dt-sc-tabs-content" id="desc_pro">
+      <p>{{ product.description }}</p>
+    </div>
+    {% endif %}
+    {% if settings.product_tab2 %}
+    <div class="dt-sc-tabs-content">
+      <div class="commentlist">
+        <div class="comment-text">
+          <div class="rating-review">
+           <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% if settings.product_tab3 %}
+    <div class="dt-sc-tabs-content">
+       <p>{{ pages[settings.product_tab3_page].content }}</p>
+    </div>
+    {% endif %}               
+  </div>
+{% endif %}
+  
+   {% if  settings.display_description_type == "horizant" %}
+  
+       <div class="dt-sc-toggle-frame-set"  id="tab_pr_deskl">
+          <h5 class="dt-sc-toggle-accordion "><a href="#">	{{ settings.product_tab1_heading }}</a></h5>
+          <div class="dt-sc-toggle-content">
+            <div class="dt-sc-block">
+             
+      <div class="product-tabs-content-inner clearfix"> 
+        {% assign des = product.description | split:'[/countdown]' | last %}  
+        {{ des | split: '[lang2]' | first }}
+    </div>
+            </div>
+          </div>    
+         
+         <h5 class="dt-sc-toggle-accordion "><a href="#">	 {{ settings.product_tab2_heading }}</a></h5>
+          <div class="dt-sc-toggle-content">
+            <div class="dt-sc-block">
+               <div class="product-tabs-content-inner clearfix">
+     <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>      </div>
+            </div>
+          </div>        
+         
+         
+         <h5 class="dt-sc-toggle-accordion "><a href="#">{{ settings.product_tab3_heading }}</a></h5>
+          <div class="dt-sc-toggle-content">
+            <div class="dt-sc-block">
+               <div class="product-tabs-content-inner clearfix">
+     <p>{{ pages[settings.product_tab3_page].content }}</p>   </div>
+            </div>
+          </div>   
+  </div>
+  
+
+{% endif %}
+  
+
+  {% if settings.product_related_enable %}        
+  {% include 'related-products' %}
+  {% endif %}
+  <div class="dt-sc-hr-invisible-large"></div>
+  {% if settings.display_recently_viewed_products %} 
+  {% include 'recently-viewed-products' %}
+  {% endif %}
+</div>
+
+</div>
+ {{ 'option_selection.js' | shopify_asset_url | script_tag }}
+<script>
+  var selectCallback = function(variant, selector) {
+    timber.productPage({
+      money_format: "{{ shop.money_format }}",
+      variant: variant,
+      selector: selector,
+      translations: {
+      add_to_cart : "{{ 'products.product.add_to_cart' | t }}",
+      sold_out : "{{ 'products.product.sold_out' | t }}",
+      unavailable : "{{ 'products.product.unavailable' | t }}"
+    }
+  });
+  };
+
+  jQuery(function($) {
+    new Shopify.OptionSelectors('productSelect', {
+      product: {{ product | json }},
+      onVariantSelected: selectCallback,
+      enableHistoryState: true
+    });
+
+
+    {% if settings.enable_linked_option %}
+    {% if product.available and product.options.size > 1 %}
+    Shopify.linkOptionSelectors({{ product | json }});
+    {% endif %}
+    {% endif %}
+
+    // Add label if only one product option and it isn't 'Title'. Could be 'Size'.
+    {% if product.options.size == 1 and product.options.first != 'Title' %}
+    $('.selector-wrapper:eq(0)').prepend('<label for="productSelect-option-0">{{ product.options.first | escape }}</label>');
+	{% endif %}
+     // Hide selectors if we only have 1 variant and its title contains 'Default'.
+     {% if product.variants.size == 1 and product.variants.first.title contains 'Default' %}
+     $('.selector-wrapper').hide();
+     $('.selector-wrapper-secton').hide();
+    {% endif %}
+    
+    // Auto-select first available variant on page load. Otherwise the product looks sold out.
+    {% assign found_one_in_stock = false %}
+    {% for variant in product.variants %}
+    {% if variant.available and found_one_in_stock == false %}
+    {% assign found_one_in_stock = true %}
+    {% for option in product.options %}
+    $('.single-option-selector:eq({{ forloop.index0 }})').val({{ variant.options[forloop.index0] | json }}).trigger('change');
+    {% endfor %}
+    {% endif %}
+    {% endfor %}
+    
+    
+    $('.product-single .single-option-selector').wrap('<div class="selector-arrow">');
+    
+    
+                         
+  });  
+    
+    
+</script>

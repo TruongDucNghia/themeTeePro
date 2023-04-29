@@ -1,0 +1,5 @@
+
+  
+  <!-- Printcart Design Tool -->
+  <script>var printcart_server='https://printcart.com', product_id="{{product.id}}", product_name="{{product.title}}", shop_domain="{{shop.permanent_domain}}", shop_url="{{shop.url}}", current_url=document.location, cart_items=[], customer_id="{{customer.id}}", template_url="", order_name="{{order.order_number}}", order_items=[], printcart_product_id=0;{%- for item in cart.items -%}cart_items.push("{{item.product.id}}");{%- endfor -%}{% if order %}{%- for product in order.line_items -%}order_items.push("{{product.product_id}}");{%- endfor -%}{% endif %}</script> <script src="https://unpkg.com/axios/dist/axios.min.js"></script></script> <script src="https://printcart-shopify-cdn.s3.amazonaws.com/main.js"></script> <link rel="stylesheet" type="text/css" href="https://printcart-shopify-cdn.s3.amazonaws.com/style.css">
+  <!-- End Printcart Design Tool -->

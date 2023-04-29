@@ -1,0 +1,152 @@
+<div data-section-id="{{ section.id }}"  data-section-type="support-block-8" class="support-block-8" style="background:{{ section.settings.bg_color }};padding: 40px 0;float:left;width:100%;">  
+
+
+   
+      <div class="support-blk-section">
+       
+        
+        <ul class="support_block"> 
+          <div class="container">
+          {% if section.blocks.size > 0 %}      
+          {% for block in section.blocks %}
+          {% case section.blocks.size %}
+          {% when 1 %}
+          {%- assign block_width = 'one-whole text-center' -%}
+          {% when 2 %}
+          {%- assign block_width = 'wide--one-half post-large--one-half large--one-half medium--one-half small-grid__item' -%}
+          {% when 3 %}
+          {%- assign block_width = 'wide--one-third post-large--one-third large--one-third medium--one-half small-grid__item' -%}
+          {% when 4 %}
+          {%- assign block_width = 'wide--one-quarter post-large--one-quarter large--one-half medium--one-half small-grid__item' -%}
+          {% endcase %}
+          <div class="grid__item {{ block_width }}">
+
+            <div class="support_section" >  
+              <div class="support-wrapper" >
+
+            
+                <div class="support_icon">    
+                  <i class="{{ block.settings.class }}" style="color:{{ block.settings.class_color }}"></i>
+  
+               </div>
+               
+                <div class="support_text text-left">  
+                  <h5 style="color:{{ block.settings.title_color }};">{{ block.settings.link_text }}</h5>           
+                  {% if block.settings.desc != blank  %}  
+                  <span style="color:{{ block.settings.desc_color }};">{{ block.settings.desc }}</span>
+                  {% endif %}   
+                </div>   
+              </div>
+
+            </div>    
+          </div>  
+          {% endfor %}
+          {% endif %}
+          </div>
+        </ul>
+      </div>
+</div>
+
+
+
+{% schema %}
+{
+"name": "Support Block",
+"class": "index-section",
+"max_blocks":12,
+"settings": [
+{
+"type": "header",
+"content": "General Settings"
+},
+{
+"type": "color",
+"id": "bg_color",
+"label": "Bg",
+"default":"#F3F3F3"
+}
+
+
+],
+"blocks": [
+{
+"type": "text",
+"name": "Support Block",
+"settings": [ 
+
+
+{
+"type":"text",
+"id":"class",
+"label":"Icon"
+},
+{
+"type": "color",
+"id": "class_color",
+"label": "Icon color",
+"default":"#000"
+},
+{
+"type": "text",
+"id": "link_text",
+"label": "Link text",
+"default":"Read more"
+},
+{
+"type": "color",
+"id": "title_color",
+"label": "Color",
+"default":"#000"
+},
+{
+"type": "text",
+"id": "desc",
+"label": "Description",
+"default":"Description"
+},
+
+{
+"type": "color",
+"id": "desc_color",
+"label": "Color",
+"default":"#696969"
+} 
+]
+}
+],
+"presets": [
+{
+"name": "Support Block Type 1",
+"category": "Support",
+"blocks": [
+{
+"type": "text",
+"settings":{
+ "class":"teepro-svg-icon-rocket-ship",
+"link_text":"FREE SHIPPING",
+"desc":"Design On order over $99"
+}
+},
+{
+"type": "text",
+"settings":{
+ "class":"teepro-svg-icon-hours-support",
+"link_text":"ORDER ONLINE",
+"desc":"Easy 24/7 online ordering"
+}
+},
+{
+"type": "text",
+"settings":{
+ "class":"teepro-svg-icon-money-bag",
+"link_text":"SHOP AND SAVE",
+"desc":"For all special & heart"
+}
+}
+
+
+]
+}
+]
+}
+{% endschema %}

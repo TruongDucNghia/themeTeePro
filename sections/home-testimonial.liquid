@@ -1,0 +1,331 @@
+<div data-section-id="{{ section.id }}"  data-section-type="home-testimonial" class="support-block-type-7">  
+ 
+  <div class="container">
+      {% if section.settings.title != blank %}
+    <div class="border-title wow fadeInDown animated {{ section.settings.title_position }}">
+      {% if section.settings.title != blank %}
+      <h3 class="service-title" style="color:{{ section.settings.title_color }};">    
+        {{ section.settings.title }}
+      </h3>
+      {% endif %} 
+            {% if section.settings.description != blank %} <p style="color:{{ section.settings.desc_color }}" >{{ section.settings.description }}</p>{% endif %}  
+
+    </div>
+    {% endif %}
+  
+      <div class="support-blk-section">
+        
+          
+        
+         <div class="grid__item wide--one-third post-large--one-third large--one-whole medium--one-whole small--grid__item small--text-center  wow fadeInUp animated">
+      
+        	
+			{% for block in section.blocks %}
+              {% case block.type %}
+              {% when 'text' %}
+         
+        
+            	<div class="support-block" style="{% if block.settings.background_color_block != blank %} background-color:{{block.settings.background_color_block}}{% endif %}">
+
+                {% if block.settings.title != blank  %}  
+                <div class="support_icon icon-block" >    
+                <i class="{{ block.settings.class }}" style="color:{{ block.settings.class_color }}"></i>
+                </div>
+                {% endif %}   
+                <div class="support_text"> 
+                  {% if block.settings.title != blank  %}  
+                  <h5 style="color:{{ block.settings.title_color }};">{{ block.settings.title }}</h5>
+                  {% endif %} 
+                  {% if block.settings.desc != blank  %}  
+                  <p style="color:{{ block.settings.desc_color }};" class="desc">{{ block.settings.desc }}</p>
+                  {% endif %}                       
+                </div>   
+              </div>
+                {% endcase %}
+            {% endfor %}
+              
+        
+       
+       
+      </div>
+      
+         
+        
+        <div class="grid__item wide--one-third post-large--one-third large--one-whole medium--one-whole small--grid__item small--text-center center-section wow fadeInUp animated">
+         {% for block in section.blocks %}
+              {% case block.type %}
+              {% when 'Image' %}
+          <div class="ovrly31 overlay_1 img-hover-effect">
+       
+            <a class="banner_half_img">
+           
+          {% if block.settings.image_1 != blank %}
+          <img src="{{ block.settings.image_1 | img_url: '1920X' }}"  />
+          <div class="ovrly"></div>
+          {% else %}
+          <img src="//via.placeholder.com/360x420">
+          {% endif%}           
+         </a>
+
+         
+        
+        </div>
+           {% endcase %}
+          {% endfor %}
+      </div>  
+      
+        
+         <div class="grid__item wide--one-third post-large--one-third large--one-whole medium--one-whole small--grid__item small--text-center  wow fadeInUp animated">
+
+  {% if section.blocks.size > 0 %}    
+ 
+
+        <div id="logo-brand" class="client-car2">
+          {% for block in section.blocks %}
+        
+              {% case block.type %}
+              {% when 'Brand' %}
+          
+          {% if block.settings.client_img != blank %}
+          <div class="item">
+            <a href="{{ block.settings.client_link }}"> <img src="{{ block.settings.client_img | img_url: "250x250"  }}"  /></a>
+          </div>
+          {% else %}          
+          <div class="item"><a href="#">{{'logo' | placeholder_svg_tag: 'placeholder-svg'   }}</a></div>
+          {% endif %} 
+           {% endcase %}
+          {% endfor %}
+        </div>
+  
+ 
+  {% endif %} 
+        </div>
+      </div>
+    </div>
+ 
+  <div class="dt-sc-hr-invisible-s-medium"></div>
+
+
+</div>
+
+
+{% schema %}
+{
+"name": "Image and Logo",
+"class": "index-section",
+"max_blocks":12,
+"settings": [
+{
+"type": "header",
+"content": "General Setting"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Heading"
+},	
+{
+"type":"select",
+"id":"title_position",
+"label":"Heading position",
+"default":"text-center",
+"options":[
+{"value":"text-left","label":"Text Left"},
+{"value":"text-right","label":"Text Right"},
+{"value":"text-center","label":"Text Center"}
+]
+},
+{
+"type": "color",
+"id": "title_color",
+"label": "Heading Color",
+"default": "#000"
+},
+
+{
+"type": "textarea",
+"id": "description",
+"label": "Description"
+},
+{
+"type": "color",
+"id": "desc_color",
+"label": "Description color",
+"default": "#696969"
+}
+],
+"blocks": [
+{
+"type": "Brand",
+"name":"Brand",
+"settings": [
+{
+"type": "image_picker",
+"id": "client_img",
+"label": "Image",
+"info": "Size: 250x110"
+},
+
+{
+"type": "url",
+"id": "client_link",
+"label": "Link URL"
+}
+
+]
+},
+
+{
+"type": "Image",
+"name":"Image",
+"limit": 1,
+"settings": [
+{
+"type": "image_picker",
+"id": "image_1",
+"label": "Image",
+"info": "Size: 250x110"
+}
+]
+},
+
+
+{
+"type": "text",
+"name": "Text",
+"limit": 3,
+"settings": [ 
+
+{
+"type": "color",
+"id": "background_color_block",
+"label": "background block",
+"default": "#c8dbc5"
+},
+{
+"type":"text",
+"id":"class",
+"label":"Icon"
+},
+{
+"type": "color",
+"id": "class_color",
+"label": "Icon color",
+"default":"#000"
+},
+
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default":"Heading"
+},
+{
+"type": "color",
+"id": "title_color",
+"label": "Color",
+"default":"#000"
+},
+{
+"type": "text",
+"id": "desc",
+"label": "Description",
+"default":"Description"
+},
+
+{
+"type": "color",
+"id": "desc_color",
+"label": "Color",
+"default":"#000"
+}     
+
+]
+}
+
+
+ 
+],
+"presets": [
+{
+"name": "Block tPro",
+"category": "Testaminial",
+"blocks": [
+{
+"type": "text",
+"settings":{
+ "class":"teepro-svg-icon-rocket-ship",
+"background_color_block":"#c8dbc5",
+"title":"Heading",
+"desc":"Lorem ipsum dolor sit amet consectetur adipiscing elit"
+}
+},
+{
+"type": "text",
+"settings":{
+ "class":"teepro-svg-icon-hours-support",
+"background_color_block":"#d5dbf6",
+"title":"Heading",
+"desc":"Lorem ipsum dolor sit amet consectetur adipiscing elit"
+}
+},
+{
+"type": "text",
+"settings":{
+ "class":"teepro-svg-icon-money-bag",
+"background_color_block":"#ffeaf0",
+"title":"Heading",
+"desc":"Lorem ipsum dolor sit amet consectetur adipiscing elit"
+}
+},
+{
+"type": "Image"
+},
+{
+"type": "Brand"
+},
+{
+"type": "Brand"
+},
+{
+"type": "Brand"
+},
+{
+"type": "Brand"
+}
+
+
+]
+}
+]
+}
+{% endschema %}
+
+
+
+{% javascript %}
+$(document).ready(function(){
+
+$("#logo-brand").slick({
+				rows: 3,
+		dots: true,
+		infinite: true,
+		autoplay:true,
+		speed: 3000,
+		slidesToShow: 2,
+		slidesToScroll: 2,
+ responsive: [
+   
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+
+  ]
+});
+
+});
+{% endjavascript %}

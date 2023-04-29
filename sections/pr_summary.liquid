@@ -1,0 +1,428 @@
+
+{%- for block in section.blocks -%}
+   {%- case block.type -%}
+
+      {%- when 'title' -%}
+        <h2 itemprop="name" class="product-single__title" style="font-size: {{block.settings.size}}px" >{{ product.title }}</h2>
+
+
+  {%- when 'review' -%}
+       <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span><span class="separated-line"> | </span>
+<span><a href="#tab_pr_deskl" class="add-review">Add your review</a></span>
+<script>
+       $(".add-review").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#tab_pr_deskl").offset().top
+    }, 1000);
+});
+</script>
+      {%- when 'price' -%}
+
+        <div class="product_single_price">
+        <div class="product_price">          
+          <div class="grid-link__org_price" id="ProductPrice">
+            <span>{{ product.price | money }}</span>
+          </div>
+        </div>
+        {% if product.compare_at_price > product.price %}
+        <del class="grid-link__sale_price" id="ComparePrice">
+          <span>{{ product.compare_at_price | money }}</span></del>
+        {% endif %}
+      </div>
+
+
+      {%- when 'des' -%}
+        <div class="product-description rte">
+           {%- assign _length = block.settings.length -%}
+           {%- assign length = _length | default: 31 | plus:0 -%}
+           <p>
+           {%- if product.metafields.meta.description_excerpt -%}
+            {{- product.metafields.meta.description_excerpt -}}
+          {% elsif product.description contains  '[' %}
+            {% assign pr_des = product.description | split: '[' %}
+            {% assign pr_des = pr_des[1] | split: ']' | first | append:']' | prepend:'[' %}
+            {{- product.description | remove: pr_des | strip_html | truncatewords: length -}}
+          {%-else-%}
+            {{- product.description | strip_html | truncatewords: length -}}
+          {%-endif-%}
+          {%- if block.settings.readm %}<a class="readm_sp_kl" href="#tab_pr_deskl"> {{block.settings.readm_txt}}</a>{% endif -%}
+           </p>
+        </div>
+        
+		
+
+     {%- when 'frm' -%}
+         <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+        {% assign variant = product.selected_or_first_available_variant %}
+        <meta itemprop="priceCurrency" content="{{ shop.currency }}">
+        <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
+        
+    
+                
+        {% form 'product', product, id: "AddToCartForm", class: "product-form" %}
+           {% assign hide_default_title = false %}
+            {% if product.variants.size == 1 and product.variants.first.title contains 'Default' %}
+            {% assign hide_default_title = true %}
+            {% endif %}           
+          
+          <div class="selector-wrapper-secton"  {% if hide_default_title %} style="display:none;"{% endif %}>           
+            {% if settings.enable_color_swatch %}                       
+            {% for option in product.options %}
+            {% include 'swatch' with option %}
+            {% endfor %}
+            {% endif %}              
+            <select name="id" id="productSelect" class="{% if hide_default_title %} product-single__variants {% endif %}" >
+              {% for variant in product.variants %}
+              <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">{{ variant.title }}</option>
+              {% endfor %}
+            </select>
+            </div> 
+           <div class="product-selected">
+          <div class="product-single__quantity {% unless settings.product_quantity_enable %} hide {% endunless %}">
+            <div class="quantity-box-section">
+             
+              {% include 'qty' %}
+            </div>
+          </div>
+        
+            <button type="submit" name="add" id="AddToCart" class="btn">
+         <span id="AddToCartText">{{ 'products.product.add_to_cart' | t }}</span>
+            </button>
+           </div>
+     {% if settings.payment_button %}
+        {{ form | payment_button }}
+        {% endif %}
+        {% endform %}
+      
+	
+           
+
+      </div>
+    {%- when 'wishlist-compare' -%}
+ <div class="product-action">
+{% if settings.enable_compare %}
+<div class="add-to-compare">     
+      <a href="#" class="compare action-home4 add-in-wishlist-js btn" data-pid="{{ product.handle  }}" title="" data-original-title="Compare product">  <i class="icons-compare"></i><span class="tooltip-label">{{ 'products.product.compare_products' | t }}</span></a>
+ </div>
+    {% endif %}
+{% if settings.enable_wishlist %}
+      {% include 'wishlist-product' %}
+      {% endif %}
+</div> 
+           
+ 
+
+
+
+
+      {%- when 'meta' -%}
+   {% assign variant = product.selected_or_first_available_variant %}
+   {%- assign ck_meta = false -%}
+         <div class="product-infor">
+     
+               {%- if block.settings.show_pr_vendor and product.vendor != blank -%} {%- assign ck_meta = true -%}
+          <p class="product-vendor">
+            <label>{{ 'products.product.product_vendor' | t }}</label>
+            <span>{{ product.vendor }}</span>
+          </p>
+          {%- endif -%}
+	    {%- if block.settings.show_sku -%}      
+          <p class="product-vendor">
+            <label>Sku</label>
+            <span>{% if product.selected_or_first_available_variant.sku != blank %} {{ product.selected_or_first_available_variant.sku }}   {% else %}
+              N/A
+              {% endif %}
+              
+            </span>
+          </p>
+{%- endif -%}
+ {%- if product.collections.size > 0 and block.settings.show_category_product -%} {%- assign ck_meta = true -%}
+            <p class="product-vendor">
+          <label>Categories:  </label>
+        <span>  {% for collection in product.collections -%}{{ collection.title | link_to: collection.url }}{%- if forloop.last == false -%}, {% endif -%}{%- endfor -%}</span>
+           </p>
+              {%- endif -%}
+ {%- if product.tags.size > 0 and block.settings.show_tag_product and product.collections.size > 0 -%} {%- assign ck_meta = true -%}
+ <p class="product-vendor">
+           <label>Tags:</label>
+<span>
+           {% for tag in product.tags -%}
+           <a href="{%- if collection != blank -%}{{ collection.url }}{%- else -%}{{ product.collections.first.url }}{%- endif -%}/{{ tag | handle }}">{{ tag | remove:'type ' | remove:'Type ' }}</a>{%- unless forloop.last -%}, {% endunless -%}
+           {%- endfor -%}
+          {%- endif -%}
+</span>
+           </p>
+           
+             <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+     
+       
+      
+        
+          {% if settings.display_availability %}
+          <p class="product-inventory" id="product-inventory">
+            <label>{{ 'products.product.availability' | t  }}  </label>              
+            <span>
+              {% if product.selected_or_first_available_variant.inventory_management %}
+              {% assign first_inventory = product.selected_or_first_available_variant.inventory_quantity %}
+              {% if first_inventory > 0 %}
+              {{first_inventory}} {{ 'products.product.in_stock' | t }}
+              {% else %}
+              {{ 'products.product.out_of_stock' | t }}
+              {% endif %}
+              {% else %}
+              {{ 'products.product.many_in_stock' | t }}
+              {% endif %}
+            </span>
+          </p>
+             
+        {% endif %}
+          </div>
+          
+ 
+      
+   
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+      {%- when 'social' -%}
+           {% if settings.social_sharing_products %}     
+      <div class="share_this_btn">
+   {% include 'addthis' %}
+      {% endif %}
+         
+  
+     
+   
+ 
+   
+
+      {%- when 'countdown' -%}
+        {% if settings.count_down_enable and settings.count_down_collections %}
+      {% assign dealTime = settings.home_productdeal_time | split: ' ' | join: ' ' | split: ' ' %}
+      {% include 'deal-snippet' %}
+      {% endif %}    
+        
+
+
+
+      {%- when 'html' -%}
+        {%- if block.settings.page == blank -%}{%- continue -%}{%- endif -%}
+        <div class="custom_{{block.id}}">{{pages[block.settings.page].content}}</div>
+
+      {%- when 'text' -%}
+        {%- if block.settings.text == blank -%}{%- continue -%}{%- endif -%}
+        <div class="richtext_{{block.id}}">{{block.settings.text}}</div>
+
+     
+     
+
+   {%- endcase -%}
+{%- endfor -%}
+
+{%- schema -%}
+  {
+    "name": "Product summary",
+    "class": "summary entry-summary mt__30 theiaStickySidebar",
+    "max_blocks": 30,
+    "blocks": [
+      {
+        "type": "title",
+        "name": "Product Title",
+        "limit": 1,
+        "settings": [
+            {
+              "type": "range",
+              "id": "size",
+              "min": 10,
+              "max": 60,
+              "step": 1,
+              "label": "Font size",
+              "unit": "px",
+              "default": 16
+            }
+        ]
+      },
+      {
+        "type": "price",
+        "name": "Product Price",
+        "limit": 1
+        
+      },
+          {
+        "type": "review",
+        "name": "Product  Review",
+        "limit": 1,
+         "settings": [
+     
+          {
+           "type": "checkbox",
+           "id": "rating",
+           "label": "Use Rating?",
+           "default": true
+          }
+        ]
+      },
+      {
+        "type": "des",
+        "name": "Short description",
+        "limit": 1,
+        "settings": [
+        {
+          "type": "range",
+          "id": "length",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "label": "Excerpt length (integer)",
+          "info": "Number of words that will be displayed for each product content if you use 'Excerpt' mode and don't set custom excerpt for each product content.",
+          "default": 31
+        },
+        {
+         "type": "checkbox",
+         "id": "readm",
+         "label": "Use Read more?",
+         "default": false
+        },
+        {
+         "type": "text",
+         "id": "readm_txt",
+         "label": "Read more title",
+         "default": "Read more"
+        }
+        ]
+      },
+      {
+        "type": "frm",
+        "name": "Product Form",
+        "limit": 1
+      },
+ 
+      {
+        "type": "meta",
+        "name": "Product meta",
+        "limit": 1,
+        "settings": [
+         {
+           "type": "checkbox",
+           "id": "show_pr_vendor",
+           "label": "Show Product vendors",
+           "default": true
+         },
+         {
+           "type": "checkbox",
+           "id": "show_sku",
+           "label": "Show Sku?",
+           "default": true
+         },
+         {
+           "type": "checkbox",
+           "id": "show_available",
+           "label": "Show Available?",
+           "default": true
+         },
+         {
+           "type": "checkbox",
+           "id": "show_category_product",
+           "label": "Show Category product?",
+           "default": true
+         },
+         {
+           "type": "checkbox",
+           "id": "show_tag_product",
+           "label": "Show product's tags?",
+           "default": true
+         }
+        ]
+      },
+      {
+        "type": "social",
+        "name": "Product social",
+        "limit": 1,
+        "settings": [
+         {
+           "type": "select",
+           "id": "class",
+           "label": "social align",
+           "default": "tc",
+           "options": [
+             {
+               "value": "tdf",
+               "label": "Default"
+             },
+             {
+               "value": "tc",
+               "label": "Center"
+             }
+           ]
+         }
+         ]
+      },
+      {
+        "type": "countdown",
+        "name": "Countdown Timer",
+        "limit": 1
+      },
+      {
+        "type": "stock",
+        "name": " Inventory Quantity",
+        "limit": 1
+      },
+      {
+        "type": "img",
+        "name": "Trust Badge",
+        "limit": 1
+      },
+      {
+        "type": "time",
+        "name": "Live view",
+        "limit": 1
+      },
+
+ 
+      {
+        "type": "text",
+        "name": "Text",
+        "settings": [
+            {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+            }
+         ]
+      },
+          {
+        "type": "wishlist-compare",
+        "name": "Wishlist",
+        "limit":1
+        
+      },
+      {
+        "type": "html",
+        "name": "Custom HTML",
+        "settings": [
+          {
+            "type": "page",
+            "id": "page",
+            "label": "Content page"
+          }
+        ]
+      }
+   ],
+    "default": {
+      "blocks": [
+        { "type": "title" },{ "type": "review" },{ "type": "wishlist-compare" },{ "type": "price" },{ "type": "stock" },{ "type": "des" },{ "type": "frm" },{ "type": "meta" },{ "type": "social" }
+      ]
+    }
+  }
+{% endschema %}

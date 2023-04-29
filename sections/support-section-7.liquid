@@ -1,0 +1,189 @@
+<div data-section-id="{{ section.id }}"  data-section-type="support-block-type-7" class="support-block-type-7">  
+
+  <div class="grid-uniform">
+    <div class="container">
+      <div class="support-blk-section">
+        
+           {% if section.settings.title != blank %}
+    <div class="border-title wow fadeInDown animated {{ section.settings.title_position }}">
+      {% if section.settings.description != blank %} <h5 style="color:{{ section.settings.desc_color }}"  class="small-title">{{ section.settings.description }}</h5>{% endif %}  
+      {% if section.settings.title != blank %}
+      <p class="section-header__title" style="color:{{ section.settings.title_color }};">    
+        {{ section.settings.title }}
+      </p>
+      {% endif %}      
+    </div>
+    {% endif %}
+        
+        
+        <ul class="support_block" >         
+          {% if section.blocks.size > 0 %}      
+          {% for block in section.blocks %}
+         
+          <li class="grid__item wide--one-third post-large--one-third large--one-third medium--one-half small-grid__item wow fadeInUp"  data-wow-delay="{{ settings.time_lazy_load }}ms">
+
+            <div class="support_section" >  
+              <div class="support-wrapper" style="">
+
+                {% if block.settings.title != blank  %}  
+                <div class="support_icon" style="">    
+                  
+       {% if block.settings.image != blank %}
+                <img  src="{{ block.settings.image | img_url:'master' }}"  alt="">
+            {% else %}
+                {{ 'collection-2' |placeholder_svg_tag }}
+            {% endif %}      
+                  
+                  <a href="{{ block.settings.link }}" >{{ block.settings.link_text }}</a>
+                </div>
+                {% endif %}   
+                <div class="support_text"> 
+                  {% if block.settings.title != blank  %}  
+                  <h4 style="color:{{ block.settings.title_color }};">{{ block.settings.title }}</h4>
+                  {% endif %} 
+                  {% if block.settings.desc != blank  %}  
+                  <p style="color:{{ block.settings.desc_color }};" class="desc">{{ block.settings.desc }}</p>
+                  {% endif %}                       
+                </div>   
+              </div>
+
+            </div>    
+          </li>  
+          {% endfor %}
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="dt-sc-hr-invisible-large"></div>
+
+
+</div>
+
+
+{% schema %}
+{
+"name": "Support Block",
+"class": "index-section",
+"max_blocks":12,
+"settings": [
+{
+"type": "header",
+"content": "General Color"
+},
+
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default": "New arrivals"
+},
+{
+"type":"select",
+"id":"title_position",
+"label":"Heading position",
+"default":"text-center",
+"options":[
+{"value":"text-left","label":"Text Left"},
+{"value":"text-right","label":"Text Right"},
+{"value":"text-center","label":"Text Center"}
+]
+},
+{
+"type": "color",
+"id": "title_color",
+"label": "Heading Color",
+"default": "#000"
+},
+{
+"type": "textarea",
+"id": "description",
+"label": "Description"
+},
+{
+"type": "color",
+"id": "desc_color",
+"label": "Description color",
+"default": "#000"
+}
+
+
+
+],
+"blocks": [
+{
+"type": "text",
+"name": "Support Block",
+"settings": [ 
+
+
+{
+"type":"image_picker",
+"id":"image",
+"label":"Image"
+},
+
+{
+"type": "color",
+"id": "class_color",
+"label": "Icon color",
+"default":"#000"
+},
+{
+"type": "url",
+"id": "link",
+"label": "Link URL"
+},
+{
+"type": "text",
+"id": "link_text",
+"label": "Link text",
+"default":"Read more"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default":"Heading"
+},
+{
+"type": "color",
+"id": "title_color",
+"label": "Color",
+"default":"#000"
+},
+{
+"type": "text",
+"id": "desc",
+"label": "Description",
+"default":"Description"
+},
+
+{
+"type": "color",
+"id": "desc_color",
+"label": "Color",
+"default":"#000"
+}     
+
+]
+}
+],
+"presets": [
+{
+"name": "Support Block type 2",
+"category": "Support",
+"blocks": [
+{
+"type": "text"
+},
+{
+"type": "text"
+}
+
+
+]
+}
+]
+}
+{% endschema %}

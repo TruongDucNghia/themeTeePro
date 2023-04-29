@@ -1,0 +1,247 @@
+<div data-section-id="{{ section.id }}"  data-section-type="testimonial-type-18" class="testimonial-type-18">
+  <div class="grid-uniform testimonial-block " style="float:left;width:100%;position:relative;">
+
+    <div class="testimonial-overlay"></div>
+    <div class="container">
+
+ {% if section.settings.title != blank %}
+    <div class="border-title wow fadeInDown animated {{ section.settings.title_position }}">
+    
+      <h3 class="service-title" style="color:{{ section.settings.title_color }};">    
+        {{ section.settings.title }}
+      </h3>
+ 
+            {% if section.settings.description != blank %} <p style="color:{{ section.settings.desc_color }}" >{{ section.settings.description }}</p>{% endif %}  
+
+    </div>
+    {% endif %}
+
+      <div class="grid__item" style="position:relative;">
+        <div class="testimonial-car-18  owl-carousel owl-theme">
+          {% if section.blocks.size > 0 %}  
+          {% for block in section.blocks %}
+          <div class="grid__item wow fadeInUp"> 
+            <div class="testimonial-block">
+
+
+              {% if block.settings.text_desc != blank %}
+              <blockquote>
+
+                <p style="color:{{block.settings.des_color }}">{{ block.settings.text_desc }}</p>
+
+              </blockquote>
+     
+              {% endif %} 
+
+          
+
+              <div class="vc-avatar-testimonial">
+
+                                            <div class="vc-avatar-img">
+                          {% if  block.settings.image_1 != blank %}
+                <img class="image-avatar" src="{{  block.settings.image_1 | img_url: "1920X" }}" alt="{{  block.settings.author_name }}" />
+                {% else %}
+                <img src="//via.placeholder.com/500x500">
+                {% endif %} 
+                                         </div>
+                                            <div class="name-position">
+                                                {% if block.settings.author_name != blank %}
+              <div class="author-description">  
+                <h5 style="color:{{block.settings.author_color }}" class="client-name" >{{ block.settings.author_name }}</h4>
+
+                {% if block.settings.image_1_heading != blank %}
+                <p style="color:{{block.settings.image_1_heading_color }}" class="client-position">{{ block.settings.image_1_heading }}</p>
+                {% endif %}
+              </div>
+              {% endif %}
+                                            </div>
+                                        </div>
+              
+              
+            </div>
+          </div>
+          {% endfor %}         
+          {% endif %}   
+        </div>
+        <div class="testimonial-navigation"></div>
+      </div>
+    </div>    
+  </div>
+  <div class="dt-sc-hr-invisible-large"></div>
+</div>
+<style>
+    .testimonial-type-18 .grid__item .testimonial-block {
+    padding: 15px 15px 0;
+    border: 1px solid transparent;
+    transition: 0.3s linear;
+    background-image: url({{ section.settings.bg_img | img_url: '1920X'  }});
+    padding: 45px 30px;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+</style>
+{% schema %}
+{
+"name": "Testimonials 18",
+"settings": [
+{
+"type": "image_picker",
+"id": "bg_img",
+"label": "Background block",
+"info": "Size: 1920x1217"
+
+},
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default": "Shop By Category"
+},
+{
+"type":"select",
+"id":"title_position",
+"label":"Heading position",
+"default":"text-center",
+"options":[
+{"value":"text-left","label":"Text Left"},
+{"value":"text-right","label":"Text Right"},
+{"value":"text-center","label":"Text Center"}
+]
+},
+{
+"type": "color",
+"id": "title_color",
+"label": "Heading Color",
+"default": "#000"
+},
+
+{
+"type": "textarea",
+"id": "description",
+"label": "Description",
+"default":"Shopping for t-shirts is fun and easy with Teepro. Browse our amazing selection of t-shirt designs and find one that fits your personality or create your own t-shirt design from scratch."
+},
+{
+"type": "color",
+"id": "desc_color",
+"label": "Description color",
+"default": "#696969"
+}
+
+],
+"blocks": [
+{
+"type": "Testimonial",
+"name": "Testimonial",
+"settings": [
+
+
+{
+"type": "textarea",
+"id": "text_desc",
+"label": "Description",
+"default":"This PSD is so well organised - the best Ive ever downloaded from here. The ideas are also really fresh and  new great work"
+},
+{
+"type": "color",
+"id": "des_color",
+"label": "Description Color",
+"default":"#000"
+},
+{
+"type": "image_picker",
+"id": "image_1",
+"label": "Image",
+"info": "Size: 180x180"
+},
+{
+"type": "text",
+"id": "author_name",
+"label": "author name",
+"default":"JOHN WEB"
+},
+{
+"type": "text",
+"id": "image_1_heading",
+"label": "Designation",
+"default":"Web Designer"
+},
+{
+"type": "color",
+"id": "author_color",
+"label": "Author Color",
+"default":"#000"
+},
+{
+"type": "color",
+"id": "image_1_heading_color",
+"label": "Designation",
+"default":"#696969"
+}
+]
+}
+],
+
+"presets": [
+{
+"name": "Testimonials with Background",
+"category": "Testimonial",
+"blocks": [
+{
+"type": "Testimonial"
+},
+{
+"type": "Testimonial"
+},
+{
+"type": "Testimonial"
+}
+
+]
+}
+]
+}
+
+{% endschema %}
+
+{% stylesheet %}
+
+
+
+
+
+{% endstylesheet %}
+
+
+{% javascript %}
+$(document).ready(function(){
+var testimonialtype18 = $(".testimonial-car-18");
+testimonialtype18.owlCarousel({
+items:1,
+loop:true,      
+dots: true, 
+nav:true,
+ margin:10,
+//navContainer: ".testimonial-navigation",
+//  navText: ['<a class="prev btn"><i class="icon-arrow-left" ></i></a>','<a class="next btn"><i class="icon-arrow-right" ></i></a>'],
+//autoplay: true,
+//autoplayTimeout: 3000,
+responsive:{
+0:{
+items: 1
+},
+600:{
+items:1
+},
+700:{
+items:1
+},
+
+1000:{
+items: 3
+}
+}
+});
+});
+{% endjavascript %}

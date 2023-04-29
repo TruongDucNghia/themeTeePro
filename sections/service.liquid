@@ -1,0 +1,423 @@
+{% if section.settings.service == "left_sidebar" or  section.settings.service == "right_sidebar" %}
+{% assign mid_width = "grid__item wide--seven-tenths post-large--three-quarters large--three-quarters" %}
+{% else %}
+{% assign mid_width = "grid__item" %}
+{% endif %}
+<div class="nb-page-title-wrap bg_title_post_category bg_img" style="{% if section.settings.background_color_wrapper != blank %}  background-image:url({{ section.settings.background_color_wrapper | img_url: '1920X'  }}){% endif %}">
+
+    <div class="nb-page-title">
+      <h1 style="font-size: {{section.settings.size}}px"  >{{section.settings.heading }}</h1>
+    </div>
+
+</div>
+  
+<div class="dt-sc-hr-invisible-medium"></div>
+<div class="service-type container ">
+    <div class="wrapper">
+  <div class="blog-section ">
+     {% if section.settings.service == "left_sidebar" %}
+    <aside class="sidebar left-sidebar grid__item wide--three-tenths post-large--one-quarter large--one-quarter">
+      <div class="product_sidebar">  
+     <div data-section-id="{{ section.id }}"  data-section-type="Sidebar-category">  
+    {%- assign sidebar_linklist = section.settings.linkedlist -%}
+
+    {% if section.settings.enable_sidecategory %} 
+    <div class="widget widget_product_categories">
+      {% if section.settings.linkedlist_title != blank %}
+      <h4>
+        {{ section.settings.linkedlist_title }}
+      </h4>  
+      {% endif %}
+      {% if linklists[sidebar_linklist].links.size > 0 %}
+      <ul class="product-categories dt-sc-toggle-frame-set">
+        {% for link in linklists[sidebar_linklist].links %}
+        {% assign child_list_handle = link.title | handle %}             
+        {% if linklists[child_list_handle] and linklists[child_list_handle].links.size > 0 %}
+        <li class="cat-item cat-item-39 cat-parent first">
+          <i></i>
+          <a class="{% if link.active %}active{% endif %}" href="{{ link.url }}">{{ link.title | escape }}</a> <span class="dt-sc-toggle"></span>
+
+          {% if linklists[child_list_handle].links.size > 0 %}        
+          <ul class="children dt-sc-toggle-content ">
+            {% for child_link in linklists[link.handle].links %}
+              {% assign sub_sub_link_handle = child_link.title | handle %} 
+            <li class="second">
+              <i></i>             
+              <a class="{% if child_link.active %}active{% endif %}" href="{{ child_link.url }}">{{ child_link.title | escape }}</a>
+               {% if linklists[sub_sub_link_handle].links.size > 0 %}<span class="dt-sc-toggle"></span>   {% endif %}
+              {% if linklists[sub_sub_link_handle].links.size > 0 %}    
+              <ul class="third children dt-sc-toggle-content">
+              {% for sub_sub_link in linklists[child_link.handle].links %}
+             <li> <a class="{% if sub_sub_link.active %}active{% endif %}" href="{{ sub_sub_link.url }}">{{ sub_sub_link.title | escape }}</a></li>
+              {% endfor %}
+              </ul>
+              {% else %}
+              {% endif %}
+            
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+        {% else %}
+        <li class="cat-item cat-item-39 cat-parent">
+          <i></i><a class=" {% if link.active %}active{% endif %}" href="{{ link.url }}">{{ link.title | escape }}</a> 
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+      {% endif  %}
+    </div>
+    {% endif %}
+  </div>
+        
+        {%- for block in section.blocks -%}
+   {%- case block.type -%}
+
+    {% when 'html' %}
+             <div class="background-media-text__text" data-aos>
+          {% if block.settings.subtitle != blank %}
+            <div class="subheading appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ block.settings.subtitle }}</div>
+          {% endif %}
+          {% if block.settings.title != blank %}
+            <h2 class="h1 appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ block.settings.title | escape }}</h2>
+          {% endif %}
+          {% if block.settings.text != blank %}
+            <div class="rte appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ block.settings.text }}</div>
+          {% endif %}
+          {% if block.settings.button_label != blank and block.settings.button_link != blank %}
+            <a href="{{ block.settings.button_link }}" class="btn appear-delay{% cycle '','-1','-2','-3','-4' %}">
+              {{ block.settings.button_label }}
+            </a>
+          {% endif %}
+        </div>
+
+ {% when 'service-info' %}
+    	<div class="service-info">
+            {% if block.settings.service_address != blank or block.settings.service_phone != blank or  block.settings.service_mail != blank %}        
+            <div class="address">
+              {% if block.settings.service_phone != blank %}
+              <p > <i class="fa fa-phone"></i>  {{ block.settings.service_phone }}</p>
+              {% endif %}          
+              {% if block.settings.service_chat!= blank %}
+              <p > <i class="fa fa-comments"></i>{{ block.settings.service_chat }}</p>
+              {% endif %}
+              {% if block.settings.service_mail != blank %}
+              <p><i class="fa fa-envelope-o"></i>{{ block.settings.service_mail }}</p>
+            {% endif %}
+            </div>
+               
+            {% endif %}
+           
+            </div>
+        
+        
+   {%- endcase -%}
+{%- endfor -%}
+        
+        
+      </div>
+    </aside>    
+    {% endif %}
+     <div class="grid__item {{ mid_width }}">    
+        	
+ 		<div class="rte">
+      {{ page.content }}
+    </div>
+
+    </div>    
+    {% if section.settings.service == "right_sidebar" %}
+    <aside class="sidebar right-sidebar grid__item wide--three-tenths post-large--one-quarter large--one-quarter">
+      <div class="product_sidebar">  
+      <div data-section-id="{{ section.id }}"  data-section-type="Sidebar-category">  
+    {%- assign sidebar_linklist = section.settings.linkedlist -%}
+
+    {% if section.settings.enable_sidecategory %} 
+    <div class="widget widget_product_categories">
+      {% if section.settings.linkedlist_title != blank %}
+      <h4>
+        {{ section.settings.linkedlist_title }}
+      </h4>  
+      {% endif %}
+      {% if linklists[sidebar_linklist].links.size > 0 %}
+      <ul class="product-categories dt-sc-toggle-frame-set">
+        {% for link in linklists[sidebar_linklist].links %}
+        {% assign child_list_handle = link.title | handle %}             
+        {% if linklists[child_list_handle] and linklists[child_list_handle].links.size > 0 %}
+        <li class="cat-item cat-item-39 cat-parent first">
+          <i></i>
+          <a class="{% if link.active %}active{% endif %}" href="{{ link.url }}">{{ link.title | escape }}</a> <span class="dt-sc-toggle"></span>
+
+          {% if linklists[child_list_handle].links.size > 0 %}        
+          <ul class="children dt-sc-toggle-content ">
+            {% for child_link in linklists[link.handle].links %}
+              {% assign sub_sub_link_handle = child_link.title | handle %} 
+            <li class="second">
+              <i></i>             
+              <a class="{% if child_link.active %}active{% endif %}" href="{{ child_link.url }}">{{ child_link.title | escape }}</a>
+               {% if linklists[sub_sub_link_handle].links.size > 0 %}<span class="dt-sc-toggle"></span>   {% endif %}
+              {% if linklists[sub_sub_link_handle].links.size > 0 %}    
+              <ul class="third children dt-sc-toggle-content">
+              {% for sub_sub_link in linklists[child_link.handle].links %}
+             <li> <a class="{% if sub_sub_link.active %}active{% endif %}" href="{{ sub_sub_link.url }}">{{ sub_sub_link.title | escape }}</a></li>
+              {% endfor %}
+              </ul>
+              {% else %}
+              {% endif %}
+            
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+        {% else %}
+        <li class="cat-item cat-item-39 cat-parent">
+          <i></i><a class=" {% if link.active %}active{% endif %}" href="{{ link.url }}">{{ link.title | escape }}</a> 
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+      {% endif  %}
+    </div>
+    {% endif %}
+  </div>
+        
+      {%- for block in section.blocks -%}
+   {%- case block.type -%}
+
+      {%- when 'title' -%}
+        <h2 itemprop="name" class="product-single__title" style="font-size: {{block.settings.size}}px" >{{ product.title }}</h2>
+ {% when 'html' %}
+             <div class="background-media-text__text" data-aos>
+<!--           {% if block.settings.subtitle != blank %}
+            <div class="subheading appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ block.settings.subtitle }}</div>
+          {% endif %} -->
+          {% if block.settings.title != blank %}
+            <h2 class="h1 appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ block.settings.title | escape }}</h2>
+          {% endif %}
+          {% if block.settings.text != blank %}
+            <div class="rte appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ block.settings.text }}</div>
+          {% endif %}
+          {% if block.settings.button_label != blank and block.settings.button_link != blank %}
+            <a href="{{ block.settings.button_link }}" class="btn appear-delay{% cycle '','-1','-2','-3','-4' %}">
+              {{ block.settings.button_label }}
+            </a>
+          {% endif %}
+        </div>
+ {% when 'service-info' %}
+    		<div class="service-info">
+            {% if block.settings.service_address != blank or block.settings.service_phone != blank or  block.settings.service_mail != blank %}        
+            <div class="address">
+              {% if block.settings.service_phone != blank %}
+              <p > <i class="fa fa-phone"></i>  {{ block.settings.service_phone }}</p>
+              {% endif %}          
+              {% if block.settings.service_chat!= blank %}
+              <p > <i class="fa fa-comments"></i>{{ block.settings.service_chat }}</p>
+              {% endif %}
+              {% if block.settings.service_mail != blank %}
+              <p><i class="fa fa-envelope-o"></i>{{ block.settings.service_mail }}</p>
+            {% endif %}
+            </div>
+               
+            {% endif %}
+           
+            </div>
+        
+   {%- endcase -%}
+{%- endfor -%}
+        
+        
+      </div>
+    </aside>    
+    {% endif %}
+      </div>
+  </div>
+</div>
+
+
+
+
+{% schema %}
+{
+	"name": "FAQs",
+	"settings": [
+{
+"type": "text",
+"id": "heading",
+"label": "Heading",
+"default":"FAQ"
+},
+ {
+              "type": "range",
+              "id": "size",
+              "min": 10,
+              "max": 60,
+              "step": 1,
+              "label": "Font size",
+              "unit": "px",
+              "default": 24
+            },
+{
+"type": "image_picker",
+"id": "background_color_wrapper",
+"label": "Bg Wrapper",
+"info": "Size: 1920x1217"
+},
+
+{
+"type": "text",
+"id": "faq_heading",
+"label": "Find The Answer",
+"default":"You Find The Answer Here!"
+},
+
+ {
+        "type": "select",
+        "id": "service",
+        "label": "Use sidebar ",
+        "default": "left_sidebar",
+        "options": [
+          {
+            "value": "left_sidebar",
+            "label": "Left Sidebar"
+          },
+          {
+            "value": "right_sidebar",
+            "label": "Right Sidebar"
+          },
+          {
+            "value": "full_width",
+            "label": "Full Width"
+          }
+        ]
+      },
+
+{
+        "type": "checkbox",
+        "id": "enable_sidecategory",
+        "label": "Enable category",
+        "default":false
+      },
+ 	 {
+        "type": "link_list",
+        "id": "linkedlist",
+        "label": "Linklist"
+      },
+ 		{
+        "type": "text",
+        "id": "linkedlist_title",
+        "label": "Heading"
+      } 
+
+],
+  "blocks": [
+      {
+        "type": "title",
+        "name": "Product Title",
+        "limit": 1,
+        "settings": [
+            {
+              "type": "range",
+              "id": "size",
+              "min": 10,
+              "max": 60,
+              "step": 1,
+              "label": "Font size",
+              "unit": "px",
+              "default": 16
+            }
+        ]
+      },
+ 	    {
+        "type": "html",
+        "name": "Html code",
+        "limit": 1,
+       "settings": [
+          {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Subheading"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Large image with text box"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.</p>"
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button label"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button link"
+          }
+        ]
+      },
+ 	  {
+        "type": "service-info",
+        "name": "Service info",
+        "limit": 1,
+        "settings": [
+
+{
+"type": "textarea",
+"id": "service_phone",
+"label": "Phone",
+"default": "3 045 224 48 00"
+},
+{
+"type": "text",
+"id": "service_chat",
+"label": "Chat",
+"default": "Chat with a Specialist"
+},
+{
+"type": "text",
+"id": "service_mail",
+"label": "E-Mail",
+"default": "Send us a Message"
+}
+        ]
+      }
+
+
+   ]
+}
+{% endschema %}
+
+{% javascript %}
+$(document).ready(function(){
+  $(".dt-menu-expand").click(function(event){
+    event.preventDefault();
+    if( $(this).hasClass("dt-mean-clicked") ){
+   $(this).html('<i class="fa fa-plus"></i>');
+      if( $(this).prev('ul').length ) {
+        $(this).prev('ul').slideUp(400);
+      } else {
+        $(this).prev('.megamenu-child-container').find('ul:first').slideUp(600);
+      }
+    } else {
+     $(this).html('<i class="fa fa-minus"></i>');
+      if( $(this).prev('ul').length ) {
+        $(this).prev('ul').slideDown(400);
+      } else{
+        $(this).prev('.megamenu-child-container').find('ul:first').slideDown(2000);
+      }
+    }
+
+    $(this).toggleClass("dt-mean-clicked");
+    return false;
+  });
+
+});
+      
+{% endjavascript %}

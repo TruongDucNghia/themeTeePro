@@ -1,0 +1,323 @@
+<div data-section-id="{{ section.id }}"  data-section-type="home-product-grid-type-5" class="home-product-grid-type-5">     
+  <div class="container">
+   {%- assign limit = section.settings.grid | times: section.settings.rows -%}   
+    <div class="full_width_tab">    
+      <div class="grid-uniform">   
+        <div class="grid__item">      
+              {% if section.settings.alignment == 'right' or  section.settings.alignment == 'left' %} 
+    {%- assign grid_mid_width = 'wide--four-sixths  post-large--four-sixths    medium--grid__item small-grid__item' -%}
+    {% else %}
+    {%- assign grid_mid_width = ' ' -%}
+    {% endif%} 
+
+            {% if section.blocks.size > 0 %} 
+            
+            
+            <div class="dt-sc-tabs-container"> 
+              {% if section.settings.title_1 != blank %}
+            <div class="border-title text-center wow fadeInDown animated {{ section.settings.title_position }}">
+              {% if section.settings.description != blank %} <h5 style="color:{{ section.settings.desc_color }}"  class="small-title">{{ section.settings.description }}</h5>{% endif %}  
+              <h3 class="service-title" style="color:{{ section.settings.title_1_clr }};">{{ section.settings.title_1 }}</h3>
+            </div>
+               
+            {% endif %}
+              <ul class="dt-sc-tabs wow fadeInDown animated" >         
+                {% for block in section.blocks %} 
+                {% if block.settings.title != blank %}
+                <li><a href="#" class="tabs-{{ block.id }}">{{ block.settings.title }} </a></li>           
+                {% endif %}
+                {% endfor %}
+              </ul>   
+           
+              {% for block in section.blocks %}
+              {%- assign collection = collections[block.settings.collection] -%}                 
+              <div class="dt-sc-tabs-content">
+ 			{% if section.settings.alignment == 'left' %}
+      {% if section.settings.show_image  %}
+      <div class="grid__item wide--two-sixths post-large--two-sixths   medium--grid__item small-grid__item left">      
+        <div class="type4__singele_items">
+          <a href="{{ section.settings.link }}">
+            {% if section.settings.image != blank %}
+            <img src="{{ section.settings.image  | img_url:'master'}}"  alt="{{ section.settings.title }}"/>    
+            {% else %}
+             <img src="//via.placeholder.com/340x550">
+            {% endif%}      
+                      </a>
+          
+          
+        </div>
+      </div>
+      {% endif %}
+      {% endif %}
+                  {% if section.settings.alignment == 'right' %}
+      {% if section.settings.show_image %}
+      <div class="grid__item wide--two-sixths post-large--two-sixths   medium--grid__item small-grid__item left">      
+        <div class="type4__singele_items">
+          <a href="{{ section.settings.link }}">
+            {% if section.settings.image != blank %}
+            <img src="{{ section.settings.image  | img_url:'master'}}"  alt="{{ section.settings.title }}"/>    
+            {% else %}
+            <img src="//via.placeholder.com/340x550">
+            {% endif%} 
+                      {% if section.settings.title_banner != blank %}  <h2 style="color:{{ section.settings.title_banner_clr }}">{{ section.settings.title_banner }}</h2>{% endif%}   
+
+          </a>
+        </div>
+      </div>
+      {% endif %}
+      {% endif %}
+             
+                <div class="grid__item{% if section.settings.show_image %} {{grid_mid_width }} {% endif %}  left ">  
+                  
+                  <ul class="banners_wrapper" >
+                  {% case section.settings.grid %}
+            {% when '2' %}
+            {% assign grid_item_width = 'wide--one-half post-large--one-half large--one-half medium--one-half small-grid__item' %}
+            {% when '3' %}
+            {% assign grid_item_width = 'wide--one-third post-large--one-third large--one-third medium--one-third small-grid__item' %}
+            {% when '4' %}
+            {% assign grid_item_width = 'wide--one-quarter post-large--one-quarter large--one-quarter medium--one-half small-grid__item' %}
+            {% when '5' %}
+            {% assign grid_item_width = 'wide--one-fifth post-large--one-fifth large--one-third medium--one-third small-grid__item' %}            
+            {% endcase %}
+                   {% for product in collection.products limit:limit   %}                  
+                  {% include 'home-product-grid-item', grid_item_width: grid_item_width %}     
+                  {% else %}
+                  {% for i in (1..8) %}
+                  <li class="grid__item wide--one-quarter post-large--one-quarter  medium--one-half small-grid__item item-row  on-sale" id="product-{{ i }}">
+                    <div class="products">
+                      <div class="product-container">
+                        <a href="#" class="grid-link"> 
+                          {% if forloop.index == 3 %}
+                          <div class="featured-tag">
+                            <span class="badge badge--sale">
+                              <i class="fa fa-star"></i>
+                              <span class="gift-tag badge__text{% if sale_text.size > 7 %} badge__text--small{% endif %}">{{ 'products.product.sale' | t }}</span>
+                            </span>
+                          </div>{% endif %}
+
+                          <div class="reveal"> 
+                            {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                            {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }} 
+                          </div>
+                        </a>
+                        <div class="ImageWrapper">
+                          <div class="product-button">
+                            <div class="button-row-1">
+                              <a href="#" class="quick-view-text"> 
+                                <i class="zmdi zmdi-eye"></i>
+                              </a>
+                              <a href="{{ product.url }}">                      
+                                <i class="zmdi zmdi-link"></i>
+                              </a>  
+                            </div>
+                            <div class="button-row-2">
+                              <form action="#" method="post" class="variants clearfix" id="cart-form-6529189125">
+                                <input type="hidden" name="id" value="21661289093">
+                                <a href="#" class="add-cart-btn"><i class="zmdi zmdi-shopping-cart"></i> </a>
+                              </form>
+                              <a href="/account/login" class="wishlist"><i class="zmdi zmdi-favorite-outline"></i></a> 
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-detail"> 
+                        <a href="#" class="grid-link__title">Sample title {{ i }}</a>
+
+                        <div class="grid-link__meta">
+                          <div class="product_price"> <span class="money" data-currency-usd="$320.00">$0.00</span> </div>
+                          <del class="grid-link__sale_price"><span class="money" data-currency-usd="$756.00">$0.00</span></del> </div>
+                        <span class="spr-badge" id="spr_badge_6529189125" data-rating="0.0"> 
+                          <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star-empty" style="color: #f05315;"></i><i class="spr-icon spr-icon-star-empty" style="color: #f05315;"></i><i class="spr-icon spr-icon-star-empty" style="color: #f05315;"></i><i class="spr-icon spr-icon-star-empty" style="color: #f05315;"></i><i class="spr-icon spr-icon-star-empty" style="color: #f05315;"></i></span> <span class="spr-badge-caption"> </span> </span>
+
+                      </div>
+                    </div>
+                  </li>
+                  {% endfor %} 
+                  {% endfor %}
+                  </div>
+                </ul>    
+                
+              </div>             
+              {% endfor %}                
+            </div><!--End tabs container-->
+            {% endif %}
+          
+        </div>
+
+      </div>
+  	<style>
+        .home-product-grid-type-5 .full_width_tab ul.dt-sc-tabs  li a { color:{{ section.settings.tag_clr }};padding:0;}
+        .home-product-grid-type-5 .full_width_tab .dt-sc-tabs-content {padding:0; }
+      	.home-product-grid-type-5 .dt-sc-tabs-container .dt-sc-tabs {text-align: right;width: 60%;}
+        .home-product-grid-type-5 .full_width_tab ul.dt-sc-tabs  li a:hover.tabs-{{ block.id }}::before,.product-tab-type-2 .full_width_tab ul.dt-sc-tabs li a:hover.current::before { height:100%; }
+      </style>
+    </div> 
+  </div>
+</div>
+<div class="dt-sc-hr-invisible-large"></div>
+
+{% schema %}
+{
+"name": "Product Tab",
+"class": "index-section",
+"max_blocks": 4,
+"settings": [
+
+{
+"type": "text",
+"id": "title_1",
+"label": "Heading",
+"default":"New Arrival"
+},
+{
+"type":"select",
+"id":"title_position",
+"label":"Heading position",
+"default":"text-center",
+"options":[
+{"value":"text-left","label":"Text Left"},
+{"value":"text-right","label":"Text Right"},
+{"value":"text-center","label":"Text Center"}
+]
+},
+{
+"type": "color",
+"id": "title_1_clr",
+"label": "Heading",
+"default": "#000"
+},        
+	
+{
+"type": "checkbox",
+"id": "show_image",
+"label": "Show Image",
+"default": true
+},
+{
+"type": "image_picker",
+"id": "image",
+"label": "Image",
+"info": "Size: 474x759"
+},	
+{
+"type": "url",
+"id": "link",
+"label": "Link Url"	  
+},
+{
+"type": "select",
+"id": "alignment",
+"label": "Alignment",
+"default": "left",
+"options": [
+{
+"value": "left",
+"label": "Left"
+},
+{
+"value": "right",
+"label": "Right"
+},
+{
+"value": "none",
+"label": "None"
+} 
+
+]
+},
+
+{
+"type": "color",
+"id": "tag_clr",
+"label": "Tag Color",
+"default": "#000"
+},
+{
+      "type": "select",
+      "id": "grid",
+      "label": "Products per row",
+      "default": "3",
+      "options": [
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        }, 
+        {
+          "value": "4",
+          "label": "4"
+        },
+        {
+          "value": "5",
+          "label": "5"
+        }
+      ]
+    },
+{
+        "type": "select",
+        "id": "rows",
+        "label": "Rows per page (grid only)",
+        "default": "2",
+        "options": [
+			{
+            "value": "1",
+            "label": "1"
+          },
+          {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          },
+          {
+            "value": "5",
+            "label": "5"
+          }          
+        ]
+      }
+
+],
+"blocks": [	
+{
+"type": "text_block",
+"name": "Column",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Collection Name",
+"default": "Tab Name"
+},	
+
+{
+"id": "collection",
+"type": "collection",
+"label": "Collection"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Product Tab",
+"category": "Collection",
+"blocks": [
+{
+"type": "text_block"
+}        
+]
+}
+]
+}
+{% endschema %}

@@ -1,0 +1,267 @@
+<div data-section-id="{{ section.id }}"  data-section-type="testimonial-type-18" class="testimonial-type-18">
+  <div class="grid-uniform testimonial-block parallax">
+
+    <div class="testimonial-overlay"></div>
+    <div class="container">
+
+
+    
+
+      <div class="grid__item" style="position:relative;{% if section.settings.bg_img != blank %} background-image:url({{ section.settings.bg_img | img_url: '1920X'  }}){% else %}background-color:{{section.settings.background_color}}{% endif %}; float:left;width:100%;padding:70px 0;">
+         {% if section.settings.title != blank or section.settings.small_title  %}
+      <div class="section-header section-header--small" style="position:relative;">
+        <div class="border-title wow fadeInDown animated">
+          {% endif %}  
+          {% if section.settings.title != blank %}
+          <h2 class="service-title" style="color:{{ section.settings.title_clr }};">    
+            {{ section.settings.title }}
+          </h2>
+          {% endif %}  
+          {% if section.settings.description != blank %} <p style="color:{{ section.settings.desc_color }}">{{ section.settings.description }}</p>{% endif %}  
+          {% if section.settings.small_title != blank %}
+          <div class="short-desc"><p style="color:{{ section.settings.text_clr }};">{{ section.settings.small_title }}</p></div>{% endif %}  
+          {% if section.settings.title != blank or section.settings.small_title  %}
+
+        </div>
+      </div>
+
+      {% endif %}   
+
+        <div class="testimonial-car-3 owl-carousel owl-theme">
+          {% if section.blocks.size > 0 %}  
+          {% for block in section.blocks %}
+          <div class="grid__item wow fadeInUp"> 
+            <div class="testimonial-block">
+  
+              <div class="authorimg">
+                {% if  block.settings.image_1 != blank %}
+                <img src="{{  block.settings.image_1 | img_url: "1920X" }}" alt="{{  block.settings.author_name }}" />
+                {% else %}
+                <img src="//via.placeholder.com/500x500">
+                {% endif %} 
+              </div>
+{% if block.settings.text_desc != blank %}
+              <blockquote>
+
+                <q style="color:{{block.settings.des_color }}">{{ block.settings.text_desc }}</q>
+
+              </blockquote>
+
+              {% endif %} 
+              {% if block.settings.author_name != blank %}
+            
+              <div class="author-desc">  
+               
+  <h6 style="color:{{block.settings.author_color }}">{{ block.settings.author_name }} <span style="color:{{block.settings.image_1_heading_color }}">/{{ block.settings.image_1_heading }}</span></h6>
+                {% if block.settings.image_1_heading != blank %}
+                
+                {% endif %}
+              </div>
+              {% endif %}
+
+            </div>
+          </div>
+          {% endfor %}         
+          {% endif %}   
+        </div>
+        <div class="testimonial-navigation"></div>
+      </div>
+    </div>    
+  </div>
+  <div class="dt-sc-hr-invisible-large"></div>
+</div>
+
+<style>
+
+  {% if section.settings.heading_image_need %} .testimonial-type-18 .testimonial-block .border-title:after {  content:"";background-image:url({{ section.settings.heading_image | img_url: 'master' }});display:inline-block;background-repeat:no-repeat;width:75px;height:34px;} {% endif %}
+
+
+  .testimonial-type-18 .testimonial-block .btn:hover { color: {{ section.settings.hover_btn_text }};opacity:1;}
+
+
+  .testimonial-type-18 .testimonial-block .btn { display: inline-block;background:{{ section.settings.color_bg | color_modify: 'alpha', 1 }};border:none;color: {{ section.settings.color_text }};opacity:0.7;  }
+
+  .testimonial-type-18 .testimonial-block .btn:before {background: {{ section.settings.hover_btn }}; }
+
+  .testimonial-type-18 .testimonial-block .btn:hover,.testimonial-type-18 .testimonial-block .btn:active,.testimonial-block .btn:focus { background-color: {{ section.settings.hover_btn }}; color: {{ settings.hover_btn_text }}; border-color: {{ section.settings.hover_btn }}; }
+	
+  
+</style>
+
+
+
+
+{% schema %}
+{
+"name": "Testimonials 3",
+"settings": [
+
+
+{
+"type": "color",
+"id": "bg_color",
+"label": "Bg",
+"default":"#fff"
+},
+{
+"type": "image_picker",
+"id": "bg_img",
+"label": "Bg",
+"info": "Size: 1920x1217"
+
+},
+{
+"type": "color",
+"id": "background_color",
+"label":"Bckground color",
+"default": "#000"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default": "New arrivals"
+},	
+{
+"type": "color",
+"id": "title_clr",
+"label": "Title Color",
+"default":"#000"
+},
+{
+"type": "textarea",
+"id": "description",
+"label": "Small Heading"
+},
+{
+"type": "color",
+"id": "desc_color",
+"label": "Description color",
+"default": "#000"
+}, 
+
+{
+"type": "text",
+"id": "small_title",
+"label": "Small Heading"
+},	
+{
+"type": "color",
+"id": "text_clr",
+"label": "Text color",
+"default":"#000"
+}
+
+
+],
+"blocks": [
+{
+"type": "text",
+"name": "Testimonial",
+"settings": [
+
+
+{
+"type": "textarea",
+"id": "text_desc",
+"label": "Description"
+},
+{
+"type": "color",
+"id": "des_color",
+"label": "Description Color",
+"default":"#696969"
+},
+{
+"type": "image_picker",
+"id": "image_1",
+"label": "Image",
+"info": "Size: 180x180"
+},
+{
+"type": "text",
+"id": "author_name",
+"label": "author name"
+},
+{
+"type": "text",
+"id": "image_1_heading",
+"label": "Designation"
+},
+{
+"type": "color",
+"id": "image_1_heading_color",
+"label": "Designation",
+"default":"#696969"
+},
+{
+"type": "color",
+"id": "author_color",
+"label": "Author Color",
+"default":"#000"
+}
+]
+}
+],
+
+"presets": [
+{
+"name": "Testimonials Type 3",
+"category": "Testimonial",
+"blocks": [
+{
+"type": "text"
+},
+{
+"type": "text"
+},
+{
+"type": "text"
+}
+
+]
+}
+]
+}
+
+{% endschema %}
+
+{% stylesheet %}
+
+
+
+
+
+{% endstylesheet %}
+
+
+{% javascript %}
+$(document).ready(function(){
+var testimonialtype18 = $(".testimonial-car-3");
+testimonialtype18.owlCarousel({
+items:1,
+loop:true,      
+dots: false, 
+nav:true,
+navContainer: ".testimonial-navigation",
+ navText: ['<a class="prev btn"><i class="icon-arrow-left" ></i></a>','<a class="next btn"><i class="icon-arrow-right" ></i></a>'],
+autoplay: true,
+autoplayTimeout: 3000,
+responsive:{
+0:{
+items: 1
+},
+600:{
+items:1
+},
+700:{
+items:1
+},
+
+1000:{
+items: 1
+}
+}
+});
+});
+{% endjavascript %}

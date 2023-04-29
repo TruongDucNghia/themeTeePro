@@ -1,0 +1,2793 @@
+{
+  "presets": {
+  },
+  "current": {
+    "checkout_header_image": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "Helvetica Neue",
+    "checkout_body_font": "Helvetica Neue",
+    "checkout_accent_color": "#cbba9c",
+    "checkout_button_color": "#cbba9c",
+    "checkout_error_color": "#f45b4f",
+    "logo_use_image": true,
+    "logo_max_height": "100",
+    "favicon_enable": true,
+    "preloader_enable": true,
+    "base_font": "Google+Nunito",
+    "type_base_size": "16px",
+    "body_weight_size": "normal",
+    "text_spacing": "0",
+    "header_font": "Google+Nunito",
+    "type_weight_size": "700",
+    "type_uppercase": false,
+    "heading_spacing": "0",
+    "type_header_base_size": "60px",
+    "type_header_base_size_2": "44px",
+    "type_header_base_size_3": "30px",
+    "type_header_base_size_4": "22px",
+    "type_header_base_size_5": "18px",
+    "type_header_base_size_6": "16px",
+    "subtitle_font": "Google+Nunito",
+    "other_font": "Google+Nunito",
+    "color_body_bg": "#ffffff",
+    "overlay_bg": "#000",
+    "color_borders": "#e4e4e4",
+    "black_borders": "#000000",
+    "color_primary_bg": "#687ff0",
+    "color_button_primary_text": "#ffffff",
+    "primary_hover_btn": "#778ae6",
+    "primary_hover_btn_text": "#ffffff",
+    "color_sold": "#db0022",
+    "color_sold_text": "#ffffff",
+    "sale_bg": "#80a814",
+    "sale_button_text": "#ffffff",
+    "new_bg": "#9ac799",
+    "new_button_text": "#ffffff",
+    "offer_bg": "#94d793",
+    "offer_button_text": "#ffffff",
+    "color_body_text": "#696969",
+    "link_color": "#696969",
+    "color_primary_color": "#687ff0",
+    "title_border": "#d4af77",
+    "color_heading_type1_color": "#d4af77",
+    "color_heading_color": "#333333",
+    "overlay_use": true,
+    "product_overlay": "#ffffff",
+    "products_icon_bg": "#687ff0",
+    "products_icon_clr": "#ffffff",
+    "products_icon_hover_bg": "#687ff0",
+    "products_icon_hover_clr": "#ffffff",
+    "products_gutter": "15",
+    "products_border_radius": "0",
+    "products_border_full": false,
+    "products_full_border_width": "2",
+    "products_full_border": "#17313e",
+    "products_border_use": false,
+    "products_border_width": "2",
+    "products_border": "#b10a0a",
+    "products_border_2": "#0fa1ea",
+    "products_det_bg": "#f4f4f4",
+    "product_title_color": "#333333",
+    "product_title_hover_color": "#3845bf",
+    "product_price": "#687ff0",
+    "product_cmp_price": "#3845bf",
+    "product_vendor": "#bcbcbc",
+    "product_label_color": "#696969",
+    "sidebar_bg": "#000000",
+    "sidebar_text": "#fff",
+    "use_breadcrumb": true,
+    "breadcrumb_bg_image": false,
+    "breadcrumb_bg_color": "#f4f4f4",
+    "breadcrumb_text_color": "#000000",
+    "breadcrumb_text_hover_color": "#d4af77",
+    "top_to_btm": false,
+    "images_style_1": "style_1",
+    "use_sticky_header": true,
+    "show_collection_image": true,
+    "collections_show_sale_circle": true,
+    "collections_show_sold_out_circle": true,
+    "offer_price_enable": true,
+    "collections_sort_enable": true,
+    "collections_items_enable": true,
+    "collections_show_new_circle": false,
+    "new_products_period": "100",
+    "collections_view_enable": true,
+    "enable_quick_view": true,
+    "display_vendor": true,
+    "display_quickview_subtotal": true,
+    "enable_product_detail_link_icon": true,
+    "enable_add_cart": true,
+    "enable_compare": true,
+    "enable_wishlist": true,
+    "display_color_variant": true,
+    "product_review": true,
+    "collection_grid": "3",
+    "collection_results_per_page": "12",
+    "collection_infinite_scrolling": false,
+    "collection_sidebar_use": "left_sidebar",
+    "filter_height": "300",
+    "product_page_sidebar": "right_layout",
+    "display_availability": true,
+    "display_product_type": true,
+    "display_vendor_type": "name",
+    "enable_color_swatch": true,
+    "color_tooltip": true,
+    "enable_linked_option": true,
+    "product_quantity_enable": true,
+    "payment_button": false,
+    "short_desc": true,
+    "product_tab1": true,
+    "display_description_type": "accordian",
+    "product_tab1_heading": "Description",
+    "product_tab2": true,
+    "product_tab2_heading": "Reviews",
+    "product_tab3": true,
+    "product_tab3_heading": "Shipping details",
+    "product_tab3_page": "contact-us",
+    "product_related_enable": true,
+    "related_prds_heading": "Relate Product",
+    "heading_image_need": false,
+    "related_prds_title": "",
+    "display_recently_viewed_products": false,
+    "recently_viewed_products_title": "Recently Viewed Products",
+    "number_of_recently_viewed_products": "8",
+    "use_custom_list_collection": false,
+    "list-collections": "",
+    "collection_btn_text": "Read More",
+    "cart_notes_enable": true,
+    "use_ajax_cart": true,
+    "cart_title_bg": "#000",
+    "cart_title_clr": "#ffffff",
+    "blog_page_sidebar": "right_sidebar",
+    "show_blog_4_content": true,
+    "background_blog": "",
+    "show_blog_4_img": true,
+    "show_blog_4_author": true,
+    "show_blog_4_btn": false,
+    "show_blog_4_date": true,
+    "show_blog_4_tag": true,
+    "blog_design_4_title": "#000000",
+    "blog_design_4_titlehover": "#d4af77",
+    "blog_design_4_datecolor": "#000000",
+    "blog_design_4_authorcolor": "#000000",
+    "blog_design_commentcolor": "#000",
+    "blog_design_4_tag": "#000000",
+    "blog_design_4_taghover": "#d4af77",
+    "show_blog_sidebar": true,
+    "show_recent_articles": true,
+    "show_recent_articles_img": true,
+    "blog_article_limit": "3",
+    "show_blog_tags": true,
+    "show_featured_products": true,
+    "show_footer_tweets": false,
+    "tweet_heading": "Latest Tweets",
+    "tweet_embcode": "<a class=\"twitter-timeline\" href=\"https:\/\/twitter.com\/iamdesigning\" data-widget-id=\"425498722839957505\" data-border-color=\"#fff\" data-tweet-limit=\"3\" data-chrome=\"nofooter noheader\">Tweets by @iamdesigning<\/a>\r\n<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=\/^http:\/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+\":\/\/platform.twitter.com\/widgets.js\";fjs.parentNode.insertBefore(js,fjs);}}(document,\"script\",\"twitter-wjs\");<\/script>",
+    "display_popup_newsletter": true,
+    "pop_up_newsletter_img_show": true,
+    "popup_newsletter_bg": "#ffffff",
+    "popup_newsletter_title": "Get to know the latest offers",
+    "popup_newsletter_message": "Subscribe and get notified at first on the latest update and offers!",
+    "popup_newsletter_text": "#000000",
+    "popup_newsletter_form": "#fff",
+    "popup_newsletter_form_txt": "#000",
+    "form_note": "We do not spam",
+    "newsletter_form_action": "",
+    "count_down_enable": true,
+    "count_down_home": true,
+    "count_down_collections": true,
+    "count_down_prodetails": true,
+    "prodetail_deal_label": true,
+    "prodetail_deal_heading": "Hurry, Only few item(s) left!",
+    "home_productdeal_time": "10095683785@10\/24\/2019_00:00:00",
+    "dealbtn": "#000",
+    "dealbtn_text": "#ffffff",
+    "social_twitter_link": "https:\/\/twitter.com\/shopify",
+    "social_facebook_link": "https:\/\/www.facebook.com\/shopify",
+    "social_pinterest_link": "https:\/\/www.pinterest.com\/shopify",
+    "social_google_plus_link": "https:\/\/www.facebook.com\/shopify",
+    "social_instagram_link": "https:\/\/instagram.com\/shopify",
+    "social_tumblr_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "social_fancy_link": "",
+    "social_rss_link": "",
+    "social_sharing_products": true,
+    "social_sharing_blog": true,
+    "social_sharing_count": true,
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "share_google": true,
+    "social_sharing_style": "normal",
+    "shipping_calculator": "Enabled",
+    "shipping_calculator_heading": "Get shipping estimates",
+    "shipping_calculator_default_country": "United States",
+    "shipping_calculator_submit_button_label": "Calculate shipping",
+    "shipping_calculator_submit_button_label_disabled": "Calculating...",
+    "collection_suggest": "",
+    "display_index": true,
+    "display_product": true,
+    "display_collection": true,
+    "display_article": true,
+    "display_blog": true,
+    "display_cart": true,
+    "interval_time": "15000",
+    "show_close_suggest": true,
+    "display_currency": true,
+    "currency_1_unit": "USD",
+    "currency_2_unit": "EUR",
+    "currency_3_unit": "GBP",
+    "currency_4_unit": "AUD",
+    "currency_5_unit": "INR",
+    "currency_6_unit": "JPY",
+    "currency_7_unit": "CAD",
+    "currency_8_unit": "CNY",
+    "currency_9_unit": "AED",
+    "currency_10_unit": "RUB",
+    "password_bg_img": true,
+    "password_logo": true,
+    "pwd_logo_max_width": "100",
+    "pwd_header": "Opening Soon",
+    "pwd_show_share_buttons": true,
+    "pwd_social_message": "Spread the word",
+    "pwd_newsletter_enable": true,
+    "pwd_newsletter_form_heading": "Be the first to know when we launch.",
+    "pwd_newsletter_placeholder": "Email address",
+    "pwd_newsletter_button_text": "Notify me",
+    "checkout_use_storefront_logo": true,
+    "show_blog_instagram": true,
+    "enable_filters": true,
+    "shop_by_color_list_tags": "Bisque,DarkMagenta,Green,Orange,Tomato,White,Yellow",
+    "cart_collection": "backpack",
+    "display_subtotal": true,
+    "display_flavour": false,
+    "flavour_txt": "Flavour",
+    "flavour_bg": "#000",
+    "flavour_color": "#fff",
+    "enable_gmap": true,
+    "contact_iframe_code": "<iframe width=\"960\" height=\"578\" style=\"border:0;overflow:hidden;\" src=\"https:\/\/maps.google.co.in\/?ie=UTF8&t=m&ll=-37.823006,144.977388&spn=0.02034,0.042915&z=14&output=embed\"><\/iframe>",
+    "enable_contact_section": true,
+    "contact_bg_img": true,
+    "contact_bg_color": "#ffffff",
+    "contact_module_contact_phonetitle": "Talk to us",
+    "contact_phone1": "<b>Toll-Free: <\/b> 0803 - 080 - 3081",
+    "contact_phone2": "<b>Fax: <\/b> 0803 - 080 - 3082",
+    "contact_module_contact_title": "Contact Us",
+    "contact_module_email": true,
+    "contact_module_email_1": "buddhathemes@somemail.com",
+    "contact_module_email2": "support@somemail.com",
+    "contact_phone": true,
+    "enable_contact_address": true,
+    "contact_module_address": true,
+    "contact_module_address_title": "Location",
+    "contact_module_address1": "No: 58 A, East Madison Street,",
+    "contact_module_address2": "Baltimore, MD, USA\r\n4508",
+    "color_primary": "#d4af77",
+    "button_style_1": "style_2",
+    "links_style_1": "style_6",
+    "blog_btn_sec_bg": "#ffffff",
+    "sections": {
+      "sidebar-category": {
+        "type": "sidebar-category",
+        "settings": {
+          "enable_sidecategory": true,
+          "linkedlist": "main-menu",
+          "linkedlist_title": "Category"
+        }
+      },
+      "sidebar-bestsellers": {
+        "type": "sidebar-bestsellers",
+        "settings": {
+          "show_best_products": true,
+          "title": "Best Sellers",
+          "bestseller": "",
+          "limi": "4"
+        }
+      },
+      "sidebar-promoimage": {
+        "type": "sidebar-promoimage",
+        "blocks": {
+          "1477474976957": {
+            "type": "content",
+            "settings": {
+              "promo_img": "",
+              "promo_link": "",
+              "promo_title": "Promo Text"
+            }
+          },
+          "1477475002420": {
+            "type": "content",
+            "settings": {
+              "promo_img": "",
+              "promo_link": "",
+              "promo_title": "Promo Text"
+            }
+          }
+        },
+        "block_order": [
+          "1477474976957",
+          "1477475002420"
+        ],
+        "settings": {
+        }
+      },
+      "sidebar-tag-filters": {
+        "type": "sidebar-tag-filters",
+        "blocks": {
+          "1477476983857": {
+            "type": "text",
+            "settings": {
+              "enable_shop_by_tags": true,
+              "shop_by_tags_title": "Shop By Size",
+              "shop_by_tags_list": "S, M, L,Xl, XXl"
+            }
+          },
+          "1477476999076": {
+            "type": "text",
+            "settings": {
+              "enable_shop_by_tags": true,
+              "shop_by_tags_title": "Shop By Brand",
+              "shop_by_tags_list": "Cindrella,\tLaura,Liva,Mystique,\t\nNyka"
+            }
+          },
+          "1477477078599": {
+            "type": "text",
+            "settings": {
+              "enable_shop_by_tags": true,
+              "shop_by_tags_title": "Shop By Price",
+              "shop_by_tags_list": "$100 - $200, $200 - $300, $300 - $400, $400 - $500,\n$500 - $700,"
+            }
+          },
+          "1486453499362": {
+            "type": "text",
+            "settings": {
+              "enable_shop_by_tags": true,
+              "shop_by_tags_title": "Shop By Flavour",
+              "shop_by_tags_list": "Sandal, Strawberry, Natural Fruit, Orange, Vanilla,"
+            }
+          },
+          "1593589649700": {
+            "type": "text",
+            "settings": {
+              "enable_shop_by_tags": true,
+              "shop_by_tags_title": "Shop By Color",
+              "shop_by_tags_list": "Bisque,DarkMagenta,Green,Orange,Tomato,White,Yellow"
+            }
+          }
+        },
+        "block_order": [
+          "1477476983857",
+          "1477476999076",
+          "1477477078599",
+          "1486453499362",
+          "1593589649700"
+        ],
+        "settings": {
+          "enable_sidebar_multiple_choice": true
+        }
+      },
+      "faqs": {
+        "type": "faqs",
+        "blocks": {
+          "1483333359453": {
+            "type": "text",
+            "settings": {
+              "title": "Lorem ipsum dolor sit amet",
+              "description": "Answer :<br>\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui official."
+            }
+          },
+          "1483333363494": {
+            "type": "text",
+            "settings": {
+              "title": "Lorem ipsum dolor sit amet",
+              "description": "Answer :<br>\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui official."
+            }
+          },
+          "1483333365467": {
+            "type": "text",
+            "settings": {
+              "title": "Lorem ipsum dolor sit amet",
+              "description": "Answer :<br>\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui official."
+            }
+          },
+          "1483333367109": {
+            "type": "text",
+            "settings": {
+              "title": "Lorem ipsum dolor sit amet",
+              "description": "Answer :<br>\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui official."
+            }
+          },
+          "1483333368739": {
+            "type": "text",
+            "settings": {
+              "title": "Lorem ipsum dolor sit amet",
+              "description": "Answer :<br>\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui official."
+            }
+          },
+          "1483333369796": {
+            "type": "text",
+            "settings": {
+              "title": "Lorem ipsum dolor sit amet",
+              "description": "Answer :<br>\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui official."
+            }
+          },
+          "1483333371707": {
+            "type": "text",
+            "settings": {
+              "title": "Lorem ipsum dolor sit amet",
+              "description": "Answer :<br>\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui official."
+            }
+          }
+        },
+        "block_order": [
+          "1483333359453",
+          "1483333363494",
+          "1483333365467",
+          "1483333367109",
+          "1483333368739",
+          "1483333369796",
+          "1483333371707"
+        ],
+        "settings": {
+          "heading": "FAQ",
+          "size": 24,
+          "background_color_wrapper": "",
+          "faq_heading": "You Find The Answer Here!"
+        }
+      },
+      "brands": {
+        "type": "brands",
+        "settings": {
+          "title": "",
+          "car_border_clr": ""
+        }
+      },
+      "custom-text-type-1": {
+        "type": "custom-text-type-1",
+        "blocks": {
+          "1500546641912": {
+            "type": "text",
+            "settings": {
+              "class": "fa fa-cog",
+              "title": "",
+              "title_color": "#000",
+              "sub_title": "",
+              "sub_title_color": "#000",
+              "desc": "We will send this product in 2 days. Read more...",
+              "desc_color": "#000",
+              "link": "#"
+            }
+          },
+          "1500546704884": {
+            "type": "text",
+            "settings": {
+              "class": "fa fa-transgender",
+              "title": "",
+              "title_color": "#000",
+              "sub_title": "",
+              "sub_title_color": "#000",
+              "desc": "Call us now for more info about our products.",
+              "desc_color": "#000",
+              "link": "#"
+            }
+          },
+          "1500546793110": {
+            "type": "text",
+            "settings": {
+              "class": "fa fa-desktop",
+              "title": "",
+              "title_color": "#000",
+              "sub_title": "",
+              "sub_title_color": "#000",
+              "desc": "Return purchased items and get all your money back.",
+              "desc_color": "#000",
+              "link": "#"
+            }
+          },
+          "1500546865134": {
+            "type": "text",
+            "settings": {
+              "class": "fa fa-ban",
+              "title": "",
+              "title_color": "#000",
+              "sub_title": "",
+              "sub_title_color": "#000",
+              "desc": "Buy this product and earn 10 special loyalty points!",
+              "desc_color": "#000",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1500546641912",
+          "1500546704884",
+          "1500546793110",
+          "1500546865134"
+        ],
+        "settings": {
+          "bg_color": "#fff"
+        }
+      },
+      "product-sidebar-deals": {
+        "type": "product-sidebar-deals",
+        "settings": {
+          "show_best_products": true,
+          "title": "Hot Deals",
+          "dealitems": "",
+          "dealbtn": "#000",
+          "dealbtn_text": "#ffffff",
+          "limit": "4"
+        }
+      },
+      "product-sidebar-bestsellers": {
+        "type": "product-sidebar-bestsellers",
+        "settings": {
+          "show_best_products": true,
+          "title": "Best Sellers",
+          "bestseller": "man",
+          "limit": "4"
+        }
+      },
+      "sidebar-banner": {
+        "type": "sidebar-banner",
+        "blocks": {
+          "1592387753790": {
+            "type": "content",
+            "settings": {
+              "promo_img": "shopify:\/\/shop_images\/t1-150x150.jpg",
+              "promo_link": "",
+              "promo_title": ""
+            }
+          }
+        },
+        "block_order": [
+          "1592387753790"
+        ],
+        "settings": {
+        }
+      },
+      "home-product-grid-type-12-b": {
+        "type": "home-product-grid-type-12-b",
+        "settings": {
+          "description": "",
+          "desc_color": "#000",
+          "title": "New arrivals",
+          "title_color": "#000",
+          "collection": "frontpage",
+          "items": "4"
+        }
+      },
+      "support-section-6": {
+        "type": "support-section-6",
+        "blocks": {
+          "1520404140031": {
+            "type": "text",
+            "settings": {
+              "class": "",
+              "class_color": "#ffffff",
+              "title": "Free Delivery",
+              "title_color": "#000",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "desc_color": "#000"
+            }
+          },
+          "1520404182206": {
+            "type": "text",
+            "settings": {
+              "class": "",
+              "class_color": "#ffffff",
+              "title": "Return of Goods",
+              "title_color": "#000",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "desc_color": "#000"
+            }
+          },
+          "1520404218758": {
+            "type": "text",
+            "settings": {
+              "class": "",
+              "class_color": "#ffffff",
+              "title": "24\/7 Customer support",
+              "title_color": "#000",
+              "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "desc_color": "#000"
+            }
+          }
+        },
+        "block_order": [
+          "1520404140031",
+          "1520404182206",
+          "1520404218758"
+        ],
+        "settings": {
+          "title": "New arrivals",
+          "title_position": "text-center",
+          "title_color": "#000",
+          "description": "",
+          "desc_color": "#000",
+          "background_color_wrapper": "",
+          "link": "",
+          "link_text": "Star Designing"
+        }
+      },
+      "product-tab-model-2": {
+        "type": "product-tab-model-2",
+        "blocks": {
+          "1520415111748": {
+            "type": "text_block",
+            "settings": {
+              "title": "Tab - 1",
+              "collection": "frontpage"
+            }
+          },
+          "1520415123417": {
+            "type": "text_block",
+            "settings": {
+              "title": "Tab - 2",
+              "collection": "frontpage"
+            }
+          },
+          "1520415136022": {
+            "type": "text_block",
+            "settings": {
+              "title": "Tab - 3",
+              "collection": "frontpage"
+            }
+          }
+        },
+        "block_order": [
+          "1520415111748",
+          "1520415123417",
+          "1520415136022"
+        ],
+        "settings": {
+          "title_1": "Lorem ipsum dolor sit amet",
+          "title_position": "text-center",
+          "title_1_clr": "#000",
+          "tag_clr": "#000",
+          "grid": "3",
+          "rows": "2"
+        }
+      },
+      "blog-sidebar-instagram": {
+        "type": "blog-sidebar-instagram",
+        "settings": {
+          "instagram_use": true,
+          "sidebar_bg_color": "#000",
+          "accessToken": "5513419399.1677ed0.8c2ac2981cd84c3ba3a6392e64fd567a",
+          "heading_image_need": true,
+          "heading_image": "",
+          "title": "Instagram Feed",
+          "title_1_clr": "#ffffff",
+          "sort": "most-recent"
+        }
+      },
+      "header-type-5": {
+        "type": "header-type-5",
+        "blocks": {
+          "1594267631038": {
+            "type": "style_2",
+            "settings": {
+              "title": "home",
+              "megamenu_items_2": "Home",
+              "main_linklist_2": "contact-us",
+              "banner_second_style_2": "",
+              "link_banner_second_style_2": "",
+              "banner_third_style_2": "",
+              "link_banner_third_style_2": "",
+              "banner_first_style_2": "",
+              "link_banner_first_style_2": ""
+            }
+          },
+          "1594263971293": {
+            "type": "style_1",
+            "settings": {
+              "title": "Services",
+              "megamenu_items_1": "Services",
+              "main_linklist_1": "services",
+              "banner_first_style_1": "shopify:\/\/shop_images\/menu-sv.jpg",
+              "link_banner_first_style_1": ""
+            }
+          },
+          "1594262620886": {
+            "type": "style_5",
+            "settings": {
+              "title": "SHOP",
+              "megamenu_items_5": "Shop",
+              "main_linklist_5": "shop",
+              "banner_first_style_5": "",
+              "link_banner_first_style_5": "",
+              "banner_second_style_5": "",
+              "link_banner_second_style_5": ""
+            }
+          },
+          "1594262542541": {
+            "type": "style_3",
+            "settings": {
+              "title": "About",
+              "megamenu_items_3": "About",
+              "banner_second_style_3": "About TEE PRO",
+              "link_banner_third_style_3": "shopify:\/\/collections\/backpack",
+              "banner_third_style_3": "Read more",
+              "banner_four_style_3": "Do you want to design your own custom t-shirts, but don’t know where to start? TEE PRO is your answer. <br>\nTEE PRO is the best store for T-shirt printing place that adapts all your requirements. Find your favorite photo, design, or image and upload it onto one of our cool shirt templates and exercise your artistic side.  You can free your mind in creative with Online Designer tool.",
+              "banner_first_style_3": "shopify:\/\/shop_images\/q.jpg"
+            }
+          },
+          "1594262518436": {
+            "type": "style_6",
+            "settings": {
+              "title": "Contact us",
+              "megamenu_items_6": "Contact us",
+              "banner_first_style_6": "shopify:\/\/shop_images\/map_screen.png",
+              "banner_four_style_6": "<div class=\"textwidget custom-html-widget\">\n<div class=\"contact_address\">\n\t<strong class=\"contact_title\">Contact us <\/strong>\n\t<div>102580 Santa Monica Los Angeles<\/div>\n<\/div>\n\n<div class=\"contact_open\">\n\t<strong class=\"open_title\">Opening Hours <\/strong>\n\t<div>Mon, Tue, Wed, Thur, Fri:<\/div>\n\t<div>8:00 AM - 5:30 PM<\/div>\n\t<div>Saturday: 8: 00 - 12:00 AM<\/div>\n\t<div>Sunday: Closed<\/div>\n<\/div>\n<\/div>"
+            }
+          }
+        },
+        "block_order": [
+          "1594267631038",
+          "1594263971293",
+          "1594262620886",
+          "1594262542541",
+          "1594262518436"
+        ],
+        "settings": {
+          "display_top_adv_bar": false,
+          "display_top_bar": true,
+          "display_search": true,
+          "display_minicart": true,
+          "display_wishlist": true,
+          "notification_bar_bg": "#000",
+          "notification_bar_bg_img": "",
+          "stripe_icon": "#687ff0",
+          "stripe_icon_hover": "#687ff0",
+          "notification_text": "Long Weekend Sale Up to 50% OFF",
+          "notification_text_clr": "#ffffff",
+          "notification_linktxt": "SHOP NOW",
+          "header_notification_link": "\/collections\/all",
+          "drop_dw_bgclr": "#000",
+          "drop_dw_txtclr": "#fff",
+          "drop_dw_txthoverclr": "#687ff0",
+          "login_txt_clr": "#000000",
+          "header_welcome_text": "Have a great idea? Tee pro makes design easily. Start Designing",
+          "top_bar_bg": "#43c9d7",
+          "top_bar_text": "#ffffff",
+          "top_bar_links": "#ffffff",
+          "top_bar_link_hover": "#e07517",
+          "top_bar_btn_bg": "#d77b35",
+          "top_bar_btn_txt": "#000000",
+          "top_bar_btn_hoverbg": "#e65e20",
+          "top_bar_btn_hovertxt": "#fff",
+          "logo_bar_bg": "rgba(0,0,0,0)",
+          "logo_text": "#000",
+          "logo_hover_text": "#687ff0",
+          "border_between_bars": "#e4e4e4",
+          "currency_icon": "#ffffff",
+          "currency_icon_hover": "#d77b35",
+          "currency_bg": "#fff",
+          "currency_link": "#000000",
+          "search_icon": "#000",
+          "search_icon_hover": "#687ff0",
+          "search_bg": "#fff",
+          "search_text": "#000",
+          "Btn_text": "#ffffff",
+          "search_btn_hover": "#ffffff",
+          "search_btn_bg": "#000",
+          "search_btn_bghover": "#687ff0",
+          "minicart_count": "#000",
+          "minicart_icon_hover": "#687ff0",
+          "minicart_bg": "#fff",
+          "minicart_text": "#000",
+          "minicart_link": "#000",
+          "minicart_link_hover": "#687ff0",
+          "minicart_btn_bg": "#000",
+          "minicart_btn_hover_bg": "#687ff0",
+          "minicart_btn_text": "#ffffff",
+          "minicart_btn_hover_text": "#ffffff",
+          "minicart_total": "#000",
+          "menubar_bg": "rgba(0,0,0,0)",
+          "menubar_links": "#000000",
+          "menubar_links_hover": "#687ff0",
+          "menu_active": "#000000",
+          "menubar_dropdown_bg": "#fff",
+          "menubar_dropdown_caption": "#687ff0",
+          "menubar_dropdown_caption_hover": "#687ff0",
+          "menubar_dropdown_links": "#8f8f8f",
+          "menubar_dropdown_links_hover": "#687ff0",
+          "display_megamenu": true,
+          "show_dropdown_arrow": true
+        }
+      },
+      "footer-model-6": {
+        "type": "footer-model-6",
+        "blocks": {
+          "1590658750254": {
+            "type": "text",
+            "settings": {
+              "show_contact": false,
+              "footer_contact_title": "Contact us",
+              "footer_address": "1203 Town Center Drive FL 33458 USA",
+              "footer_contact_no": "+841 123 456 78",
+              "footer_contact_id": "info@lindashop.com",
+              "footer_contact_link": "cms@lindashop.com",
+              "footer_link": "#6b6b6b",
+              "color_footer_link_hover": "#636363"
+            }
+          },
+          "1590658756893": {
+            "type": "linklist",
+            "settings": {
+              "footer_menu_2_title": "OTHER PAGES",
+              "footer_menu_2": "footer"
+            }
+          },
+          "1590658759349": {
+            "type": "instagram",
+            "settings": {
+              "instagram_title": "Instagram",
+              "userid": "5513419399",
+              "accessToken": "IGQVJWaVR1aTJFZAWw0SUk0QmZAQNXZA1ZA1hMQnFTb0t4R1lKMGl1RFFpQksxelpXOXVicGQ3YXB1WjlQUFR2QkI3WUttcHhHelNqRDFMdWduYWRRb1NxOTJySlJ6SUNWeDFUdnVNVWxB",
+              "limited": "9",
+              "resolution": "low_resolution"
+            }
+          },
+          "1590658765717": {
+            "type": "html",
+            "settings": {
+              "html_title": "WORKING TIME",
+              "section_html": "<div id=\"custom_html-4\" class=\"widget_text widget_custom_html\">\n<div class=\"textwidget custom-html-widget\"><div class=\"footer-workingtime-wrapper\">\n\t<div class=\"working-time\">\n\t\t<p>\n\t\t\tMonday to Friday: <i>8:00am - 8:00pm<\/i>\n\t\t<\/p>\n\t\t<p>\n\t\t\tSaturday & Sunday: <i>10:00am - 8:00pm<\/i>\n\t\t<\/p>\n\t<\/div>\n\t<div class=\"love-hour\">\n\t\t<img src=\"http:\/\/demo9.cmsmart.net\/teepro_tf\/home4\/wp-content\/uploads\/2018\/09\/footer-love-hour-bg.png\" alt=\"footer-love-hour-bg\">\n\t\t<div class=\"love-hour-text\">\n\t\t\t<span class=\"fs-35\"><i class=\"fa fa-heart\"><\/i><\/span>\n\t\t\t<span>People love period<\/span>\n\t\t\t<span>6:00 am - 8:00 pm<\/span>\n\t\t<\/div>\n\t<\/div>\n<\/div><\/div>\n<\/div>"
+            }
+          }
+        },
+        "block_order": [
+          "1590658750254",
+          "1590658756893",
+          "1590658759349",
+          "1590658765717"
+        ],
+        "settings": {
+          "footer_bg": "#687ff0",
+          "footer_text": "#f4f4f4",
+          "footer_logo_enable": true,
+          "footer_newsletter_enable": true,
+          "newletter_text": "Newsletter",
+          "newletter_text_color": "#ffffff",
+          "newsletter_form_action": "",
+          "input_bg": "#687ff0",
+          "input_text": "#ffffff",
+          "newsletter_btn_bg": "rgba(0,0,0,0)",
+          "newsletter_btn_text": "#ffffff",
+          "color_footer_news_btn_bg": "rgba(0,0,0,0)",
+          "color_footer_news_btn_text": "#ffffff",
+          "footer_border": "bottom",
+          "footer_social_enable": true,
+          "social_icon_clr": "#ffffff",
+          "social_icon_hover_clr": "#d4af77",
+          "border_btm_clr": "#e9e9e9",
+          "copyright_bg": "#687ff0",
+          "menu": "",
+          "show_payment_icons": true,
+          "show_copyright": true,
+          "copyright_text": ". All Rights Reserved"
+        }
+      },
+      "home-sidebar-deals": {
+        "type": "home-sidebar-deals",
+        "settings": {
+          "show_best_products": true,
+          "title": "Best Sellers",
+          "dealitems": "frontpage",
+          "dealbtn_border": "#000",
+          "dealbtn": "#000",
+          "dealbtn_text": "#000",
+          "limit": "4"
+        }
+      },
+      "about-page-intro": {
+        "type": "about-page-intro",
+        "blocks": {
+          "1525435445410": {
+            "type": "Image",
+            "settings": {
+              "small_img": ""
+            }
+          },
+          "1525435611640": {
+            "type": "Image",
+            "settings": {
+              "small_img": ""
+            }
+          },
+          "1525435617516": {
+            "type": "Image",
+            "settings": {
+              "small_img": ""
+            }
+          }
+        },
+        "block_order": [
+          "1525435445410",
+          "1525435611640",
+          "1525435617516"
+        ],
+        "settings": {
+          "maintitle": "",
+          "maintitle_clr": "#000",
+          "left_img": "",
+          "img_title": "",
+          "abot_bg_img": "",
+          "title_1": "Welcome to Mika Cosmetics",
+          "title_1_clr": "#000",
+          "title_1_border": "#000",
+          "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate id est laborum.",
+          "desc_clr": "#000",
+          "subdesc": "Ius ferri velit sanctus cu, sed at soleat accusata. Dictas prompta et Ut placerat legendos interpre.Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante Etiam sit amet orci eget",
+          "subdesc_clr": "#000",
+          "title": "",
+          "title_clr": "#000",
+          "arrow_bg_clr": "#f7f7f7",
+          "arrow_txt_clr": "#000",
+          "arrow_hoverbg_clr": "#d4af77",
+          "arrow_hovertxt_clr": "#ffffff",
+          "img_block_bg": "#ffffff",
+          "boxshadow_clr": "#f7f7f7"
+        }
+      },
+      "about-border-icon-section": {
+        "type": "about-border-icon-section",
+        "blocks": {
+          "1525435662972": {
+            "type": "text",
+            "settings": {
+              "image_1": "",
+              "title": "Makeup Brush",
+              "title_clr": "#000",
+              "desc": "Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate",
+              "desc_clr": "#000",
+              "btn_text": "View more",
+              "btn_text_link": ""
+            }
+          },
+          "1525435721040": {
+            "type": "text",
+            "settings": {
+              "image_1": "",
+              "title": "Brushes set",
+              "title_clr": "#000",
+              "desc": "Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate",
+              "desc_clr": "#000",
+              "btn_text": "View more",
+              "btn_text_link": ""
+            }
+          },
+          "1525435743590": {
+            "type": "text",
+            "settings": {
+              "image_1": "",
+              "title": "Foundation Cream",
+              "title_clr": "#000",
+              "desc": "Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate",
+              "desc_clr": "#000",
+              "btn_text": "View more",
+              "btn_text_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1525435662972",
+          "1525435721040",
+          "1525435743590"
+        ],
+        "settings": {
+          "icon_wrapper_bg": "#f7f7f7",
+          "main_title": "What we offer at Mika Cosmetics",
+          "mainheading_color": "#000",
+          "main_subheading": "A nature cosmetic for makeup",
+          "subheading_color": "#000",
+          "icon_border_clr": "#fff"
+        }
+      },
+      "about-banner": {
+        "type": "about-banner",
+        "settings": {
+          "image_1": "",
+          "bg_color": "",
+          "titleshadow_1": "Our Latest Offers",
+          "shadowtext_color": "#ffffff",
+          "title_1": "Cosmetics Offers",
+          "title_color": "#ffffff",
+          "text_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate id est laborum.",
+          "text_color": "#ffffff",
+          "button_1": "Shop Now",
+          "btn_bg": "#ffffff",
+          "btn_color": "#000000",
+          "btn_hover_bg": "#d4af77",
+          "btn_hover_color": "#fff",
+          "link_1": "",
+          "button_2": "",
+          "link_2": ""
+        }
+      },
+      "about": {
+        "type": "about",
+        "settings": {
+          "showvedaone_2_section": true,
+          "abtone_image_2": "",
+          "abtone_image_2_heading": "",
+          "abtone_2_title": "A Gorgeous Makeup Look",
+          "abtone_2_maintilte": "#000",
+          "abtone_2_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dictum pretium faucibus. Integer non pulvinar metus, ut feugiat tellus. Mauris vestibulum enim at dui accumsan, vitae tincidunt lorem placerat. Nunc vehicula rhoncus ultricies. Maecenas vehicula vel enim sit amet mollis. Nulla sed.",
+          "abtone_2_desc": "#000",
+          "abtone_2_listone": "Eyeliner",
+          "abtone_2_icon_1": "fa fa-taxi",
+          "abtone_2_listtwo": "Eyeshadow",
+          "abtone_2_icon_2": "fa fa-ship",
+          "abtone_2_listthree": "Mascara",
+          "abtone_2_icon_3": "fa fa-plane",
+          "abtone_2_listfour": "Face cleanser",
+          "abtone_2_icon_4": "fa fa-train",
+          "aboutveda_1_listcolor": "#000",
+          "btn_2_text": "Read More",
+          "link_2": ""
+        }
+      },
+      "about-page-number-block": {
+        "type": "about-page-number-block",
+        "blocks": {
+          "1525436167672": {
+            "type": "text",
+            "settings": {
+              "section_4_iconclsone": "fa fa-diamond",
+              "section_4_numberone": "960+",
+              "section_4_numberone_clr": "#000",
+              "section_4_titleone": "Women’s Makeup",
+              "section_4_titleone_clr": "#000"
+            }
+          },
+          "1525436183502": {
+            "type": "text",
+            "settings": {
+              "section_4_iconclsone": "fa fa-coffee",
+              "section_4_numberone": "750+",
+              "section_4_numberone_clr": "#000",
+              "section_4_titleone": "Bridal Foundation",
+              "section_4_titleone_clr": "#000"
+            }
+          },
+          "1525436207374": {
+            "type": "text",
+            "settings": {
+              "section_4_iconclsone": "fa fa-adjust",
+              "section_4_numberone": "520+",
+              "section_4_numberone_clr": "#000",
+              "section_4_titleone": "Lipstick",
+              "section_4_titleone_clr": "#000"
+            }
+          },
+          "1525436241158": {
+            "type": "text",
+            "settings": {
+              "section_4_iconclsone": "fa fa-building",
+              "section_4_numberone": "860+",
+              "section_4_numberone_clr": "#000",
+              "section_4_titleone": "Lipgloss",
+              "section_4_titleone_clr": "#000"
+            }
+          }
+        },
+        "block_order": [
+          "1525436167672",
+          "1525436183502",
+          "1525436207374",
+          "1525436241158"
+        ],
+        "settings": {
+          "show_5_section": true,
+          "section_4_bgcolor": "#d4af77",
+          "section_4_iconbgcolor": "#f7f7f7",
+          "section_4_iconcolor": "#000",
+          "section_4_iconborder": "#d4af77"
+        }
+      },
+      "about-page-team": {
+        "type": "about-page-team",
+        "settings": {
+          "show_team_section": true,
+          "meet_our_team": "Our Staff",
+          "heading_color": "#000000",
+          "team_subheading": "Meet our cosmetic team with amazing ideas",
+          "subheading_color": "#000000",
+          "team_name_color": "#000",
+          "team_job_color": "#000000",
+          "team_fb_color": "#3b5998",
+          "team_tw_color": "#4099ff",
+          "team_gp_color": "#d34836",
+          "socialicon_bg_color": "#000000",
+          "socialicon_hover_color": "#ffffff",
+          "socialicon_color": "#ffffff",
+          "image_hover_bg": "#d4af77",
+          "border_color": "#ffffff",
+          "team_1_image": "",
+          "team_1_name": "Victoria Lewis",
+          "team_1_job": "Salon Manager",
+          "team_1_fb": "\/",
+          "team_1_tw": "\/",
+          "team_1_gp": "\/",
+          "team_2_image": "",
+          "team_2_name": "Edith Underwood",
+          "team_2_job": "Salon Assistant",
+          "team_2_desc": "Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate",
+          "team_2_fb": "\/",
+          "team_2_tw": "\/",
+          "team_2_gp": "\/",
+          "team_3_image": "",
+          "team_3_name": "Genevieve Davidson",
+          "team_3_job": "Manicurist",
+          "team_3_desc": "Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate",
+          "team_3_fb": "\/",
+          "team_3_tw": "\/",
+          "team_3_gp": "\/",
+          "team_4_image": "",
+          "team_4_name": "",
+          "team_4_job": "",
+          "team_4_desc": "",
+          "team_4_fb": "",
+          "team_4_tw": "",
+          "team_4_gp": ""
+        }
+      },
+      "navigation": {
+        "type": "navigation",
+        "blocks": {
+          "1525678552304": {
+            "type": "style_2",
+            "settings": {
+              "title": "Menu - Style 2",
+              "megamenu_items_2": "Home",
+              "main_linklist_2": "main-menu",
+              "banner_second_style_2": "",
+              "link_banner_second_style_2": "",
+              "banner_third_style_2": "",
+              "link_banner_third_style_2": "",
+              "banner_first_style_2": "",
+              "link_banner_first_style_2": ""
+            }
+          },
+          "1594110586813": {
+            "type": "style_5",
+            "settings": {
+              "title": "Menu - Style 5",
+              "megamenu_items_5": "Services",
+              "main_linklist_5": "",
+              "banner_first_style_5": "",
+              "link_banner_first_style_5": "",
+              "banner_second_style_5": "",
+              "link_banner_second_style_5": ""
+            }
+          },
+          "1594114593107": {
+            "type": "style_6",
+            "settings": {
+              "title": "Menu - Style 6",
+              "megamenu_items_6": "Pages",
+              "banner_first_style_6": "shopify:\/\/shop_images\/map_screen.png",
+              "banner_four_style_6": "<div class=\"textwidget custom-html-widget\">\n<div class=\"contact_address\">\n\t<strong class=\"contact_title\">Contact us <\/strong>\n\t<div>102580 Santa Monica Los Angeles<\/div>\n<\/div>\n\n<div class=\"contact_open\">\n\t<strong class=\"open_title\">Opening Hours <\/strong>\n\t<div>Mon, Tue, Wed, Thur, Fri:<\/div>\n\t<div>8:00 AM - 5:30 PM<\/div>\n\t<div>Saturday: 8: 00 - 12:00 AM<\/div>\n\t<div>Sunday: Closed<\/div>\n<\/div>\n<\/div>"
+            }
+          },
+          "1525678695543": {
+            "type": "style_5",
+            "settings": {
+              "title": "Menu - Style 5",
+              "megamenu_items_5": "Lipstick",
+              "main_linklist_5": "",
+              "banner_first_style_5": "",
+              "link_banner_first_style_5": "",
+              "banner_second_style_5": "",
+              "link_banner_second_style_5": ""
+            }
+          },
+          "1591933025807": {
+            "type": "style_1",
+            "settings": {
+              "title": "Menu - Style 1",
+              "megamenu_items_1": "Catalog",
+              "main_linklist_1": "footer",
+              "banner_first_style_1": "shopify:\/\/shop_images\/signature.png",
+              "link_banner_first_style_1": ""
+            }
+          },
+          "1594190391270": {
+            "type": "style_4",
+            "settings": {
+              "title": "Menu - Style 4",
+              "megamenu_items_4": "Shop",
+              "main_linklist_4": ""
+            }
+          },
+          "1594190911274": {
+            "type": "style_3",
+            "settings": {
+              "title": "Menu - Style 3",
+              "megamenu_items_3": "Shop",
+              "banner_second_style_3": "About us",
+              "link_banner_third_style_3": "shopify:\/\/collections\/backpack",
+              "banner_third_style_3": "Read more",
+              "banner_four_style_3": "<div class=\"textwidget custom-html-widget\">\n<div class=\"about_des1\">Do you want to design your own custom t-shirts, but don’t know where to start? TEE PRO is your answer..\n<\/div>\n<div class=\"about_des2\">TEE PRO is the best store for T-shirt printing place that adapts all your requirements. Find your favorite photo, design, or image and upload it onto one of our cool shirt templates and exercise your artistic side.  You can free your mind in creative with Online Designer tool.<\/div>\n<\/div>",
+              "banner_first_style_3": ""
+            }
+          }
+        },
+        "block_order": [
+          "1525678552304",
+          "1594110586813",
+          "1594114593107",
+          "1525678695543",
+          "1591933025807",
+          "1594190391270",
+          "1594190911274"
+        ],
+        "settings": {
+          "display_megamenu": true,
+          "show_dropdown_arrow": true
+        }
+      },
+      "contact-us": {
+        "type": "contact-us",
+        "settings": {
+          "show_contact_1_page": true,
+          "show_contact_1_iconwrapper": true,
+          "show_contact_1_address": true,
+          "contact_add_heading": "ADDRESS",
+          "contact_add_detail": "62,74th Avenue-galendale NY 11385 , US",
+          "show_contact_1_email": true,
+          "contact_mail_heading": "EMAIL",
+          "contact_mail_detail": "email:contact@domain.com",
+          "show_contact_1_phone": true,
+          "contact_phone_heading": "PHONE",
+          "contact_phone_detail": "call:+1800-567-879",
+          "show_contact_1_time": true,
+          "contact_time_heading": "TIMING",
+          "contact_time_detail": "available at 10am-8pm",
+          "enable_gmap": true,
+          "contact_iframe_code": "<iframe style=\"border:0;scrolling=\" no=\"\" src=\"https:\/\/maps.google.co.in\/?ie=UTF8&t=m&ll=-37.823006,144.977388&spn=0.02034,0.042915&z=14&output=embed\" width=\"960\" height=\"578\"><\/iframe>",
+          "contact_1_linkcolor": "#000",
+          "contact_1_linkhovercolor": "#d4af77",
+          "contact_1_iconbg": "#000",
+          "contact_1_iconcolor": "#ffffff",
+          "contact_1_iconhoverbg": "#d4af77",
+          "contact_1_iconheadingcolor": "#000",
+          "contact_1_icondetailcolor": "#000",
+          "show_contact_1_contactform": true,
+          "contact_form_heading": "SEND US A MESSAGE",
+          "contact_1_formheadingcolor": "#000",
+          "contact_1_formheadingbordercolor": "#d4af77",
+          "contact_1_formbgcolor": "#ffffff",
+          "contact_1_formborder": "#e4e4e4",
+          "contact_1_formbtnbg": "#000",
+          "contact_1_formbtncolor": "#ffffff",
+          "contact_1_formbtnhoverbg": "#d4af77",
+          "contact_1_formbtnhovercolor": "#ffffff",
+          "show_contact_1_socialicon": true,
+          "contact_1_socialiconcolor": "#000",
+          "contact_1_socialiconhoverbg": "#d4af77",
+          "contact_1_socialiconhovercolor": "#ffffff",
+          "show_contact_1_facebook": true,
+          "contact_1_icon": "fa fa-facebook",
+          "contact_1_facebook": "",
+          "show_contact_1_twitter": true,
+          "contact_2_icon": "fa fa-twitter",
+          "contact_1_twitter": "",
+          "show_contact_1_googleplus": true,
+          "contact_3_icon": "fa fa-google-plus",
+          "contact_1_googleplus": "",
+          "show_contact_1_youtube": true,
+          "contact_4_icon": "fa fa-youtube",
+          "contact_1_youtube": "",
+          "contact_5_icon": "fa fa-pinterest",
+          "show_contact_1_pinterest": true,
+          "contact_1_pinterest": ""
+        }
+      },
+      "1590744763594": {
+        "type": "resolution",
+        "blocks": {
+          "1590744770052": {
+            "type": "banner-item-2",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/slider1-5.jpg",
+              "text_1": "THE  SOPHISTICATED PRODUCT",
+              "text_2": "Finding trendy Tshirt or create your own",
+              "text_3": "CUSTOM TSHIRT THEME",
+              "button": "Shop Now",
+              "link_1": "shopify:\/\/collections\/bag",
+              "button_2": "Start Design",
+              "link_2": "shopify:\/\/pages\/foil-printing"
+            }
+          },
+          "1590744775413": {
+            "type": "banner-item-2",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/slider2-5.jpg",
+              "text_1": "THE  SOPHISTICATED PRODUCT",
+              "text_2": "Finding trendy Tshirt or create your own",
+              "text_3": "CUSTOM TSHIRT THEME",
+              "button": "Shop Now",
+              "link_1": "shopify:\/\/products\/bag-backpack-sporty",
+              "button_2": "Start Design",
+              "link_2": "shopify:\/\/pages\/foil-printing"
+            }
+          },
+          "1597567235614": {
+            "type": "banner-item-2",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/slider3-5.jpg",
+              "text_1": "THE  SOPHISTICATED PRODUCT",
+              "text_2": "Finding trendy Tshirt or create your own",
+              "text_3": "CUSTOM TSHIRT THEME",
+              "button": "Shop Now",
+              "link_1": "shopify:\/\/products\/arkasi-volanli-bol-kesim-pamuk-elbise-1",
+              "button_2": "Start Design",
+              "link_2": "shopify:\/\/pages\/foil-printing"
+            }
+          }
+        },
+        "block_order": [
+          "1590744770052",
+          "1590744775413",
+          "1597567235614"
+        ],
+        "settings": {
+        }
+      },
+      "1591689984697": {
+        "type": "product-tab-model-2",
+        "blocks": {
+          "1591689984697-0": {
+            "type": "text_block",
+            "settings": {
+              "title": "T-shirt",
+              "collection": "t-shirt"
+            }
+          },
+          "1591690010315": {
+            "type": "text_block",
+            "settings": {
+              "title": "Tank-tops",
+              "collection": "tank-tops"
+            }
+          },
+          "1591690025145": {
+            "type": "text_block",
+            "settings": {
+              "title": "Unisex",
+              "collection": "unisex"
+            }
+          }
+        },
+        "block_order": [
+          "1591689984697-0",
+          "1591690010315",
+          "1591690025145"
+        ],
+        "settings": {
+          "title_1": "Featured Products",
+          "title_position": "text-center",
+          "title_1_clr": "#000000",
+          "tag_clr": "#000000",
+          "grid": "4",
+          "rows": "2"
+        }
+      },
+      "1591772871670": {
+        "type": "support-section-6",
+        "disabled": true,
+        "blocks": {
+          "1591772871670-0": {
+            "type": "text",
+            "settings": {
+              "class": "teepro-svg-icon-seller-register",
+              "class_color": "#ffffff",
+              "title": "SELLER REGISTERS",
+              "title_color": "#000",
+              "desc": "First, you need to create a Teepro Seller account, if you don’t already have one. It is very simple.",
+              "desc_color": "#000000"
+            }
+          },
+          "1591772871670-1": {
+            "type": "text",
+            "settings": {
+              "class": "teepro-svg-icon-create-product",
+              "class_color": "#ffffff",
+              "title": "CREATE PRODUCT",
+              "title_color": "#000",
+              "desc": "Once you have your account, you need to list the items you want to sell. Then, just wait for approval collection",
+              "desc_color": "#000"
+            }
+          },
+          "1591772976630": {
+            "type": "text",
+            "settings": {
+              "class": "teepro-svg-icon-start-selling",
+              "class_color": "#ffffff",
+              "title": "START SELLING",
+              "title_color": "#000",
+              "desc": "After you list your offers, customers can see them in the Handmade marketplace and do the shopping",
+              "desc_color": "#000"
+            }
+          },
+          "1591772989181": {
+            "type": "text",
+            "settings": {
+              "class": "teepro-svg-icon-earn-money",
+              "class_color": "#ffffff",
+              "title": "BOTH EARN MONEY",
+              "title_color": "#000",
+              "desc": "We also offer a wide range of services and tools that help the creative company start, manage their businesses.",
+              "desc_color": "#000"
+            }
+          }
+        },
+        "block_order": [
+          "1591772871670-0",
+          "1591772871670-1",
+          "1591772976630",
+          "1591772989181"
+        ],
+        "settings": {
+          "title": "How does seller work",
+          "title_position": "text-center",
+          "title_color": "#000",
+          "description": "Join a creative marketplace where nearly 30 million buyers around the world shop for special items.",
+          "desc_color": "#000",
+          "background_color_wrapper": "shopify:\/\/shop_images\/seller-background.jpg",
+          "link": "",
+          "link_text": "Star Designing"
+        }
+      },
+      "1591779722325": {
+        "type": "support-section-5",
+        "blocks": {
+          "1591779722325-0": {
+            "type": "text",
+            "settings": {
+              "class": "teepro-svg-icon-printer",
+              "class_color": "#000",
+              "title": "SCREEN PRINTING",
+              "link": "shopify:\/\/pages\/printing-service",
+              "link_text": "Read more »",
+              "title_color": "#000",
+              "desc": "Screen printing is our number one specialty, and your solution for when you need any customized gear …",
+              "desc_color": "#000"
+            }
+          },
+          "1591779722325-1": {
+            "type": "text",
+            "settings": {
+              "class": "teepro-svg-icon-knitting",
+              "class_color": "#000",
+              "title": "EMBROIDERY",
+              "link": "shopify:\/\/pages\/embroidery",
+              "link_text": "Read more »",
+              "title_color": "#000",
+              "desc": "Screen printing is our number one specialty, and your solution for when you need any customized gear …",
+              "desc_color": "#000"
+            }
+          },
+          "1591779722325-2": {
+            "type": "text",
+            "settings": {
+              "class": "teepro-svg-icon-iron",
+              "class_color": "#000",
+              "title": "PERMAPRESS",
+              "link": "shopify:\/\/pages\/permapress",
+              "link_text": "Read more »",
+              "title_color": "#000",
+              "desc": "PermaPress is an alternative printing option that isn’t offered by many other screen printers …",
+              "desc_color": "#000"
+            }
+          },
+          "1591779722325-3": {
+            "type": "text",
+            "settings": {
+              "class": "teepro-svg-icon-rocket-ship",
+              "class_color": "#000",
+              "title": "T-SHIRT DELIVERY",
+              "link": "shopify:\/\/pages\/service-delivery-1",
+              "link_text": "Read more »",
+              "title_color": "#000",
+              "desc": "Whether you had a last minute idea to order merchandise, or have simply been too busy to place …",
+              "desc_color": "#000"
+            }
+          },
+          "1591779881780": {
+            "type": "text",
+            "settings": {
+              "class": "teepro-svg-icon-review",
+              "class_color": "#000",
+              "title": "DESIGN REVIEW",
+              "link": "shopify:\/\/pages\/service-design",
+              "link_text": "Read more »",
+              "title_color": "#000",
+              "desc": "To ensure the best possible outcome for each order, our professional in-house designers review placement, sizing …",
+              "desc_color": "#000"
+            }
+          },
+          "1591779889512": {
+            "type": "text",
+            "settings": {
+              "class": "teepro-svg-icon-shirt",
+              "class_color": "#000",
+              "title": "DIRECT TO GARMENT",
+              "link": "shopify:\/\/pages\/what-is-digital-shirt-printing",
+              "link_text": "Read more »",
+              "title_color": "#000",
+              "desc": "Extremely detailed and vivid designs work best using our Direct to Garment printers …",
+              "desc_color": "#000"
+            }
+          }
+        },
+        "block_order": [
+          "1591779722325-0",
+          "1591779722325-1",
+          "1591779722325-2",
+          "1591779722325-3",
+          "1591779881780",
+          "1591779889512"
+        ],
+        "settings": {
+          "title": "Our Professional Services",
+          "title_position": "text-center",
+          "title_color": "#000000",
+          "description": "Whatever your custom apparel need, low quantity, large quanitiy, fast turn-around – we’ve got<br>\nyou covered. Let’s find the service that’s right for you.",
+          "desc_color": "#696969",
+          "background_color": "",
+          "background_color_block": "#f7f6f2"
+        }
+      },
+      "1591784833675": {
+        "type": "banner-index-4",
+        "blocks": {
+          "1591784833675-0": {
+            "type": "banner-item-2",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/cat-image1.jpg",
+              "position": "left",
+              "link": "",
+              "image_position": "text-right",
+              "banner_position": "banner-left",
+              "text_1": "T-SHIRT FOR HIM",
+              "description_text": "Select the right Men Tshirts to suit your taste and sense of dressing through online shopping from us."
+            }
+          },
+          "1591784833675-1": {
+            "type": "banner-item-2",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/cat-image3.jpg",
+              "position": "left",
+              "link": "",
+              "image_position": "text-left",
+              "banner_position": "banner-right",
+              "text_1": "T-SHIRT FOR KIDS",
+              "description_text": "We bring you an exhaustive lineup of children’s dresses, accessories and footwear for all occasions."
+            }
+          },
+          "1591784833675-2": {
+            "type": "banner-item-2",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/cat-image2.jpg",
+              "position": "right",
+              "link": "",
+              "image_position": "text-right",
+              "banner_position": "banner-left",
+              "text_1": "ACCESSORIES",
+              "description_text": "Make or break your wardrobe when you add fashionable accessories from us"
+            }
+          },
+          "1591784833675-3": {
+            "type": "banner-item-2",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/cat-image4.jpg",
+              "position": "right",
+              "link": "",
+              "image_position": "text-left",
+              "banner_position": "banner-right",
+              "text_1": "T-SHIRT FOR HER",
+              "description_text": "Find ladies' t-shirts to suit your style & wear with a pair of ripped jeans for some effortless chic."
+            }
+          }
+        },
+        "block_order": [
+          "1591784833675-0",
+          "1591784833675-1",
+          "1591784833675-2",
+          "1591784833675-3"
+        ],
+        "settings": {
+          "title_1": "Shop By Category",
+          "title_1_clr": "#000",
+          "title_position": "text-center",
+          "description": "Shopping for t-shirts is fun and easy with Teepro. Browse our amazing selection of t-shirt<br>\ndesigns and find one that fits your personality or create your own t-shirt design from scratch.",
+          "desc_color": "#696969"
+        }
+      },
+      "1591856709032": {
+        "type": "about-us-company",
+        "settings": {
+          "bg_img": "shopify:\/\/shop_images\/video-image.jpg",
+          "enable_parallax": true,
+          "video_source": "youtube",
+          "video_id": "zpf6Iu8EbLk",
+          "title": "About Us Company",
+          "title_position": "text-center",
+          "title_clr": "#000",
+          "description": "We’re about more than shirts. We’re about you and everything you love. We believe that<br>\ncustom t-shirts do more than just make you look good.",
+          "desc_color": "#696969",
+          "title_passion": "TeePro Passion for Printing",
+          "title_passion_clr": "#000",
+          "description_passion": "<p><span class=\"teepro-dropcap\">T<\/span>-shirt with Tee Pro, there’s no denying it: you’re obsessed. We understand how important your T-shirt project is to you. That’s why we’ve established exacting standards for print quality and offer multiple printing technologies to ensure that your order will come out great. No matter how your T-shirts are printed, They are sure to bring your group together.<\/p>\n<p>They are sure to bring your group together. Custom T-shirts have the power to create lasting memories, start new traditions, and unite groups for a common purpose. We’ll take care of the printing so you and your group can show off your awesome T- shirts together! They are sure to bring your group together.<\/p>\n<p>Custom T-shirts have the power to create lasting memories, start new traditions, and unite groups for a common purpose. We’ll take care of the printing so you and your group can show off your awesome<\/p>",
+          "desc_passion_color": "#000",
+          "image_ceo": "shopify:\/\/shop_images\/avatar-150x150.jpg",
+          "ceo_signature": "shopify:\/\/shop_images\/signature.png",
+          "ceo_text": "<strong>CEO<\/strong> – HENRRY INN"
+        }
+      },
+      "1592014257027": {
+        "type": "home-create-your-own",
+        "disabled": true,
+        "blocks": {
+          "1592014257027-0": {
+            "type": "text",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/6.png",
+              "class": "teepro-svg-icon-seller-register",
+              "class_color": "#000",
+              "title": "CHOOSE LOCATION",
+              "background_class": "#f3f3f3",
+              "title_color": "#696969",
+              "desc": "Choose your place that you want your products come to",
+              "desc_color": "#696969",
+              "link": ""
+            }
+          },
+          "1592014257027-1": {
+            "type": "text",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/6.png",
+              "class": "teepro-svg-icon-create-product",
+              "class_color": "#000",
+              "title": "CHOOSE LOCATION",
+              "background_class": "#f3f3f3",
+              "title_color": "#696969",
+              "desc": "Choose your place that you want your products come to",
+              "desc_color": "#696969",
+              "link": ""
+            }
+          },
+          "1592014257027-2": {
+            "type": "text",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/6.png",
+              "class": "teepro-svg-icon-start-selling",
+              "class_color": "#000",
+              "title": "CHOOSE LOCATION",
+              "background_class": "#f3f3f3",
+              "title_color": "#696969",
+              "desc": "Choose your place that you want your products come to",
+              "desc_color": "#696969",
+              "link": ""
+            }
+          },
+          "1592014338770": {
+            "type": "text",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/6.png",
+              "class": "teepro-svg-icon-earn-money",
+              "class_color": "#000",
+              "title": "CHOOSE LOCATION",
+              "background_class": "#f3f3f3",
+              "title_color": "#696969",
+              "desc": "Choose your place that you want your products come to",
+              "desc_color": "#696969",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1592014257027-0",
+          "1592014257027-1",
+          "1592014257027-2",
+          "1592014338770"
+        ],
+        "settings": {
+          "title": "Create your own",
+          "title_position": "text-center",
+          "title_clr": "#333333",
+          "description": "You can create any product with your signature. It will make your beloved people supprising",
+          "desc_color": "#696969",
+          "show_image": true,
+          "image": "",
+          "link": "",
+          "alignment": "right"
+        }
+      },
+      "1592014859215": {
+        "type": "home-product-grid-type-5",
+        "disabled": true,
+        "blocks": {
+          "1595845830427": {
+            "type": "text_block",
+            "settings": {
+              "title": "ALL CATEGORIES",
+              "collection": ""
+            }
+          },
+          "1595845854815": {
+            "type": "text_block",
+            "settings": {
+              "title": "T-SHIRT",
+              "collection": ""
+            }
+          }
+        },
+        "block_order": [
+          "1595845830427",
+          "1595845854815"
+        ],
+        "settings": {
+          "title_1": "New Arrival",
+          "title_position": "text-center",
+          "title_1_clr": "#000",
+          "show_image": true,
+          "image": "shopify:\/\/shop_images\/home6-bn2.jpg",
+          "link": "",
+          "alignment": "left",
+          "tag_clr": "#000",
+          "grid": "3",
+          "rows": "2"
+        }
+      },
+      "1592014927422": {
+        "type": "banner-index-2",
+        "disabled": true,
+        "blocks": {
+          "1592014927422-0": {
+            "type": "banner-item-2",
+            "settings": {
+              "image": "",
+              "position": "left",
+              "link": "",
+              "text_position": "top-left",
+              "text_1": "Categories",
+              "button_text": "View detail"
+            }
+          },
+          "1592014927422-1": {
+            "type": "banner-item-2",
+            "settings": {
+              "image": "",
+              "position": "left",
+              "link": "",
+              "text_position": "top-left",
+              "text_1": "Categories",
+              "button_text": "View detail"
+            }
+          },
+          "1592014927422-2": {
+            "type": "banner-item-2",
+            "settings": {
+              "image": "",
+              "position": "right",
+              "link": "",
+              "text_position": "top-left",
+              "text_1": "Categories",
+              "button_text": "View detail"
+            }
+          },
+          "1592014927422-3": {
+            "type": "banner-item-2",
+            "settings": {
+              "image": "",
+              "position": "right",
+              "link": "",
+              "text_position": "top-left",
+              "text_1": "Categories",
+              "button_text": "View detail"
+            }
+          }
+        },
+        "block_order": [
+          "1592014927422-0",
+          "1592014927422-1",
+          "1592014927422-2",
+          "1592014927422-3"
+        ],
+        "settings": {
+          "title": "Shop By Category",
+          "title_position": "text-center",
+          "title_color": "#000",
+          "description": "Shopping for t-shirts is fun and easy with Teepro. Browse our amazing selection of t-shirt designs and find one that fits your personality or create your own t-shirt design from scratch.",
+          "desc_color": "#696969"
+        }
+      },
+      "1592015524605": {
+        "type": "home-create-your-own",
+        "disabled": true,
+        "blocks": {
+          "1592015524605-0": {
+            "type": "text",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/6.png",
+              "class": "teepro-svg-icon-choose-location",
+              "class_color": "#000",
+              "title": "CHOOSE LOCATION",
+              "background_class": "#f3f3f3",
+              "title_color": "#000000",
+              "desc": "Choose your place that you want your products come to",
+              "desc_color": "#696969",
+              "link": ""
+            }
+          },
+          "1592015524605-1": {
+            "type": "text",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/6.png",
+              "class": "teepro-svg-icon-select-product",
+              "class_color": "#000",
+              "title": "CREATE PRODUCT",
+              "background_class": "#f3f3f3",
+              "title_color": "#000000",
+              "desc": "Once you have your account, you need to list the items you want to sell. Then, just wait for approval collection",
+              "desc_color": "#696969",
+              "link": ""
+            }
+          },
+          "1592015524605-2": {
+            "type": "text",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/6.png",
+              "class": "teepro-svg-icon-add-design",
+              "class_color": "#000",
+              "title": "BOTH EARN MONEY",
+              "background_class": "#f3f3f3",
+              "title_color": "#000000",
+              "desc": "We also offer a wide range of services and tools that help the creative company start, manage their businesses.",
+              "desc_color": "#696969",
+              "link": ""
+            }
+          },
+          "1592015637079": {
+            "type": "text",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/6.png",
+              "class": "teepro-svg-icon-checkout",
+              "class_color": "#000",
+              "title": "START SELLING",
+              "background_class": "#f3f3f3",
+              "title_color": "#000000",
+              "desc": "After you list your offers, customers can see them in the Handmade marketplace and do the shopping",
+              "desc_color": "#696969",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1592015524605-0",
+          "1592015524605-1",
+          "1592015524605-2",
+          "1592015637079"
+        ],
+        "settings": {
+          "title": "New arrivals",
+          "title_position": "text-center",
+          "title_clr": "#333333",
+          "description": "You can create any product with your signature. It will make your beloved people supprising",
+          "desc_color": "#696969",
+          "show_image": true,
+          "image": "shopify:\/\/shop_images\/home6-bn1.png",
+          "link": "",
+          "alignment": "left"
+        }
+      },
+      "1592015965712": {
+        "type": "blog-post-type-1",
+        "disabled": true,
+        "settings": {
+          "blog_bg": "#000",
+          "title": "Our Blog",
+          "title_position": "text-center",
+          "title_color": "#000",
+          "description": "Our blog is a great resource for t-shirt design & inspiration and includes industry news,<br>\nreviews, tips and tricks, how to tips and more.",
+          "desc_color": "#000",
+          "pick_featured_blog": "news",
+          "title_blog_clr": "#000",
+          "title_hover_clr": "#000",
+          "show_featured_date": true,
+          "date_bgcolor": "#1a1a1a",
+          "date_color": "#fff",
+          "blog_date_clr": "#fff",
+          "blog_author_enable": true,
+          "blog_author_text": "#000",
+          "blog_comment": true,
+          "blog_comment_text": "#000",
+          "blog_description": true,
+          "blog_desc_clr": "#000",
+          "show_blog_4_tag": true,
+          "blog_design_4_tag": "#1a1a1a",
+          "blog_design_4_taghover": "#da004d",
+          "btn": "Read more"
+        }
+      },
+      "1592016500981": {
+        "type": "brands",
+        "disabled": true,
+        "blocks": {
+          "1592016500981-0": {
+            "type": "Image",
+            "settings": {
+              "client_img": "shopify:\/\/shop_images\/6.png",
+              "client_heading": "",
+              "client_link": ""
+            }
+          },
+          "1592016500981-1": {
+            "type": "Image",
+            "settings": {
+              "client_img": "shopify:\/\/shop_images\/6.png",
+              "client_heading": "",
+              "client_link": ""
+            }
+          },
+          "1592016500981-2": {
+            "type": "Image",
+            "settings": {
+              "client_img": "shopify:\/\/shop_images\/6.png",
+              "client_heading": "",
+              "client_link": ""
+            }
+          },
+          "1592016500981-3": {
+            "type": "Image",
+            "settings": {
+              "client_img": "shopify:\/\/shop_images\/6.png",
+              "client_heading": "",
+              "client_link": ""
+            }
+          },
+          "1592016500981-4": {
+            "type": "Image",
+            "settings": {
+              "client_img": "shopify:\/\/shop_images\/6.png",
+              "client_heading": "",
+              "client_link": ""
+            }
+          },
+          "1592016500981-5": {
+            "type": "Image",
+            "settings": {
+              "client_img": "shopify:\/\/shop_images\/6.png",
+              "client_heading": "",
+              "client_link": ""
+            }
+          },
+          "1592016500981-6": {
+            "type": "Image",
+            "settings": {
+              "client_img": "shopify:\/\/shop_images\/6.png",
+              "client_heading": "",
+              "client_link": ""
+            }
+          },
+          "1592016500981-7": {
+            "type": "Image",
+            "settings": {
+              "client_img": "shopify:\/\/shop_images\/6.png",
+              "client_heading": "",
+              "client_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1592016500981-0",
+          "1592016500981-1",
+          "1592016500981-2",
+          "1592016500981-3",
+          "1592016500981-4",
+          "1592016500981-5",
+          "1592016500981-6",
+          "1592016500981-7"
+        ],
+        "settings": {
+          "title": "",
+          "car_border_clr": "#e4e4e4"
+        }
+      },
+      "1592017116308": {
+        "type": "banner-index-3",
+        "disabled": true,
+        "blocks": {
+          "1592017116308-0": {
+            "type": "banner-item-3",
+            "settings": {
+              "image": "",
+              "position": "left",
+              "effect": "fade-right",
+              "hover_effect": "banner-effect1",
+              "link": "",
+              "show_text": true,
+              "text_position": "top-left",
+              "text_1": "<div class=\"txt-caption has-divider\"> WOMAN COLLECTION<span class=\"txt-caption-divider\"><\/span>\n<\/div>",
+              "show_text2": true,
+              "text_2": "<h4 class=\"txt-primary\"> SALE UP TO <br><span class=\"txt_primary_custom_1\">50%<\/span><span class=\"txt_primary_custom_2\">OFF<\/span>\n<\/h4>",
+              "show_button": false,
+              "button_text": "View detail"
+            }
+          },
+          "1592017116308-1": {
+            "type": "banner-item-3",
+            "settings": {
+              "image": "",
+              "position": "right",
+              "effect": "fade-right",
+              "hover_effect": "banner-effect1",
+              "link": "",
+              "show_text": true,
+              "text_position": "top-left",
+              "text_1": "<div class=\"txt-caption has-divider\"> WOMAN COLLECTION<span class=\"txt-caption-divider\"><\/span>\n<\/div>",
+              "show_text2": true,
+              "text_2": "<h4 class=\"txt-primary\"> SALE UP TO <br><span class=\"txt_primary_custom_1\">50%<\/span><span class=\"txt_primary_custom_2\">OFF<\/span>\n<\/h4>",
+              "show_button": false,
+              "button_text": "View detail"
+            }
+          }
+        },
+        "block_order": [
+          "1592017116308-0",
+          "1592017116308-1"
+        ],
+        "settings": {
+          "title_1": "",
+          "title_1_clr": "#000",
+          "description": "",
+          "desc_color": "#000",
+          "tag_clr": "#000",
+          "tag_bg_clr": "#000",
+          "tag_hover_clr": "#fff"
+        }
+      },
+      "pr_summary": {
+        "type": "pr_summary",
+        "blocks": {
+          "pr_summary-0": {
+            "type": "title",
+            "settings": {
+              "size": 30
+            }
+          },
+          "1592204702653": {
+            "type": "review",
+            "settings": {
+              "rating": true
+            }
+          },
+          "pr_summary-3": {
+            "type": "des",
+            "settings": {
+              "length": 31,
+              "readm": true,
+              "readm_txt": "Read more"
+            }
+          },
+          "1592204704644": {
+            "type": "price",
+            "settings": {
+            }
+          },
+          "pr_summary-4": {
+            "type": "frm",
+            "settings": {
+            }
+          },
+          "1592205908088": {
+            "type": "wishlist-compare",
+            "settings": {
+            }
+          },
+          "pr_summary-5": {
+            "type": "meta",
+            "settings": {
+              "show_pr_vendor": true,
+              "show_sku": true,
+              "show_available": true,
+              "show_category_product": true,
+              "show_tag_product": true
+            }
+          },
+          "pr_summary-6": {
+            "type": "social",
+            "settings": {
+              "class": "tc"
+            }
+          }
+        },
+        "block_order": [
+          "pr_summary-0",
+          "1592204702653",
+          "pr_summary-3",
+          "1592204704644",
+          "pr_summary-4",
+          "1592205908088",
+          "pr_summary-5",
+          "pr_summary-6"
+        ],
+        "settings": {
+        }
+      },
+      "contact": {
+        "type": "contact",
+        "settings": {
+          "show_contact_1_page": true,
+          "show_contact_1_iconwrapper": false,
+          "show_contact_1_address": true,
+          "contact_add_heading": "",
+          "contact_add_detail": "Stress: 15 Sweet Love Stress <br>\nSuburb: Pyanama<br>\nState: Maryland<br>\nZip Code: 12345<br>\nCountry: USA",
+          "show_contact_1_email": true,
+          "contact_mail_heading": "",
+          "contact_mail_detail": "Telephone: +321 5441600",
+          "show_contact_1_phone": true,
+          "contact_phone_heading": "",
+          "contact_phone_detail": "Fax: +321 5441601",
+          "show_contact_1_time": true,
+          "contact_time_heading": "",
+          "contact_time_detail": "Website: cmsmart.net",
+          "message": "Ask us a question and we'll write back to you promptly! Simply fill out the form below and click Send Email. Thanks. Items marked with an asterisk (*) are required fields.",
+          "enable_gmap": true,
+          "contact_iframe_code": "<iframe style=\"border:0;scrolling=\" no=\"\" src=\"https:\/\/maps.google.co.in\/?ie=UTF8&t=m&ll=-37.823006,144.977388&spn=0.02034,0.042915&z=14&output=embed\" width=\"960\" height=\"578\"><\/iframe>",
+          "contact_1_linkcolor": "#000",
+          "contact_1_linkhovercolor": "#000",
+          "contact_1_iconbg": "#000",
+          "contact_1_iconcolor": "#000",
+          "contact_1_iconhoverbg": "#000",
+          "contact_1_iconheadingcolor": "#000",
+          "contact_1_icondetailcolor": "#000",
+          "show_contact_1_contactform": true,
+          "contact_form_heading": "",
+          "contact_1_formheadingcolor": "#000000",
+          "contact_1_formheadingbordercolor": "rgba(0,0,0,0)",
+          "contact_1_formbgcolor": "rgba(0,0,0,0)",
+          "contact_1_formborder": "rgba(0,0,0,0)",
+          "contact_1_formbtnbg": "#000000",
+          "contact_1_formbtncolor": "#ffffff",
+          "contact_1_formbtnhoverbg": "#000",
+          "contact_1_formbtnhovercolor": "#000",
+          "show_contact_1_socialicon": false,
+          "contact_1_socialiconcolor": "#000",
+          "contact_1_socialiconhoverbg": "#000",
+          "contact_1_socialiconhovercolor": "#000",
+          "show_contact_1_facebook": false,
+          "contact_1_icon": "",
+          "contact_1_facebook": "",
+          "show_contact_1_twitter": false,
+          "contact_2_icon": "",
+          "contact_1_twitter": "",
+          "show_contact_1_googleplus": false,
+          "contact_3_icon": "",
+          "contact_1_googleplus": "",
+          "show_contact_1_youtube": false,
+          "contact_4_icon": "",
+          "contact_1_youtube": "",
+          "contact_5_icon": "",
+          "show_contact_1_pinterest": false,
+          "contact_1_pinterest": ""
+        }
+      },
+      "service": {
+        "type": "service",
+        "blocks": {
+          "1593067785473": {
+            "type": "html",
+            "settings": {
+              "subtitle": "",
+              "title": "",
+              "text": "<p>Our service is built with our aim is to supply customer experience that they can understand easily printing process<\/p>",
+              "button_label": "Get started",
+              "button_link": "#"
+            }
+          },
+          "1593073292332": {
+            "type": "service-info",
+            "settings": {
+              "service_phone": "+841 123 456 78",
+              "service_chat": "Chat with a Specialist",
+              "service_mail": "info@lindashop.com"
+            }
+          }
+        },
+        "block_order": [
+          "1593067785473",
+          "1593073292332"
+        ],
+        "settings": {
+          "heading": "FAQ",
+          "size": 24,
+          "background_color_wrapper": "",
+          "faq_heading": "You Find The Answer Here!",
+          "service": "left_sidebar",
+          "enable_sidecategory": true,
+          "linkedlist": "shop",
+          "linkedlist_title": "Service"
+        }
+      },
+      "support-section-help": {
+        "type": "support-section-help",
+        "blocks": {
+          "1593075688778": {
+            "type": "text",
+            "settings": {
+              "class": "fa-phone",
+              "class_color": "#000",
+              "title": "CALL OUR SPECIALIST",
+              "title_color": "#ffffff",
+              "desc": "Call 1900000",
+              "desc_color": "#0eedbf"
+            }
+          },
+          "1593075692802": {
+            "type": "text",
+            "settings": {
+              "class": "fa-comments",
+              "class_color": "#683030",
+              "title": "CHAT NOW",
+              "title_color": "#ffffff",
+              "desc": "Our skype: teepro.support",
+              "desc_color": "#0eedbf"
+            }
+          },
+          "1593075694701": {
+            "type": "text",
+            "settings": {
+              "class": "fa-envelope-o",
+              "class_color": "#000",
+              "title": "SEND EMAIL",
+              "title_color": "#ffffff",
+              "desc": "Get Started",
+              "desc_color": "#0eedbf"
+            }
+          }
+        },
+        "block_order": [
+          "1593075688778",
+          "1593075692802",
+          "1593075694701"
+        ],
+        "settings": {
+          "iconhover_color": "#000",
+          "background_color": "",
+          "background_color_block": "rgba(0,0,0,0)",
+          "bg_img": "",
+          "background_color_wrapper": "",
+          "iconhovertext_color": "#000",
+          "description": "",
+          "desc_color": "#000",
+          "title": "Available 24\/7 to help",
+          "title_color": "#ffffff"
+        }
+      },
+      "home-product-grid-type-5": {
+        "type": "home-product-grid-type-5",
+        "settings": {
+          "title_1": "",
+          "title_position": "text-center",
+          "title_1_clr": "#000",
+          "show_image": true,
+          "image": "",
+          "link": "",
+          "alignment": "left",
+          "tag_clr": "#000",
+          "grid": "3",
+          "rows": "1"
+        }
+      },
+      "collection-banner": {
+        "type": "collection-banner",
+        "settings": {
+          "heading": "FAQ",
+          "size": 24,
+          "background_color_wrapper": "shopify:\/\/shop_images\/bn_1.jpg",
+          "code": "<div class=\"text_top\">\n<p class=\"heart\">I<\/p>\n<p>Create Your Own<\/p>\n<\/div><div class=\"text_middle\">Use design add texts and photos<\/div>",
+          "button_label": "Create Now",
+          "button_link": ""
+        }
+      },
+      "1594980317817": {
+        "type": "testimonial-type-3",
+        "disabled": true,
+        "blocks": {
+          "1594980317817-0": {
+            "type": "text",
+            "settings": {
+              "text_desc": "This PSD is so well organised - the best Ive ever downloaded from here. The ideas are also really fresh and  new great work. This PSD is so well organised - the best Ive ever downloaded from here. The ideas are also  really fresh and new - great work.",
+              "des_color": "#696969",
+              "image_1": "",
+              "author_name": "Jonh Hee",
+              "image_1_heading": "Web Designer",
+              "image_1_heading_color": "#999999",
+              "author_color": "#000"
+            }
+          },
+          "1594980317817-1": {
+            "type": "text",
+            "settings": {
+              "text_desc": "This PSD is so well organised - the best Ive ever downloaded from here. The ideas are also really fresh and  new great work. This PSD is so well organised - the best Ive ever downloaded from here. The ideas are also  really fresh and new - great work.",
+              "des_color": "#696969",
+              "image_1": "",
+              "author_name": "Jonh Hee",
+              "image_1_heading": "Web Designer",
+              "image_1_heading_color": "#999999",
+              "author_color": "#000"
+            }
+          },
+          "1594980317817-2": {
+            "type": "text",
+            "settings": {
+              "text_desc": "This PSD is so well organised - the best Ive ever downloaded from here. The ideas are also really fresh and  new great work. This PSD is so well organised - the best Ive ever downloaded from here. The ideas are also  really fresh and new - great work.",
+              "des_color": "#696969",
+              "image_1": "",
+              "author_name": "Jonh Hee",
+              "image_1_heading": "Web Designer",
+              "image_1_heading_color": "#999999",
+              "author_color": "#000"
+            }
+          }
+        },
+        "block_order": [
+          "1594980317817-0",
+          "1594980317817-1",
+          "1594980317817-2"
+        ],
+        "settings": {
+          "bg_color": "#fff",
+          "bg_img": "",
+          "background_color": "#f3f3f3",
+          "title": "We love my client",
+          "title_clr": "#000",
+          "description": "Our valued customers’ feedback is the measure of our success. We’re honored to serve what<br>\nmay be the world’s most discerning clientele.",
+          "desc_color": "#000",
+          "small_title": "",
+          "text_clr": "#000"
+        }
+      },
+      "1597601012035": {
+        "type": "support-section-6",
+        "blocks": {
+          "1597601012035-0": {
+            "type": "text",
+            "settings": {
+              "class": "teepro-svg-icon-choose-location",
+              "class_color": "#fff",
+              "title": "CHOOSE LOCATION",
+              "title_color": "#000",
+              "desc": "Choose your place that you want your products come to",
+              "desc_color": "#696969"
+            }
+          },
+          "1597601012035-1": {
+            "type": "text",
+            "settings": {
+              "class": "teepro-svg-icon-select-product",
+              "class_color": "#fff",
+              "title": "SELECT PRODUCT",
+              "title_color": "#000",
+              "desc": "Select the product you want to customize in our premium quality products collection",
+              "desc_color": "#696969"
+            }
+          },
+          "1597601012035-2": {
+            "type": "text",
+            "settings": {
+              "class": "teepro-svg-icon-add-design",
+              "class_color": "#fff",
+              "title": "ADD DESIGN",
+              "title_color": "#000",
+              "desc": "You can upload your design or you can customize it through Online Designer tool",
+              "desc_color": "#696969"
+            }
+          },
+          "1597601012035-3": {
+            "type": "text",
+            "settings": {
+              "class": "teepro-svg-icon-checkout",
+              "class_color": "#fff",
+              "title": "CHECKOUT & ORDER",
+              "title_color": "#000",
+              "desc": "After you have a beautiful T-shirt with your own designjust add it to your card and checkoutcollection",
+              "desc_color": "#696969"
+            }
+          }
+        },
+        "block_order": [
+          "1597601012035-0",
+          "1597601012035-1",
+          "1597601012035-2",
+          "1597601012035-3"
+        ],
+        "settings": {
+          "title": "How does seller work",
+          "title_position": "text-center",
+          "title_color": "#000",
+          "description": "Join a creative marketplace where nearly 30 million buyers around the world shop for special items.",
+          "desc_color": "#696969",
+          "background_color_wrapper": "shopify:\/\/shop_images\/background-hp5.jpg",
+          "link": "",
+          "link_text": "Star Designing"
+        }
+      },
+      "1597602340596": {
+        "type": "support-section-8",
+        "disabled": true,
+        "blocks": {
+          "1597602340596-0": {
+            "type": "text",
+            "settings": {
+              "class": "teepro-svg-icon-seller-register",
+              "class_color": "#fff",
+              "title": "Heading",
+              "title_color": "#000",
+              "desc": "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+              "desc_color": "#696969"
+            }
+          },
+          "1597602340596-1": {
+            "type": "text",
+            "settings": {
+              "class": "teepro-svg-icon-create-product",
+              "class_color": "#fff",
+              "title": "Heading",
+              "title_color": "#000",
+              "desc": "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+              "desc_color": "#696969"
+            }
+          },
+          "1597602340596-2": {
+            "type": "text",
+            "settings": {
+              "class": "teepro-svg-icon-start-selling",
+              "class_color": "#fff",
+              "title": "Heading",
+              "title_color": "#000",
+              "desc": "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+              "desc_color": "#696969"
+            }
+          },
+          "1597602340596-3": {
+            "type": "text",
+            "settings": {
+              "class": "teepro-svg-icon-earn-money",
+              "class_color": "#fff",
+              "title": "Heading",
+              "title_color": "#000",
+              "desc": "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+              "desc_color": "#696969"
+            }
+          }
+        },
+        "block_order": [
+          "1597602340596-0",
+          "1597602340596-1",
+          "1597602340596-2",
+          "1597602340596-3"
+        ],
+        "settings": {
+          "title": "How does seller work",
+          "title_color": "#000",
+          "title_position": "text-center",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+          "desc_color": "#696969",
+          "background_color_block": "#fff",
+          "background_color_wrapper": "shopify:\/\/shop_images\/seller-background.jpg"
+        }
+      },
+      "1597605568491": {
+        "type": "home-testimonial",
+        "blocks": {
+          "1597605568491-0": {
+            "type": "text",
+            "settings": {
+              "background_color_block": "#c8dbc5",
+              "class": "teepro-svg-icon-rocket-ship",
+              "class_color": "#000",
+              "title": "FREE SHIPPING",
+              "title_color": "#000",
+              "desc": "Free delivery on order over $99",
+              "desc_color": "#000"
+            }
+          },
+          "1597605568491-1": {
+            "type": "text",
+            "settings": {
+              "background_color_block": "#d5dbf6",
+              "class": "teepro-svg-icon-hours-support",
+              "class_color": "#000",
+              "title": "ORDER ONLINE",
+              "title_color": "#000",
+              "desc": "Hour: 8am – 11am & 14pm – 17pm",
+              "desc_color": "#000"
+            }
+          },
+          "1597605568491-2": {
+            "type": "text",
+            "settings": {
+              "background_color_block": "#ffeaf0",
+              "class": "teepro-svg-icon-money-bag",
+              "class_color": "#000",
+              "title": "SHOP AND SAVE",
+              "title_color": "#000",
+              "desc": "Save your time and your money with us",
+              "desc_color": "#000"
+            }
+          },
+          "1597605568491-3": {
+            "type": "Image",
+            "settings": {
+              "image_1": "shopify:\/\/shop_images\/home5-bn1.jpg"
+            }
+          },
+          "1597605568491-4": {
+            "type": "Brand",
+            "settings": {
+              "client_img": "shopify:\/\/shop_images\/7.png",
+              "client_link": ""
+            }
+          },
+          "1597605568491-5": {
+            "type": "Brand",
+            "settings": {
+              "client_img": "shopify:\/\/shop_images\/6.png",
+              "client_link": ""
+            }
+          },
+          "1597605568491-6": {
+            "type": "Brand",
+            "settings": {
+              "client_img": "shopify:\/\/shop_images\/5.png",
+              "client_link": ""
+            }
+          },
+          "1597605568491-7": {
+            "type": "Brand",
+            "settings": {
+              "client_img": "shopify:\/\/shop_images\/2.png",
+              "client_link": ""
+            }
+          },
+          "1597640570201": {
+            "type": "Brand",
+            "settings": {
+              "client_img": "shopify:\/\/shop_images\/3.png",
+              "client_link": ""
+            }
+          },
+          "1597640580922": {
+            "type": "Brand",
+            "settings": {
+              "client_img": "shopify:\/\/shop_images\/1.png",
+              "client_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1597605568491-0",
+          "1597605568491-1",
+          "1597605568491-2",
+          "1597605568491-3",
+          "1597605568491-4",
+          "1597605568491-5",
+          "1597605568491-6",
+          "1597605568491-7",
+          "1597640570201",
+          "1597640580922"
+        ],
+        "settings": {
+          "title": "",
+          "title_position": "text-center",
+          "title_color": "#000",
+          "description": "",
+          "desc_color": "#696969"
+        }
+      },
+      "1597608284394": {
+        "type": "testimonial-type-4",
+        "blocks": {
+          "1597608284394-0": {
+            "type": "Testimonial",
+            "settings": {
+              "text_desc": "This PSD is so well organised - the best Ive ever downloaded from here. The ideas are also\nreally fresh and new great work. This PSD is so well organised - the best Ive ever downloaded from\nhere. The ideas are also really fresh and new - great work.",
+              "des_color": "#000",
+              "image_1": "shopify:\/\/shop_images\/t1-150x150.jpg",
+              "author_name": "John Web",
+              "image_1_heading": "Web Designer",
+              "image_1_heading_color": "#696969",
+              "author_color": "#000"
+            }
+          },
+          "1597608284394-1": {
+            "type": "Testimonial",
+            "settings": {
+              "text_desc": "This PSD is so well organised - the best Ive ever downloaded from here. The ideas are also\nreally fresh and new great work. This PSD is so well organised - the best Ive ever downloaded from\nhere. The ideas are also really fresh and new - great work.",
+              "des_color": "#000",
+              "image_1": "shopify:\/\/shop_images\/cat-image4.jpg",
+              "author_name": "Jay Web",
+              "image_1_heading": "Web Designer",
+              "image_1_heading_color": "#696969",
+              "author_color": "#000"
+            }
+          },
+          "1597608284394-2": {
+            "type": "Testimonial",
+            "settings": {
+              "text_desc": "lorem ipsum dolor sit amet consectetur adipiscing elit",
+              "des_color": "#000",
+              "image_1": "",
+              "author_name": "John Web",
+              "image_1_heading": "Web Designer",
+              "image_1_heading_color": "#696969",
+              "author_color": "#000"
+            }
+          }
+        },
+        "block_order": [
+          "1597608284394-0",
+          "1597608284394-1",
+          "1597608284394-2"
+        ],
+        "settings": {
+          "background_color": "#fff",
+          "title": "We love my client",
+          "title_position": "text-center",
+          "title_clr": "#000",
+          "description": "<p>Our valued customers’ feedback is the measure of our success. We’re honored to serve what<br> may be the world’s most discerning clientele.<\/p>",
+          "desc_color": "#000"
+        }
+      },
+      "1597611159340": {
+        "type": "testimonial-type-18",
+        "disabled": true,
+        "blocks": {
+          "1597611159340-0": {
+            "type": "Testimonial",
+            "settings": {
+              "text_desc": "This PSD is so well organised - the best Ive ever downloaded from here. The ideas are also really fresh and  new great work",
+              "des_color": "#000",
+              "image_1": "",
+              "author_name": "JOHN WEB",
+              "image_1_heading": "Web Designer",
+              "author_color": "#000",
+              "image_1_heading_color": "#696969"
+            }
+          },
+          "1597611159340-1": {
+            "type": "Testimonial",
+            "settings": {
+              "text_desc": "This PSD is so well organised - the best Ive ever downloaded from here. The ideas are also really fresh and  new great work",
+              "des_color": "#000",
+              "image_1": "",
+              "author_name": "JOHN WEB",
+              "image_1_heading": "Web Designer",
+              "author_color": "#000",
+              "image_1_heading_color": "#696969"
+            }
+          },
+          "1597611159340-2": {
+            "type": "Testimonial",
+            "settings": {
+              "text_desc": "This PSD is so well organised - the best Ive ever downloaded from here. The ideas are also really fresh and  new great work",
+              "des_color": "#000",
+              "image_1": "",
+              "author_name": "JOHN WEB",
+              "image_1_heading": "Web Designer",
+              "author_color": "#000",
+              "image_1_heading_color": "#696969"
+            }
+          }
+        },
+        "block_order": [
+          "1597611159340-0",
+          "1597611159340-1",
+          "1597611159340-2"
+        ],
+        "settings": {
+          "bg_img": "shopify:\/\/shop_images\/client-background.jpg",
+          "title": "Shop By Category",
+          "title_position": "text-center",
+          "title_color": "#000",
+          "description": "Shopping for t-shirts is fun and easy with Teepro. Browse our amazing selection of t-shirt designs and find one that fits your personality or create your own t-shirt design from scratch.",
+          "desc_color": "#696969"
+        }
+      },
+      "sidebar-colors": {
+        "type": "sidebar-colors",
+        "settings": {
+          "enable_sidebar_multiple_choice": true,
+          "enable_shop_by_tags_1": true,
+          "shop_by_tags_1_title": "Shop By Color",
+          "enable_filters": true,
+          "shop_by_color_list_tags": ""
+        }
+      },
+      "1597631119935": {
+        "type": "support-block",
+        "disabled": true,
+        "blocks": {
+          "1597631119935-0": {
+            "type": "text",
+            "settings": {
+              "class": "teepro-svg-icon-rocket-ship",
+              "class_color": "#000",
+              "link_text": "FREE SHIPPING",
+              "title_color": "#000",
+              "desc": "Design On order over $99",
+              "desc_color": "#696969"
+            }
+          },
+          "1597631119935-1": {
+            "type": "text",
+            "settings": {
+              "class": "teepro-svg-icon-hours-support",
+              "class_color": "#000",
+              "link_text": "ORDER ONLINE",
+              "title_color": "#000",
+              "desc": "Easy 24\/7 online ordering",
+              "desc_color": "#696969"
+            }
+          },
+          "1597631119935-2": {
+            "type": "text",
+            "settings": {
+              "class": "teepro-svg-icon-money-bag",
+              "class_color": "#000",
+              "link_text": "SHOP AND SAVE",
+              "title_color": "#000",
+              "desc": "For all special & heart",
+              "desc_color": "#696969"
+            }
+          }
+        },
+        "block_order": [
+          "1597631119935-0",
+          "1597631119935-1",
+          "1597631119935-2"
+        ],
+        "settings": {
+          "bg_color": "#f3f3f3"
+        }
+      }
+    },
+    "content_for_index": [
+      "1590744763594",
+      "1591689984697",
+      "1591779722325",
+      "1591856709032",
+      "1591784833675",
+      "1597601012035",
+      "1597605568491",
+      "1597602340596",
+      "1597608284394",
+      "1594980317817",
+      "1592015524605",
+      "1592014859215",
+      "1591772871670",
+      "1592017116308",
+      "1592014927422",
+      "1592014257027",
+      "1592015965712",
+      "1597611159340",
+      "1592016500981",
+      "1597631119935"
+    ]
+  }
+}

@@ -1,0 +1,191 @@
+
+			<rs-module-wrap id="rev_slider_6_1_wrapper" data-source="gallery" style="  overflow: hidden;background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
+				<rs-module id="rev_slider_6_1" class=" rs-ov-hidden" style="display:none;" data-version="6.1.2">
+					<rs-slides>
+
+                      {% if section.blocks.size > 0 %}
+                                {% for block in section.blocks %}
+         	<rs-slide  data-title="Slide" data-thumb="//demo9.cmsmart.net/teepro_tf/home6/wp-content/uploads/revslider/slider_home6/slider1-10x10.jpg" data-duration="5000" data-ssop="true" data-anim="ei:d;eo:d;s:1800;r:0;t:fade;sl:d;">
+							<img src={{block.settings.image | img_url :"2000x800"}} data-panzoom="d:10000;ss:100;se:100;" class="rev-slidebg" data-no-retina>
+<!--
+							--><rs-layer
+							
+								class="rs-selectable"
+								data-type="text"
+								data-color="#696969"
+								data-rsp_ch="on"
+								data-xy="xo:101px,115px,33px,28px;y:m,t,t,t;yo:-133px,180px,102px,75px;"
+								data-text="s:30,24,20,16;l:30,21,21,21;fw:600,600,400,600;a:inherit;"
+								data-frame_0="x:-175%;o:1;tp:600;"
+								data-frame_0_mask="u:t;x:100%;"
+								data-frame_1="tp:600;e:Power3.easeOut;st:1000;sp:3510;sR:1000;"
+								data-frame_1_mask="u:t;"
+								data-frame_999="x:50px;o:0;tp:600;e:Power2.easeIn;st:w;sp:1510;sR:490;"
+							
+							> {{ block.settings.text_1 }}
+							</rs-layer><!--
+
+							--><rs-layer
+							
+								class="rs-selectable text-2"
+								data-type="text"
+								data-color="#333333"
+								data-rsp_ch="on"
+								data-xy="xo:103px,120px,31px,27px;y:m;"
+								data-text="w:normal;s:60,52,48,36;l:70,60,50,43;fw:700;a:inherit;"
+								data-dim="w:719px,669px,534px,384px;h:186px,auto,auto,auto;"
+								data-frame_0="o:1;tp:600;"
+								data-frame_0_lines="x:right;o:1;skX:-85px;"
+								data-frame_1="tp:600;e:Power4.easeInOut;st:1000;sp:3000;sR:1000;"
+								data-frame_999="z:0;sX:1;sY:1;o:1;rX:0;rY:0;rZ:0;skX:0;skY:0;tp:600;e:Back.easeIn;st:w;sp:1510;sR:1000;"
+							
+				
+							>{{ block.settings.text_2 }}
+ 
+							</rs-layer><!--
+
+							--><rs-layer
+							
+								class="Gym-Menuitem rs-selectable"
+								data-type="text"
+								data-rsp_ch="on"
+								data-xy="xo:103px,117px,31px,26px;yo:189px,121px,48px,32px;"
+								data-text="s:16,16,13,12;l:25,20,16,15;ls:2px;"
+								data-padding="t:3;r:5;b:3;l:8;"
+								data-border="bos:solid;boc:#ffffff;bow:2px,2px,2px,2px;bor:3px,3px,3px,3px;"
+								data-frame_0="sX:2;sY:2;tp:600;"
+								data-frame_0_mask="u:t;"
+								data-frame_1="tp:600;e:Power2.easeOut;st:1000;sp:3000;sR:1000;"
+								data-frame_1_mask="u:t;"
+								data-frame_999="x:0;y:0;z:0;sX:1;sY:1;o:0;rX:90;rY:0;rZ:0;skX:0;skY:0;tp:600;e:Power2.easeIn;st:w;sp:1510;sR:1000;"
+								data-frame_hover="c:#fff;bgc:#000;boc:#fff;bor:3px,3px,3px,3px;bos:solid;bow:2px,2px,2px,2px;oX:50;oY:50;sp:200;"
+								style="z-index:7;background-color:#000000;cursor:pointer;border:none !important;border-radius:0px !important;outline:none !important;letter-spacing:2px;"
+							>{{ block.settings.text_3 }}
+							</rs-layer><!--
+
+							--><rs-layer
+						
+								class="rev-btn rs-selectable"
+								data-type="button"
+								data-color="rgba(255,255,255,1)"
+								data-rsp_ch="on"
+								data-xy="xo:100px,120px,35px,31px;yo:480px,400px,300px,210px;"
+								data-text="s:16,16,13,16;l:24,24,20,24;a:inherit;"
+								data-actions='o:click;a:simplelink;target:_self;url:{{ block.settings.link_1 }}'
+								data-padding="t:7;r:20;b:7;l:20;"
+								data-border="bor:3px,3px,3px,3px;"
+								data-frame_0="y:100%;tp:600;"
+								data-frame_0_mask="u:t;y:100%;"
+								data-frame_1="tp:600;e:Power2.easeInOut;st:1000;sp:3000;sR:1000;"
+								data-frame_1_mask="u:t;"
+								data-frame_999="o:0;tp:600;e:Power2.easeIn;st:w;sp:1500;sR:1000;"
+								data-frame_hover="bgc:#3ab8c5;boc:#000;bor:3px,3px,3px,3px;bos:solid;oX:50;oY:50;sp:0;"
+                                style="z-index:11;background-color:#43c9d7;font-family:Nunito;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;border-radius:5px;"
+					
+							>{{ block.settings.button }}
+							</rs-layer><!--
+
+							--><rs-layer
+							
+								class="rev-btn rs-selectable"
+								data-type="button"
+								data-color="rgba(255,255,255,1)"
+								data-rsp_ch="on"
+								data-xy="xo:255px,270px,175px,170px;yo:480px,400px,300px,210px;"
+								data-text="s:16,16,13,16;l:24,24,20,24;a:inherit;"
+								data-actions='o:click;a:simplelink;target:_self;url:{{ block.settings.link_2 }}'
+								data-padding="t:7;r:20;b:7;l:20;"
+								data-border="bor:3px,3px,3px,3px;"
+								data-frame_0="y:100%;tp:600;"
+								data-frame_0_mask="u:t;y:100%;"
+								data-frame_1="tp:600;e:Power2.easeInOut;st:1000;sp:3000;sR:1000;"
+								data-frame_1_mask="u:t;"
+								data-frame_999="o:0;tp:600;e:Power2.easeIn;st:w;sp:1500;sR:1000;"
+								data-frame_hover="bgc:#43c9d7;boc:#000;bor:3px,3px,3px,3px;bos:solid;oX:50;oY:50;sp:0;"
+                                style="z-index:12;background-color:#333333;font-family:Nunito;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;border-radius:5px;"
+					
+							>{{ block.settings.button_2 }}
+							</rs-layer><!--
+-->						</rs-slide>
+					
+                                {% endfor %}
+                           
+                            {% endif %}
+                      
+					
+                 
+                      
+                  
+                  </rs-slides>
+					<rs-progress class="rs-bottom" style="visibility: hidden !important;"></rs-progress>
+				</rs-module>
+			
+				
+			</rs-module-wrap>
+			<!-- END REVOLUTION SLIDER -->
+{% schema %}
+{
+"name":"Banner index 2",
+
+"blocks":[
+{
+"name":"Banner item",
+"type":"banner-item-2",
+"settings":[
+{
+"type":"image_picker",
+"id":"image",
+"label":"Image"
+},
+{
+"type": "text",
+"id": "text_1",
+"label": "Heading",
+"default":"THE  SOPHISTICATED PRODUCT"
+},
+{
+"type": "text",
+"id": "text_2",
+"label": "Description",
+"default":"Finding trendy Tshirt or create your own "
+},
+
+{
+"type": "text",
+"id": "text_3",
+"label": "Sub Heading",
+"default":"CUSTOM TSHIRT THEME"
+},
+{
+"type": "text",
+"id": "button",
+"label": "Button Left",
+"default":"Shop Now"
+},
+{
+"type": "url",
+"id": "link_1",
+"label": "Link URL Button Left"
+},
+{
+"type": "text",
+"id": "button_2",
+"label": "Button Right",
+"default":"Start Design"
+},
+{
+"type": "url",
+"id": "link_2",
+"label": "Link URL Button Right"
+}
+]
+}
+],
+"presets": [
+    {
+      "name": "Revolution Slider",
+      "category": "Sliders"
+    }
+  ]
+}
+{% endschema %}
